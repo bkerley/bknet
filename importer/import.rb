@@ -8,7 +8,6 @@ Post.all.each do |p|
 	print p.title
 	a = p.attributes
 	a.delete 'body'
-	# a.delete 'excerpt'
 	a.delete 'tags'
 	a['blog_post'] = true
 	a['filter'] = ['markdown']
