@@ -1,0 +1,13 @@
+---
+filter:     erb
+layout:     default
+---
+
+<div class="article">
+  <h1><%= link_to_page(@page) %><span class="date">(<%= @page.created_at.strftime('%Y-%m-%d') %>)</span></h1>
+
+  <div class="body">
+		<%= @page.excerpt %>
+    <%= @content %>
+  </div>
+</div>
