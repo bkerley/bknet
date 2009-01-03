@@ -1,0 +1,36 @@
+--- 
+slug: our-stupid-vines
+updated_at: 2008-03-02 17:37:38 -05:00
+title: Our Stupid Vines
+tags: plants building picture
+id: 7
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-03-28 13:22:00 -05:00
+--- 
+My roommate decided that our balcony was too sparse, so he bought some seeds, soil, pots, and a watering pot a month or so ago.  We figured they'd get forgotten and die, but this really isn't the case as it turns out.
+
+<img src="http://brycekerley.net/textpattern/images/17.jpg" height="352" width="288" alt="vines on my balcony"    />
+
+They're starting to grow right up to the top of the railing.  Since our part of town is kind of suburban blighty, we decided that the plants should go up to the ceiling like a big green leafy wall.  To do this, we needed to build a support system for the plants.
+
+So after walking around a hardware store for a while, we came up with several plans.  Originally we were going to mount a bunch of dowels to the railing, but after seeing the prices on dowels of suitable length, we changed to favor build a frame out of PVC pipes (cheap!) and hanging string in a lattice pattern across the span between the wall and the pillar in the corner of the balcony.
+
+So once we drove back from the store (with five pipes sticking six feet out of the sunroof of the car), it was time to go to work.
+
+<img src="http://brycekerley.net/textpattern/images/18.jpg" height="352" width="288" alt="Cutting pipe"    />
+
+My roommate cuts the PVC.
+
+<img src="http://brycekerley.net/textpattern/images/19.jpg" height="288" width="352" alt="I prefer a more supervisory job"    />
+
+I make sure construction proceeds safely.
+
+<img src="http://brycekerley.net/textpattern/images/21.jpg" height="352" width="288" alt="The high tech fastening system"    />
+
+Our high tech fastening system.
+
+Next thing on the list is adding the twine so the plants can grow.

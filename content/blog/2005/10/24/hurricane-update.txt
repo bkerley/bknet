@@ -1,0 +1,21 @@
+--- 
+slug: hurricane-update
+updated_at: 2008-03-02 17:41:59 -05:00
+title: Hurricane Update!
+tags: weather picture
+id: 31
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-10-24 16:38:00 -04:00
+--- 
+It's bright and sunny out.  There's basically no cloud cover (some extremely thin cirrus cover thousands of feet up is all I can see), the parking lot is as dry as ever, and it's finally below 80F in the afternoon (70F right now).
+
+Us Tampa jerks really lucked out with Wilma.
+
+But it's not so hot in Melbourne.  A stunning picture my brother took:
+<img src="/textpattern/images/38.jpg" alt="Flooded and floating dock" style="height:480px;width:640px" />
+
+That white thing is a dock.  It's nomally two feet above the water.  Now it's mostly a foot below, except for the parts that got separated from their pilings and are now floating.

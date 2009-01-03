@@ -1,0 +1,22 @@
+--- 
+slug: computers-are-magic
+updated_at: 2008-03-02 17:52:31 -05:00
+title: Computers are Magic
+tags: hacking
+id: 68
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-03-10 19:12:00 -05:00
+--- 
+Spent four hours trying to get our network set up for the SECCDC in Kennesaw, GA.  What a mess!
+
+The software was configured in all sorts of goofy fashions, including our domain server's password not being known to us, but that doesn't begin to be as horrible as our hardware problems.
+
+A few months ago my roommate and I were trying to switch my m0n0wall machine (a 333mhz gateway) from booting from CD with config on floppy to booting and config on hard drive (so we could update it without burning stuff).  Eventually we had to flash the BIOS to get one that wouldn't spectacularly fail at booting the BSD bootloader m0n0wall required.
+
+Same deal with the machine we were planning to use for our *censored* today (don't want to give it all up.
+
+meh

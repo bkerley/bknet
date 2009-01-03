@@ -1,0 +1,18 @@
+--- 
+slug: speech
+updated_at: 2008-03-02 17:52:23 -05:00
+title: Speech
+tags: acm hacking school
+id: 67
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-03-07 09:24:00 -05:00
+--- 
+Yesterday I gave a speech at the ACM meeting.  It was officer election day.  Throughont the preceding 24 hours or so, I had <s>painstakingly</s> half-assedly prepared a speech for my campaign.
+
+It's hard staying on topic when you're just so *excited* about an upcoming trip during spring break.  The [WCSC](http://wcsc.myweb.usf.edu) group is taking a trip to Georgia this weekend for a computer security competition, and I'm not even sure where to get started in preparing for it, because it's all IT security and not actually an attack/defense exercise.
+
+It's going to be an interesting year as ACM president.

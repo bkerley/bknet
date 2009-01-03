@@ -1,0 +1,18 @@
+--- 
+slug: vacancy
+updated_at: 2008-03-02 17:42:39 -05:00
+title: Vacancy
+tags: car school work
+id: 35
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-11-02 11:23:00 -05:00
+--- 
+It's nice being over the hump for the semester.  My birthday's coming up soon, one of my classes is finally getting to the interesting parts (no more basic object-oriented stuff!), and that sort of thing.  I can actually start thinking about Black Friday (have to see if flyers have shown up online yet), and registering for next semester's classes.
+
+I've also started to get curious about what I should do after graduation.  While it would be nice moving on and getting a job, being a student is still lots of fun and I wouldn't mind doing research either.  I'm going to start looking for scholarships, although I'm still a year off from graduating.
+
+Also I still need to get the alternator on my car checked.  It looks so sad and dejected at the back/bottom of the parking lot with the battery disconnected sitting on a mat of wind-swept sand and broken glass.

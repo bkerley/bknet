@@ -1,0 +1,40 @@
+--- 
+slug: how-to-bounce-compiz
+updated_at: 2008-03-02 18:00:15 -05:00
+title: How to bounce Compiz
+tags: compiz linux software
+id: 102
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-09-26 10:30:42 -04:00
+--- 
+I've had this problem with Compiz (both compiz-vanilla and <s>compiz-quinnstorm</s> beryl), but after I've been using my desktop for a while (could be minutes or days), Compiz just sort of freezes up and won't accept mouse or keyboard events (mouseovers, buttons, whatever).  So I've got a NASTY HACK to bounce it easily.
+
+Right now, since I'm using GDM, my gnome session starts connected to a dbus daemon, with all the environment variables that entails.  However, if Compiz freezes, I plainly can't use my current gnome session to restart compiz.
+
+![Gnome sessions control panel](/typo/files/Screenshot-Sessions.png)
+
+Here we see that compiz-manager starts up first, followed by my startcompiz script.  Compiz-manager's the handy little notification area app that provides a menu to do things, and also starts compiz for me.  Why is my script running right after it?
+
+Because it doesn't really start compiz anymore.  The part that's not commented out:
+
+            echo "   Fixing backspace"
+                xmodmap -e "keycode 22 = BackSpace"
+        
+            echo "   Preparing fixcompiz"
+                rm fixcompiz
+                echo export DISPLAY=$DISPLAY >> fixcompiz
+                echo export DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS >> fixcompiz
+                echo compiz --replace dbus csm >> fixcompiz
+                chmod u+x fixcompiz
+
+Since this runs from within a gnome session, $DISPLAY and $DBUS_SESSION_BUS_ADDRESS are defined, so this simply populates ~/fixcompiz as so:
+
+    export DISPLAY=:0.0
+    export DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-vCUILqIE6W,guid=589d124566cc145b6368533289986500
+    compiz --replace dbus csm
+
+Now, when your compiz breaks, you can ssh or switch to a shell terminal and just do ./fixcompiz.

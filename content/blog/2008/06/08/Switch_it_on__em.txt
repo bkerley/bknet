@@ -1,0 +1,22 @@
+--- 
+slug: Switch_it_on__em
+updated_at: 2008-06-08 14:53:44 -04:00
+title: Switch it on 'em
+tags: e/n hacking
+id: 174
+excerpt: It's been a busy summer so far, but quitting your job and moving across the state tends to do that to you.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-06-08 14:48:46 -04:00
+--- 
+<a href="http://www.flickr.com/photos/bonzoesc/2561119485/" title="Clouds over Okechobee by BonzoESC, on Flickr"><img src="http://farm4.static.flickr.com/3181/2561119485_01a19ca804.jpg" width="500" height="375" alt="Clouds over Okechobee" /></a>
+
+I snuck off to Miami for the weekend of May 23 for apartment hunting, having put in my resignation the Monday prior. This went pretty smoothly, freeing up the rest of the weekend for general hanging-out and slacking-off.
+
+The next weekend was quals for Kenshoto CTF.  On the down side, we didn't qualify.  On the plus side, I won't feel obligated to play CTF for the entire duration of defcon.  I put the relevant files I could find (and a lot of cussing) in a [git repo](http://github.com/bkerley/quals08/tree/master) if you're curious about what I spent the weekend on; there are omissions of stuff I forgot the context for.  The best file is rev300.c, because it's the raunchiest.
+
+This weekend is for packing and cleaning, although an awful lot of that is getting deferred until later this week.
+
+After that, moving, and then settling in to my new place in Miami.  That'll probably take me up until I go to Saskatchewan (July) and Defcon (August).

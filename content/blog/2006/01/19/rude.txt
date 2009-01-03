@@ -1,0 +1,19 @@
+--- 
+slug: rude
+updated_at: 2008-03-02 17:49:54 -05:00
+title: Rude
+tags: programming school weather work
+id: 57
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-01-19 08:41:00 -05:00
+--- 
+Operating Systems yesterday was kind of funny, in a sad way.  Half the class had their notebooks out for the class period, and not for the usual powerpoint-following.   My neighbor noticed that the prof was going over ways to protect critical sections, and he decides he needs to go on a library hunt right then instead of standing the chance of accidentally learning something.  The person a row ahead of me spent most of the class playing emulated games.
+
+Note to self: don't compute in class unless you're taking notes.
+
+Also with the help of CapnBry on the SA forums, I got textured sprites working in USFWeather, so it'll get pretty next time I work on it:
+[I didn't feel like thumbnailing this 1mb image](http://brycekerley.net/typo/files/usfweather02.png).

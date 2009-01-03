@@ -1,0 +1,22 @@
+--- 
+slug: swiss-army-knife
+updated_at: 2008-03-02 17:59:11 -05:00
+title: Swiss Army Knife
+tags: programming ruby
+id: 95
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-09-08 00:43:54 -04:00
+--- 
+Short post because it's late and I'm tired, but Ruby's pretty damn useful if you have boring tasks you want to automate:
+
+    #!/usr/bin/env ruby
+    f = File.new(ARGV[0], 'r').read
+    f.each_byte do |b|
+      $stdout.write('0x'+b.to_s(16)+', ')
+    end
+
+in case you ever wanted to take your big binary file and inline it as a C array.

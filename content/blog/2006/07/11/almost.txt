@@ -1,0 +1,20 @@
+--- 
+slug: almost
+updated_at: 2008-03-02 17:57:31 -05:00
+title: almost
+tags: townhouse
+id: 88
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-07-11 23:09:25 -04:00
+--- 
+The summer session's just over a week from being over, and I can't wait.  This friday is another hackin' game, and after that I'm going to try and get as much of my stuff as possible over to the new townhouse I'll be in for the next year (woop getting out of college slum).
+
+Picture of the new kitchen:
+
+<a href="http://www.flickr.com/photos/bonzoesc/187769890/" title="Photo Sharing"><img src="http://static.flickr.com/59/187769890_51dd3a51b9.jpg" width="500" height="375" alt="new kitchen" /></a>
+
+My current kitchen would probably fit in the empty floor space there.  This one even has enough room for the old grape iMac next to the fridge (lookin' up recipes hooray).  Well, once it boots with the 20gb drive successfully.

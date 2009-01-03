@@ -1,0 +1,14 @@
+--- 
+slug: i-think-i-ll-wait-for-web-2-1
+updated_at: 2008-03-02 17:41:26 -05:00
+title: I think I'll wait for Web 2.1
+tags: software
+id: 30
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-10-23 00:30:00 -04:00
+--- 
+<p>Tried the latest Web 2.0 buzzword-compliant browser "Flock" today.&nbsp; It's kind of tough and carbonized around the edges, like chili that wasn't stirred enough. Missed the library at school by 10 minutes, wanted to get a book, but they were all closed up.<br /></p><p>And then I was turning on the Xbox to watch a movie and somehow the knee of my shorts got ripped.&nbsp; Shoppin' tomorrow I guess :/<br /></p>

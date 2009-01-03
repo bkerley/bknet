@@ -1,0 +1,20 @@
+--- 
+slug: enabled
+updated_at: 2008-03-02 18:02:10 -05:00
+title: Enabled
+tags: hoodwinkd blog
+id: 110
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-10-21 18:24:35 -04:00
+--- 
+I enabled this site for [hoodwink.d](http://hoodwinkd.hobix.com/) today.  The tricky part was getting the XPATH set up for the right spot in the page (you need quotes around the class literal).
+
+If you want to get in on the metacommenting internet sub-layer thingy, you'll need:
+
+* Firefox & Greasemonkey - I wish it worked with [Camino](http://www.caminobrowser.org/) but there's no simple javascript injection system for that
+* To mangle your DNS to [nic.d](http://redhanded.hobix.com/cult/whoNicDOffWithTheYummyJunkDomains.html)
+* If you can see content on [wasteland](http://wasteland.hobix.com/) it works.

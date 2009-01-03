@@ -1,0 +1,32 @@
+--- 
+slug: ghost-with-the-post
+updated_at: 2008-03-02 18:01:19 -05:00
+title: ghost with the post
+tags: postscript programming ruby school
+id: 104
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-10-05 18:19:47 -04:00
+--- 
+Finished the final postscript for programming languages this morning.  It was a program to take a list of grades from a file and produce a chart showing how many grades fell into each letter (A, B, C, D, and F):
+
+![Picture of example output](/typo/files/grades.png)
+
+A fairly fun language, although not something I can see myself using very often.  It is way nicer than using PHP to draw pictures, just because the graphics features offer flexibility instead of just drawing lines and fillin' stuff, but the general weirdness of the stack paradigm makes it more difficult to work with.
+
+WHAT WOULD a postscript-like language in ruby look like?
+
+    showpage do |p|
+      scale 72 72
+      moveto 0 0
+      lineto 10 10
+      lineto 0 10
+      lineto 0 0
+      setsrokewidth 1 pt
+      stroke
+    end
+
+Transforming that to PS might be a pain, but it'd be a pretty neat ruby graphics API anyways.

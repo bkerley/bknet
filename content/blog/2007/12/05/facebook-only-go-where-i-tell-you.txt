@@ -1,0 +1,28 @@
+--- 
+slug: facebook-only-go-where-i-tell-you
+updated_at: 2008-03-02 18:12:19 -05:00
+title: "Facebook: Only go where I tell you"
+tags: facebook software
+id: 166
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-12-05 03:01:05 -05:00
+--- 
+![Empty inbox](http://brycekerley.net/assets/2007/12/5/email_client.png)
+
+See this, Facebook?  This is my Inbox.
+
+![I don't want notifications](http://brycekerley.net/assets/2007/12/5/no_notification.png)
+
+And these are my notification settings.  Notice they're all off.
+
+What does this mean?
+
+**NE'ER THE TWAIN SHOULD MEET**
+
+Do not intrude upon my inbox when one of the people on my friends list clicks the "spam my friends" button while configuring one of the 10,000 stupid apps people can pollute their profiles with.
+
+I'll put up with notices for stuff I don't care about in my news feed because, hey, I logged in, so I've kind of accepted that I'm going to red stuff I do not care about.  When I check my email, I don't want to know that so-and-so just installed the app of the day (it's probably Catbook, where you can make up cat fanfiction saying your cat is friends with cats it has never been in the same state as).

@@ -1,0 +1,25 @@
+--- 
+slug: mephisto-switch
+updated_at: 2008-03-02 18:03:38 -05:00
+title: Mephisto Switch
+tags: blog software mephisto
+id: 118
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-11-29 16:39:58 -05:00
+--- 
+I was somewhat disappointed with the recent troubles on Typo's trac site, so I'm giving Mephisto a shot.
+
+Attachment test: ![YOU CAN'T CUT BACK ON FUNDING!  YOU WILL REGRET THIS!](http://brycekerley.net/mp/assets/2006/12/3/funding.png)
+
+<pre class="textmate-source sunburst"><span class="source source_ruby source_ruby_rails"><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> proc.rb
+</span>x = [<span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>zeroth<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>, <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>first<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>, <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>gaius baltar<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>]
+n = <span class="constant constant_numeric constant_numeric_ruby">0</span>
+x.each <span class="keyword keyword_control keyword_control_ruby keyword_control_ruby_start-block">do </span>|e|
+  puts <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>The <span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>n<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span>th entry is <span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>e<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+  n += <span class="constant constant_numeric constant_numeric_ruby">1</span>
+<span class="keyword keyword_control keyword_control_ruby">end</span>
+</span></pre>

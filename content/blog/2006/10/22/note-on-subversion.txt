@@ -1,0 +1,19 @@
+--- 
+slug: note-on-subversion
+updated_at: 2008-03-02 18:02:17 -05:00
+title: Note on Subversion
+tags: subversion software
+id: 111
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-10-22 16:21:46 -04:00
+--- 
+Learned this today when setting up an fsfs repository; if users are going to be using svn+ssh or some other method that reads and writes to the database as their uid, you need to make the permissions setgid:
+
+    cd repodir
+    chmod -R g+s .
+
+What this does is makes any new files in the directory take the group of the directory, and not the primary group of the user that created them.

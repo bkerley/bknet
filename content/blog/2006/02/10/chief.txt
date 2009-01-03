@@ -1,0 +1,22 @@
+--- 
+slug: chief
+updated_at: 2008-03-02 17:51:10 -05:00
+title: Chief
+tags: hacking hardware
+id: 62
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-02-10 11:38:00 -05:00
+--- 
+This morning I found out via email that I got elected President of the computer security club, or as I call the title, President of Hacking.  Next I get to figure out what I have to do as President, which, for this club, seem slike a rubber-stamp job because the faculty sponsor's been running the show pretty tightly so far.  Maybe I'll change that.
+
+Our second operating systems project looks kind of wacky.  It's a multithreaded simulation of two teams wizards in a square dungeon freezing enemies and thawing teammates.  Since each wizard is an independent thread, there's all sorts of moving deadlocks we need to solve.
+
+Fortunately, half the class had all sorts of crazy questions to email to the prof on the weekend, so by Monday evening it had become a pair project.  My partner and I worked for about three hours on the project yesterday evening.  By our division of the problem, we got about half of the project done, which is pretty good.
+
+At case modding on Wednesday night, we had a spare UV light, so I put it on the world's ugliest switch:
+[
+Big JPEG that looks awful](http://www.brycekerley.net/typo/files/Switch_uv.jpg)

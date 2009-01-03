@@ -1,0 +1,30 @@
+--- 
+slug: exhaust-day-and-thoughts-on-katrina
+updated_at: 2008-03-02 17:39:37 -05:00
+title: Exhaust Day and Thoughts on Katrina
+tags: car picture weather
+id: 20
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-08-28 21:24:00 -04:00
+--- 
+I was out shoppin' today and saw some exhaust leftovers in two different places:
+
+<img src="http://www.bonzoesc.net/images/upload/exhaust-apt.jpg" />
+
+In the parking lot of my apartment building!
+
+<img src="http://www.bonzoesc.net/images/upload/exhaust-staples.jpg" />
+
+In the parking lot at Staples!
+
+_On Katrina:_
+
+chutwig> for the record katrina only has one more hurricane to surpass to become the most intense hurricane to ever hit the US on record
+
+BonzoESC> hurricane vin diesel?
+
+BonzoESC> oh wait that would be most extreme hurricane

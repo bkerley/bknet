@@ -1,0 +1,26 @@
+--- 
+slug: skirmish
+updated_at: 2008-03-02 17:48:56 -05:00
+title: Skirmish
+tags: games laffo nerf
+id: 55
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-01-08 23:50:00 -05:00
+--- 
+Zap was over at the apartment today, and while the original plan was to take a big-screen TV off the hands of a friend, none of us had a large enough car (8" too skinny!).   After lunch with Zap and RC, we went to Wal-Mart, and we each picked up the fantastic $8 Nerf Maverick (see this [penny-arcade comic](http://www.penny-arcade.com/comic/2006/01/04) for hot pics).
+
+If you haven't played with any Nerf guns for a few years (decade in my case), play with this one for a while, maybe with friends or something.  The three of us had a pretty good 10-minute skirmish for control of the long hallway in our apartment featuring lots of ducking behind cover, scrambling for darts, a couple instances of friendly fire (the back of Zap's head looked *so inviting!*), and a confused look from the third roommate immediately before ducking back in his room to avoid the barrage of darts.
+
+After some MGS3, fajitas, and Airplane!, I drew a target on the whiteboard to get some target practice from my desk (about 20 feet away), with some numbers I made up on it:
+
+![target with RAAGH mouth](http://www.brycekerley.net/typo/files/target-pre.jpg)
+
+(The scores, from the top down, are 49, 61, 23, sqrt(120), and *e*)
+
+I'm not too bad for somebody who's a fair bit rusty:
+
+![hits!](http://www.brycekerley.net/typo/files/target-post.jpg)

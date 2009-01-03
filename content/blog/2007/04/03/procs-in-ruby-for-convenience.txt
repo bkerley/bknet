@@ -1,0 +1,47 @@
+--- 
+slug: procs-in-ruby-for-convenience
+updated_at: 2008-03-02 18:09:08 -05:00
+title: Procs in Ruby for Convenience
+tags: programming ruby
+id: 148
+excerpt: |-
+  Part of the USF CTF score script one of my friends wrote goes like this:
+  <pre class="textmate-source sunburst"><span class="source source_ruby">    log(team, service_id, <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>Sent: <span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>bfbn<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>, <span class="support support_class support_class_ruby">Time</span>.now())
+      lol = s.recv(<span class="constant constant_numeric constant_numeric_ruby">1024</span>)
+      log(team, service_id, <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>Received: <span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>lol<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>, <span class="support support_class support_class_ruby">Time</span>.now())
+      s.close</span></pre>
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-04-03 01:33:20 -04:00
+--- 
+This was pretty raunchy (especially when the call to `log()` was repeated every other line in a 50-line script).  So when I wrote a similar script, I put most of the redundancy into a `Proc` object:
+
+<pre class="sunburst textmate-source"><span class="source source_ruby">l = <span class="support support_class support_class_ruby">Proc</span>.<span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">new</span> <span class="keyword keyword_control keyword_control_ruby keyword_control_ruby_start-block">do </span>|m|
+  log(team, service_id, m, <span class="support support_class support_class_ruby">Time</span>.now())
+<span class="keyword keyword_control keyword_control_ruby">end</span>
+
+register b, team.ip, u, p
+l.call <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>A registered <span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>u<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span> / <span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>p<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+session b, team.ip, u, p <span class="keyword keyword_control keyword_control_ruby keyword_control_ruby_start-block">do </span>|d|
+  do_something d
+<span class="keyword keyword_control keyword_control_ruby">end</span>
+l.call <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>A did something<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span></span></pre>
+
+##How does this work?
+
+Ruby blocks are one of the most visible and distinctive pieces of syntax in Ruby.  Their close friend, the `Proc` object, is how you separate the logic of a block from syntax and store it in a variable (or turn it into a method, but that's something else).
+
+Blocks and `Proc`s are [similar to closures](http://innig.net/software/ruby/closures-in-ruby.rb) as seen in other languages, in that they bind to variables in the scope where they're defined.  Above, we note that `team` and `service_id` aren't defined within the block's scope, so Ruby instead looks to the enclosing scope for their values.  Since it is able to find them there, those values get attached to the block, so that wherever the block goes, those values for `team` and `service_id` will follow.  Since `m` is specified as an argument to the block (the `|m|` syntax), Ruby doesn't go looking for it.
+
+Since the block wasn't going to be useful just sitting there, I converted it into a `Proc` object and stashed it in `l`.  At this point, the 1-ary (takes one argument) `Proc` in `l` contains the logic from the block, and the values from the variables above, all encapsulated neatly in a one-letter variable.  Since it's just a normal object, we can call its methods:
+
+<pre class="sunburst textmate-source"><span class="source source_ruby">l.arity
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> =&gt; 1
+</span>l[<span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>lol<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>]
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> =&gt; does logging stuff
+</span>l.call <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>lol<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> =&gt; does logging stuff</span></span></pre>
+
+Either calling method (either `[]` or `call`) is smaller than the whole shebang from the first script above, so that's a big win for DRY.

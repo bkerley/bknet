@@ -1,0 +1,26 @@
+--- 
+slug: one-month-with-iphone
+updated_at: 2008-03-02 18:10:42 -05:00
+title: One Month with iPhone
+tags: phone iphone
+id: 158
+excerpt: I told myself I was going to do a "two weeks with iphone" post but that didn't happen, so here's an *even more* seasoned look at it.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-07-29 20:40:23 -04:00
+--- 
+##Do like
+Maps are awesome, as long as you can catch enough street signs (or landmarks that are present on the imagery) to follow your location.  I wouldn't mind more control over caching in case you get stuck in a dead zone (found a few), but I understand why it's not there.
+
+The iPod part is showy and works well, and power consumption with it isn't an issue for me.  Videos look amazing on it.
+
+Killer app: camera -> email.  I can send to Flickr, send to Foodbloggin', send to whoever.
+
+##Do not like
+Sometimes DNS gets a little squirrelly and I can't hit my IMAP server from my LAN, because it remembers the external/internet IP instead of the local 10.x.x.x one.
+
+Speakerphone and ringing's kind of quiet.
+
+Google needs to convert more YouTube videos to h.264.

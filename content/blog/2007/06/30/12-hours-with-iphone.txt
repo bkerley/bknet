@@ -1,0 +1,28 @@
+--- 
+slug: 12-hours-with-iphone
+updated_at: 2008-03-02 18:10:32 -05:00
+title: 12 Hours with iPhone
+tags: phone iphone
+id: 157
+excerpt: I've had my new phone working for about twelve hours now, and so far I've been pretty impressed. Most if the features work basically as advertised, with very few exceptions.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-06-30 12:19:40 -04:00
+--- 
+##Do like
+Safari is about as good as it is on the desktop, which is to say, good-looking and fast.  It uses a newer WebCore than current OmniWeb does, so it shows the search form (top-right if you're reading this on my site) correctly with the fat black border.
+
+While I can't touchtype as fast as the duder in Apple's video can yet, I am seeing how it'd be possible. The keyboard software is pretty great outside of password boxes or URL fields.
+
+I'm a huge map nerd and I approve of the Maps application.
+
+##Do not like
+No copy-paste.  This translates to no flickr links in this post until I fix it on a real computer.
+
+The calculator is only a 4-function like Calculator.wdgt that came with 10.4.  No computer nerd features :(
+
+Safari does something different with font sizes than desktop browsers re: points vs. pixels vs. ems.  A page that looks consistent on OmniWeb might have varying sizes on iPhone.
+
+Scrolling the edit cursor around big text fields is quite annoying, at least in the widescreen browser.

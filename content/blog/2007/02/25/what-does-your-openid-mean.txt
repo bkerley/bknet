@@ -1,0 +1,24 @@
+--- 
+slug: what-does-your-openid-mean
+updated_at: 2008-03-02 18:08:00 -05:00
+title: What does your OpenID mean?
+tags: openid hacking
+id: 143
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-02-25 17:53:44 -05:00
+--- 
+[Tim Bray](http://www.tbray.org/ongoing/When/200x/2007/02/24/OpenID) yesterday postulated that OpenID is missing a way to show that a given ID "means something."  His example of "http://www.tbray.org/silly-id/BillGates" always coming up positive insinuates that the URL itself is significant, and that to prevent people from using OpenIDs to impersonate other people OpenID providers need to be whitelisted.
+
+This is bogus.
+
+"Another problem with OpenID is that, well, having one doesn&rsquo;t mean very much; just that you can verify that some server somewhere says it believes that the person operating the browser owns that ID."
+
+Information security usually consists of multiple services that provide one or more of four functions: authentication, integrity, privacy, and non-repudiation.  A system like OpenID provides a limited form of authentication -- it establishes that a particular web browser user (sessioned with a cookie, hidden field, SSL client cert, etc.) owns a particular URL.  What it doesn't do is establish that a web browser user is a human being, a particular human being, etc.
+
+OpenID wisely limits its scope.  By only authenticating what's currently feasible with the technical limitations of HTTP, it succeeds.  It doesn't establish trust (which would make it difficult for a new user to start using OpenID successfully), it doesn't establish that the holder's a human (no way to tell a web browsing robot from a web browsing user), and it doesn't need to.
+
+There's other tools to do that.  Typically, what most people want to do with authentication information is to use it to select the appropriate set of access controls (providing privacy), or store it with a transaction the subject of that information participated in (non-repudiation).  What OpenID lets you do is provide these without user registration (see [Pre-approved accounts](http://simonwillison.net/2007/Feb/25/six/) in this list of use cases).

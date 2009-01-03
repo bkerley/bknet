@@ -1,0 +1,20 @@
+--- 
+slug: chronicle
+updated_at: 2008-03-18 22:11:42 -04:00
+title: Chronicle
+tags: weblog chronicle programming rails
+id: 170
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-03-18 22:11:42 -04:00
+--- 
+Things look different around here.
+
+Mephisto was kind of hard to tweak and hack on, because of its heritage as both a weblog and CMS for people who might not necessarily know how to write webapps.  Hence the complicated theme system, liquid plugins, &c. that exist to make it usable for a wide audience.  However, this made it strange and unfamiliar to me.
+
+This is "chronicle", hacked together from scratch in not much time.  I'm not open-sourcing it for now because it's seriously basically the barest-bones possible weblog system you can write in Rails, without any useful features like Atom feeds or publishing support.
+
+It also doesn't support comments.  Suck on that, spambots.  If you want to comment, just email me (and get past the filter).

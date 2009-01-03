@@ -1,0 +1,25 @@
+--- 
+slug: fixing-airport-congestion
+updated_at: 2008-03-02 18:11:48 -05:00
+title: Fixing Airport Congestion
+tags: airport travel city
+id: 162
+excerpt: Columnist Patrick Smith (the "Pilot" part of salon.com's "Ask the Pilot" feature) [discusses the real source of the recent airline delays](http://www.salon.com/tech/col/smith/2007/10/05/askthepilot248/) in his column last week.  Basically, the problem is caused by routes being served by more small planes instead of fewer big planes.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-10-08 03:36:28 -04:00
+--- 
+<a href="http://www.flickr.com/photos/60492034@N00/1511415702" title="View 'Airplane Interior' on Flickr.com"><img src="http://farm3.static.flickr.com/2183/1511415702_5209569083.jpg" alt="Airplane Interior" border="0" width="375" height="500" /></a>
+
+By dumping plane capacity in favor of increasing the number of flights, consumers get more choice, but (airside) airport facilities get used more, because a runway, taxiway, apron, or passenger gate doesn't care if it's being used by a massive widebody Boeing 747 or a dual-turboprop Saab 340.  Excaberating this problem is that multiple airlines competing for the same route can't competitively use a large airplane, but use two small ones (one for each airline) instead.
+
+<a href="http://www.flickr.com/photos/60492034@N00/1511383354" title="View 'Saab 340' on Flickr.com"><img src="http://farm3.static.flickr.com/2109/1511383354_057d8be003.jpg" alt="Saab 340" border="0" width="375" height="500" /></a>
+
+For example, AirTran offers nine flights every Monday from TPA to ATL, and Delta offers eleven.  AirTran flies 117-passenger 717s or 137-passenger 737s; while Delta flies mostly 183-passenger 757s, with a single 250-passenger 767 and a 120-passenger MD-88 thrown in the mix.  Every AirTran flight is within 30 minutes of a Delta flight, most within 10 minutes.
+
+<a href="http://www.flickr.com/photos/60492034@N00/1511413854" title="View 'Landside Equipment' on Flickr.com"><img src="http://static.flickr.com/2135/1511413854_4d6209995b.jpg" alt="Landside Equipment" border="0" width="" height="" /></a>
+
+Why can't AirTran or Delta contract with the other?  Neither airline is exactly offering a unique experience, neither one pampers you in the least, so why not let the other fly more people on a larger plane, save the trouble of running a second set of landside equipment, save on landing and takeoff slots (those cost money at big airports), and create less noise and air pollution.
+

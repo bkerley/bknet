@@ -1,0 +1,16 @@
+--- 
+slug: expo
+updated_at: 2008-03-02 17:51:18 -05:00
+title: Expo
+tags: acm school work
+id: 63
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-02-16 11:15:00 -05:00
+--- 
+Killer week - got most of the crazy cube wizard project for Operating Systems done (although if I ever see a wizard I'm going to karate them), found out the database project that we'll be working on for the last half of the semester is a blank check, and did a quick hack on the metlab site.
+
+Engineerng Expo's tomorrow, and I don't really know how long I'm going to be there either day, but I'm pretty sure it'll be a long time.

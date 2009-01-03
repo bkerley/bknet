@@ -1,0 +1,20 @@
+--- 
+slug: improved-spring-schedule
+updated_at: 2008-03-02 17:44:03 -05:00
+title: Improved Spring Schedule
+tags: school
+id: 39
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-11-09 16:36:00 -05:00
+--- 
+As it turns out, the operating systems listed previously was a grad course, and fixing that cascaded to my geography class, so I had to pick a different one:
+|Ref#|Prefix|Crs#|Title|Prof|When|
+|10677|URP|4052|Urban and Regional Planning|Bosman|MW 1100|
+|11737|COT|4210|Analysis of Algorithms|Tindell|TR 0930|
+|15416|EEL|4852|Database Design|TBA|MW 1800|
+|11734|COP|4600|Operating Systems|Iamnitchi|MW 0930|
+|11716|CIS|4250|Ethical Issues|Jeanty|TR 1400|

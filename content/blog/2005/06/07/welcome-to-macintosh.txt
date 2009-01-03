@@ -1,0 +1,18 @@
+--- 
+slug: welcome-to-macintosh
+updated_at: 2008-03-02 17:41:36 -05:00
+title: Welcome to Macintosh
+tags: mac software
+id: 14
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-06-07 23:29:00 -04:00
+--- 
+<img src="/textpattern/images/26.jpg" style="height:288px;width:352px" />
+
+I got my Tiger CDs last week.  Haven't had a chance to install it yet, because not only is the Wallstreet (Powerbook1998) not supported in 10.4 (wasn't in 10.3 either), but XPostFacto, the tool used to get new MacOS working on old Macs, isn't quite compatible with the Wallstreet either.
+
+So until it's updated again, no widgets for me.

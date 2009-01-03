@@ -1,0 +1,33 @@
+--- 
+slug: am-i-snooty-about-php-webapps
+updated_at: 2008-03-02 17:40:33 -05:00
+title: Am I snooty about PHP webapps?
+tags: hacking school
+id: 26
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-09-29 18:53:00 -04:00
+--- 
+<em>Prof's comments emphasized.</em>
+<blockquote><em>Bryce, those are good questions.  Replies inline...
+
+(Security Professor)</em>
+
+
+Original Message
+From: Bryce Kerley
+Sent: Thursday, September 29, 2005 12:07 PM
+To: (Security Professor)
+Subject: Metasploit Project
+
+For the semester project, can we write a Metasploit exploit module for a known (but not modularized) exploit, or do we have to come up with an unknown exploit? 
+<em>[Prof] Writing a module for a known but not modularized exploit meets the requirement.  Coming up with a novel exploit and modularizing it is even better.</em>
+
+ And can it be for a (common) webapp, or should it be for something lower level (and with, on average, a better security record)?
+<em>[Prof] An exploit for a common web app meets the requirement in my mind.  Again, coming up with something novel and on the cutting edge would be more impressive.  You can only get 100 points for the assignment, though! ;-) [Prof]</em>
+
+Thanks,
+Bryce</blockquote>

@@ -1,0 +1,14 @@
+--- 
+slug: rockin-week
+updated_at: 2008-03-02 17:41:06 -05:00
+title: Rockin' Week
+tags: food programming school
+id: 29
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-10-20 19:00:00 -04:00
+--- 
+<p>An awesomely busy week.&nbsp; I'll say it started on Saturday night after taking 4 balloons at the programming competition (solving 4/10 problems, enough to get in the top 1/3 of the competitors).&nbsp; Started to drive the massive van full of dudes back to Tampa, but apparently a cylinder decided that it didn't want to be fired (hahaha get it) while cruisin' on I-95 and we had to stop and decide it wasn't going to happen again.&nbsp; Got back, had to gas it up before returning (it gets 1/3 the gas mileage of my car), and then crashed.</p><p>Got the Automata test from Oct. 6 back, nearly aced it (stupid δ being the whole transition function and not the set of transition functions), and reviewed stuff in class.&nbsp; Security was interesting, the prof said he was going to be an hour late, so those of us who didn't want to miss (the guy's really entertaining) just hung out until he showed.&nbsp; Learned about biometrics, found possible holes in systems that store the user's template on a token they carry (as opposed to an index to the template stored centrally), decided with my project group on a name ("Team Zissou") and meeting time to write our mad exploits.</p><p>Wednesday, got off school at a decent hour, walked home, and watched in stunned awe as my roommate got a cable modem and digital cable.&nbsp; It's the real consumer experience when none of that crap actually works as intended, too - the modem has barely any upstream, the digital tv box would get out of sync with the remote and require a hard reset (ordered by phone, takes 5 minutes) for another 2 minutes of remote control usage.&nbsp; He took it back, traded it for a more recent box, and, according to stories, had to stop at Arby's for a big Diet Coke on the way back.&nbsp; When offered a can from another roommate's stash, he apparently exclaimed that it wasn't big enough.</p><p>Today was Engineering Open House, a big BBQ and organization show-off deal to try and recruit freshmen and sophomores into the college.&nbsp; Since my boss was running it, and my organization (ACM) had a table, I got some free lunch out of it and almost had an excuse to skip work, but since I knew some people had an exam on Monday for a difficult prof, I took one for the team.</p><p>Took the second Automata test today, forgot a detail of a proof so went for max sympathy points and filled up half a page with an explanation.&nbsp; Slamming out some slides and demos for CTF tomorrow, hopefully my Mac will figure out the projector.</p>

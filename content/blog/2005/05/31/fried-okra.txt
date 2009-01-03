@@ -1,0 +1,23 @@
+--- 
+slug: fried-okra
+updated_at: 2008-03-02 17:38:28 -05:00
+title: Fried Okra
+tags: food recipe
+id: 13
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-05-31 14:02:00 -04:00
+--- 
+<img src="/textpattern/images/25.jpg" style="height:352px;width:288px" />
+
+I made Fried Okra this weekend at a bbq at Zap's place.
+
+<b>HOW I DID IT</b>
+Get some raw okra, cut off the stem and skinny part at the bottom, and then slice it into pieces about 1cm long.
+Put all these okra pieces in a gallon plastic bag.  Add corn meal and seasoning (I used Tony Chachere's Creole (best ever), but you could use normal seasoned salt if you're a wuss).
+Shake.
+Put in pan with some olive oil (but not too much olive oil - once your corn starch stops absorbing it, stop).
+Fry for a while (the interior of the okra should be soft when you eat it).

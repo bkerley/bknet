@@ -1,0 +1,18 @@
+--- 
+slug: one-button-mod
+updated_at: 2008-03-02 18:10:16 -05:00
+title: One Button Mod
+tags: mac programming cocoa onebuttonmod
+id: 155
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-06-11 00:24:39 -04:00
+--- 
+I made some progress this weekend on One Button Mod, my mikmod player in Cocoa.  It now actually populates the GUI with information about the track (name, type, comment, and named instruments if applicable).  It's rough, and the GUI is also pug-ugly, but it also plays music:
+
+![Screenshot of One Button Mod](http://brycekerley.net/assets/2007/6/11/onebuttonmod-gui.png)
+
+I've still got a pretty lengthy list of features/bugs to do (make the Play button change state while playing, populate the instruments list more smartly perhaps, actual loop/skip controls), but so far I've learned a lot about ObjC and Cocoa.

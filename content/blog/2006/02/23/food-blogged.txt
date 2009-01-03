@@ -1,0 +1,18 @@
+--- 
+slug: food-blogged
+updated_at: 2008-03-02 17:51:38 -05:00
+title: Food Blogged
+tags: blog food
+id: 64
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-02-23 20:17:00 -05:00
+--- 
+I just got added as a contributor to [Food Bloggin'](http://foodbloggin.com/), so you can look forward to looking at pictures of my food in the future.
+
+Worked more on the photo contest this week at work after putting out the (figurative) fire with the sensors that made my weather display at Engineering Expo show 32F all weekend (when it wasn't crashing thanks to the managed/unmanaged rift in Managed D3D - thanks Microsoft!).
+
+I found out the new Belle & Sebastian album is finally out in stores, I need to get it and RMA that old Epox board with busted caps.

@@ -1,0 +1,25 @@
+--- 
+slug: defcon-decompression-1
+updated_at: 2008-03-02 18:10:51 -05:00
+title: Defcon Decompression, Part 1
+tags: ctf defcon hacking
+id: 159
+excerpt: |-
+  <a href="http://www.flickr.com/photos/bonzoesc/997773938/" title="Photo Sharing"><img src="http://farm2.static.flickr.com/1207/997773938_04dc280134_m.jpg" width="180" height="240" alt="Thunderhead" /></a> <a href="http://www.flickr.com/photos/bonzoesc/989811128/" title="Photo Sharing"><img src="http://farm2.static.flickr.com/1048/989811128_c41bbb93f5_m.jpg" width="180" height="240" alt="Defcon 15 badge" /></a>
+  
+  I've been too many places in the past week - Vegas, Tampa, Huntsville, Tampa again, and [a couple layovers at Delta hubs](http://twitter.com/BonzoESC/statuses/198897572), but I think I've finally recovered from the massive rush of competing and losing in Kenshoto's CTF game.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-08-11 22:09:01 -04:00
+--- 
+We all nominally flew up to Vegas on Thursday (August 2), but scheduling and other business trips meant that of the people I knew going up there, my boss and I were the only ones that didn't fly up Wednesday.  When we got there (after the shuttle from the airport to the Riv completely lost the tread from a tire), everybody was basically just hanging out in the convention center lobby, so I went down, bought my badge, and started messing with it (see photo above).
+
+Once we were all basically caught up (most of the Thursday flyers got first-class treatment from Delta due to a cancellation and overbooking), it was lunch time (especiallly since it was about 6 pm EDT), so we hit the Peppermill restaurant next door to the casino.  After that, we went up to the hotel to make sure we had all our gear ready for competition on Friday, including a big server and a bunch of spare notebook computers Jim's company provided.  We learned that D-Link's HSDPA-compatible router is kind of garbage for updating linux with while people try and browse the web with it, but after a while it was all fixed, so we walked down to Treasure Island for the buffet.  However, still being full from lunch, I just had a little bit of pasta and a sampler of desserts.  We also re-took a picture from last year:
+
+<a href="http://www.flickr.com/photos/bonzoesc/996943247/" title="Photo Sharing"><img src="http://farm2.static.flickr.com/1273/996943247_cb6198224e_m.jpg" width="180" height="240" alt="Outside TI Buffet" /></a> <a href="http://www.flickr.com/photos/bonzoesc/1086890686/" title="Photo Sharing"><img src="http://farm2.static.flickr.com/1037/1086890686_e624e6e476_m.jpg" width="180" height="240" alt="Forswitch with Cotton Candy" /></a>
+
+The next morning, we went down to the convention center about 10 minutes before the CTF room would open for setup.  I met with the Korean team, Song of Freedom, but the language barrier made things difficult (I don't know Korean, and their spoken English isn't great yet).  When Invisigoth called team captains up, we all looked at each other and then I decided to go.  We got briefed, took our stuff in, set it up, the game started, and we dove into the image.
+
+<a href="http://www.flickr.com/photos/bonzoesc/1086279123/" title="Photo Sharing"><img src="http://farm2.static.flickr.com/1086/1086279123_96fa383850_m.jpg" width="240" height="180" alt="Song of Freedom" /></a> <a href="http://www.flickr.com/photos/bonzoesc/1000542294/" title="Photo Sharing"><img src="http://farm2.static.flickr.com/1428/1000542294_f6665821a8_m.jpg" width="240" height="180" alt="0x28 thieves" /></a>

@@ -1,0 +1,24 @@
+--- 
+slug: compressing-videos-for-the-k750i-with-visualhub
+updated_at: 2008-03-02 17:56:20 -05:00
+title: Compressing Videos for the k750i with VisualHub
+tags: mac video software
+id: 82
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-06-07 22:34:57 -04:00
+--- 
+[VisualHub](http://www.visualhub.net/) just got released today, and I compressed a short Simpsons clip for it as a test.
+
+To start with, leave VisualHub in iPod mode and fire up the Advanced dialog.  For this NTSC clip, I set the pixel size to 176x132, with a bitrate of 128 kb/s.  I set the audio to mono with the original sampling rate and a blank bitrate.
+
+Save this as k750i NTSC because it's convenient :)
+
+I dragged the video in, hit Start, and waited a few seconds (30 second video, going from WMV to MPEG-4).  Once that was done, I previewed it in QT player, and dropped it on my phone.
+
+![Preview in QT Player](http://www.brycekerley.net/typo/files/homer-compressed.png)
+
+No picture of it on my phone because I can't move my hand fast enough.

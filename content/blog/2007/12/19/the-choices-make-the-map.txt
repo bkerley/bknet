@@ -1,0 +1,38 @@
+--- 
+slug: the-choices-make-the-map
+updated_at: 2008-03-02 18:12:31 -05:00
+title: The Choices Make the Map
+tags: halo games map
+id: 167
+excerpt: Halo 3 has a map editor built in.  It's awesome.  I think I've spent as much time in there as I have in the campaign, and I would almost rather work on a map than play in matchmaking (no 12-year-olds spewing racial slurs in the map editor).
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-12-19 04:30:21 -05:00
+--- 
+The first map I finished, Dueling Dojo, was a tiny room with four spawn points and no way out, made by walling off the pipe room in High Ground.  There's no tactics or strategy to it; just murderin'
+
+The second one, Contrivance, is the defending base in Last Resort (known as Zanzibar in Halo 2), walled off with a few crates and containers allowing for a few choices in moving out of certain areas.  There's some tactical elements to it, but it really boils down to lots of violence in an atrium.
+
+Whimsy, my third map, is basically Contrivance with a teleport link between two distant parts.  This changes everything, because there's now strategy with regards to fleeing and traversing the teleporter.
+
+With the release of the Foundry map, a more ambitious map, Crucible, became a possible.
+
+<a href="http://www.flickr.com/photos/60492034@N00/2121133723" title="View 'Crucible 1' on Flickr.com"><img src="http://farm3.static.flickr.com/2246/2121133723_c654a45e42.jpg" alt="Crucible 1" border="0" width="500" height="281" /></a>
+
+Most of the original Bungie map can be deleted, and there's no shortage of construction materials.  I kind of wanted a smaller map like my first three, but with enough play area to bring in some more risk/reward factor than my first three maps.
+
+The way I understand it, a deathmatch map is all about choosing an investment.  Blood Gulch and its reincarnations do a good job of this.  If you want to hang out on the sides of the map with a sniper rifle, you're going to get kills, but not as many as if you were on an attention-getting jeep jihad or running for the rocket launcher in the middle.
+
+What happens if the reward isn't necessarily a weapon, but just better visibility and maneuverability?
+
+<a href="http://www.flickr.com/photos/60492034@N00/2121133725" title="View 'Crucible 2' on Flickr.com"><img src="http://farm3.static.flickr.com/2018/2121133725_179cf33da6.jpg" alt="Crucible 2" border="0" width="500" height="281" /></a>
+
+Crucible is fundamentally two parallel planes to move in; ground floor with lots of obstacles and cover, and elevated floor with more visibility and maneuverability.  There's incentives for both areas in normal gameplay, but the top deck really shines in the Golden Gun custom game type (instant-kill pistols, no other guns).  The top deck shines for blasting fools en masse, but you're so exposed and it only takes one golden bullet to knock you down.
+
+<a href="http://www.flickr.com/photos/60492034@N00/2121133753" title="View 'Crucible 3' on Flickr.com"><img src="http://farm3.static.flickr.com/2087/2121133753_a09c8eff89.jpg" alt="Crucible 3" border="0" width="500" height="281" /></a>
+
+It's interesting at least on the same screen, which is about half of my multiplayer.
+
+Maps from this post are in [my file share](http://www.bungie.net/stats/Halo3/FileShare.aspx?gamertag=Dishonest%20Man).

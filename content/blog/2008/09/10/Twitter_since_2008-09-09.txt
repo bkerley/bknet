@@ -1,0 +1,39 @@
+--- 
+slug: Twitter_since_2008-09-09
+updated_at: 2008-09-10 23:03:17 -04:00
+title: Twitter since 2008-09-09
+tags: no tags yet
+id: 177
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-09-10 23:03:16 -04:00
+--- 
+<div class="twitter">
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 19:45:57: </span>
+    <span>@bmf Latin is the most logical language in existence because you can write totally sweet mottos in it.</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 21:27:47: </span>
+    <span>@natetrue do they have to do /everything/ you tell them to?</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 21:28:03: </span>
+    <span>If there is not a drink called the &quot;Publix Tea Party&quot; I am inventing it fyi.</span>
+  </p>
+</div>

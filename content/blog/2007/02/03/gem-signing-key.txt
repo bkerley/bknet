@@ -1,0 +1,36 @@
+--- 
+slug: gem-signing-key
+updated_at: 2008-03-02 18:07:13 -05:00
+title: Gem-signing key
+tags: about rubygems
+id: 139
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-02-03 23:39:34 -05:00
+--- 
+<p>This is the public key/certificate I sign Ruby gems with.  It's bound to <a href="mailto:bkerley@brycekerley.net">bkerley@brycekerley.net</a>, and is usually in a file named bkerley-public_cert.pem</p>
+<pre>
+-----BEGIN CERTIFICATE-----
+MIIDPDCCAiSgAwIBAgIBADANBgkqhkiG9w0BAQUFADBEMRAwDgYDVQQDDAdia2Vy
+bGV5MRswGQYKCZImiZPyLGQBGRYLYnJ5Y2VrZXJsZXkxEzARBgoJkiaJk/IsZAEZ
+FgNuZXQwHhcNMDcwMjAzMjAzNzQ2WhcNMDgwMjAzMjAzNzQ2WjBEMRAwDgYDVQQD
+DAdia2VybGV5MRswGQYKCZImiZPyLGQBGRYLYnJ5Y2VrZXJsZXkxEzARBgoJkiaJ
+k/IsZAEZFgNuZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCXCWYY
+oQUSXonkSEg3bsMSPWwYiibFHvxJVxcnxAR0HtYY3ihOnH6s3+LaC60Qa5dTmVG3
+MkORtm7LN99TM8k2hM1P1eJhyHdxr8d8Lgww6dNZoY8a89gp6I5zCUhkLNLXcVyV
+dBhF+m/mQZrqodtS1UQNZ0gaaAfCEBw+ymk7ULNgOuxh0VywwmXa04y73+ZCQN4g
+9N2mmenmBXvf4ySzPQXGRkznD4+DT8H3WDlX45bKOklsTuPMkirk50x/yuLQpyee
+X6dMkxVxptjrfTd4AoSMYba2YU+RGCcU4biUoPVmsmXyNLvcLBwQnfAjmkd2ESYq
+YzMWepwjedNr8hNHAgMBAAGjOTA3MAkGA1UdEwQCMAAwCwYDVR0PBAQDAgSwMB0G
+A1UdDgQWBBRImfX5pqtStkvfEEJ/4MyVLy8mTTANBgkqhkiG9w0BAQUFAAOCAQEA
+gwP2ItVfPM80S6yR+b+rFlMVFVOvm+uZyYDyJUA8EFmbdkbHoSUvUpRBYmWCfglC
+d+JjumoRplylrau9sK6tbsbfE2Lr7H4A6KO/jQJs0uKBCXGKCXkRvu2b1BTYHeOV
+sWsZCTQtADRcJRve9yRJayM8YEkqzdwHnzvyPVShV8OzepbxCGkT/o/8++OYVgAH
+OY5Lj1IDyG55Hb8Iw3gdPzQQATySNG6BFkcUFbWHsEBGIcZjiltEz661msnbaJj6
++nino5jISVrYg5xJYSE92FTDGqNzTYedfNF2Cb+aKlY6pioSjk5XNILq+ksqAKJF
+YEW6Ol4DMyXi5G4pZ297gw==
+-----END CERTIFICATE-----
+</pre>

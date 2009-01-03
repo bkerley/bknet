@@ -1,0 +1,16 @@
+--- 
+slug: workin
+updated_at: 2008-03-02 18:06:06 -05:00
+title: Workin'
+tags: e/n work
+id: 133
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-01-10 02:05:30 -05:00
+--- 
+I'm a workin' stiff now – 40 hours/week, enough money to get me off a college student budget, and useful experience so far.  Also there's travel to northern (and therefore colder) places starting pretty much right away, so I get to see snow for the first time in a few years perhaps.
+
+I've got some other stuff to show off, but there's other posts for that.

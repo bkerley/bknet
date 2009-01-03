@@ -1,0 +1,31 @@
+--- 
+slug: The_Tipping_Point
+updated_at: 2008-08-04 21:02:35 -04:00
+title: The Tipping Point
+tags: programming
+id: 175
+excerpt: |-
+  Many web development tools and frameworks provide plugin or other dependency-adding interfaces.  Using these is a tricky interplay between two undesirable extremes:
+  
+  * Building your application entirely from prefabricated components and the barest minimum of glue code, so you're on the hook with a dozen or so different plugins to keep their extensions and hacks in order.
+  * Reinventing the wheel at every chance you get, producing hundreds of lines (in Rails that's actually a lot) of unnecessary code that requires new tests and maintenance.
+  
+  "Well, Bryce, there's obviously the titular "Tipping Point," where you pull in plugins as needed but keep your own code working, right?"
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-08-04 21:02:35 -04:00
+--- 
+There's not.
+
+Unless you've got a peculiar [one-shot application](http://www.brycekerley.net/chronicle/post/usf-ctf-2007) or some kind of planned obsolescence, *your software will outlive at least one plugin.*  This is inevitable because the majority of all plugins are in a state of open-source disrepair.  Somebody builds one into their app, extracts it (or builds it in pre-extracted form), publishes it, and either forgets about it or lets it age along with their app.
+
+The only way to save your dependencies is to take ownership.  When you add a plugin to your project, keep these in mind:
+
+* You **will** end up maintaining this code.  You didn't write it, but in six months when you upgrade Rails, you'll be on the hook for maintenance.  Waiting for the author to wake up and fix it doesn't work on your schedule.  Pestering the author for fixes doesn't work on theirs.
+* Since you're on the hook for maintenance, you should take a few minutes to learn how the thing works.  Read their test cases.  If they don't have tests, write some or throw it away.
+* If you don't like the way the code smells, patch it.  Excessive metaprogramming?  Straighten it out.  Excessive repetition?  Meta it up.
+* When you make improvements, share them.  Make acquaintances with other people that use the code.
+
+I've found this openness useful, and I'm pretty sure most other people do too.  Find out where others working in your environment host code, chat, &c. so you can be a part of it.

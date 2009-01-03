@@ -1,0 +1,27 @@
+--- 
+slug: on-embedded-programming
+updated_at: 2008-03-02 17:36:52 -05:00
+title: On Embedded Programming
+tags: programming hardware
+id: 4
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-01-15 17:25:00 -05:00
+--- 
+My brother is building a robot that will navigate around areas on its own, eventually being able to map out its surroundings in memory.  To achieve this, he's using a Brainstem robot controller hooked to a PocketPC 2003 machine in an autonomous unit.
+
+The problems come when setting up the MS eMbedded Visual C++ environment to be able to compile programs that both run on the PocketPC and use the Brainstem libraries (for the correct CPU and everything).  The whole EVC++ program has such a sad and terrible interface that I can't make heads or tails of it, especially with the subpar Brainstem documentation.
+
+Not trying to sound smarmy here, but when there's no easy "just let me compile it myself I want it to be a console program and not some retarded wizard's robe and hat garbage" option, it scares people away!
+
+Just starting a project, here's what the source file looks like: 
+<img src="/textpattern/images/15.png" title="MS Embedded C   example" alt="MS Embedded C example" />
+
+OK, that's a huge mess.  It's workable, once we set up the includes.
+
+Let's see, nope, there's no easy to do that either.
+
+So I did what any older brother would do: sent my brother to somebody who might possibly know. :)

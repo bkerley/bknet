@@ -1,0 +1,27 @@
+--- 
+slug: gems
+updated_at: 2008-03-02 18:08:51 -05:00
+title: Gems
+tags: carpark httpal programming rubygems ruby
+id: 140
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-02-03 23:42:10 -05:00
+--- 
+I learned how to make Gems today.  So far, I've made them for [carpark](http://brycekerley.net/mp/2006/11/8/the-carpark) and [HTTPal](http://brycekerley.net/mp/2007/1/11/httpal-ruby-http-client).
+
+These gems are signed with my [gem-signing key ](http://brycekerley.net/mp/about/gem-signing-key), which has never been signed by anybody to the best of my knowledge.
+
+Install these with:
+<pre>
+gem install HTTPal-16.gem
+gem install Carpark-16.gem
+</pre>
+
+[HTTPal-16.gem](http://brycekerley.net/assets/2007/2/3/HTTPal-16.gem)
+[Carpark-16.gem](http://brycekerley.net/assets/2007/2/3/Carpark-16.gem)
+
+Hopefully these will be on Rubyforge soon, and get updated more often, but until then, here they are.

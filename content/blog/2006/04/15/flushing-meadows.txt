@@ -1,0 +1,20 @@
+--- 
+slug: flushing-meadows
+updated_at: 2008-03-02 17:54:21 -05:00
+title: Flushing Meadows
+tags: nerf programming school
+id: 74
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-04-15 22:36:00 -04:00
+--- 
+Flushing Meadows is the final project my roommate and I are working on for our database class.  It's a database of restrooms and water fountains on campus, with ratings and comments.
+
+The goal is to be cooler than all the other groups' projects.
+
+[Flushing Meadows screenshot](http://www.brycekerley.net/typo/files/flushingmeadows-early.png)
+
+Also a Maverick Magnet update: part of my chair is ferrous enough to stick to, so I don't need that magnet taped to the upholstery.  The plastic in the handle of the toy is too thick to have it stick to my chair with the magnet installed inside.

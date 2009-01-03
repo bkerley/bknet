@@ -1,0 +1,42 @@
+--- 
+slug: mephisto-tag-cloud
+updated_at: 2008-03-02 18:06:27 -05:00
+title: Mephisto Tag Cloud
+tags: mephisto programming
+id: 135
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-01-15 15:51:13 -05:00
+--- 
+Back when I used [Typo](http://typosphere.org/), I enjoyed having the Tags sidebar module available to show that I only really write about three subjects on any regular basis.  However, while [Mephisto](http://mephistoblog.com/) did come with tag support, I couldn't make them different sizes, forcing users to actually read tiny numbers if they wanted to know which categories were bigger.  So, (since you know how I roll), I had to figure out how to do it.
+
+![Grapher showing logarithm function](http://brycekerley.net/mp/assets/2007/1/15/screenshot_1-15-2007_1-15-2007_10-47-0_10-47-0.png)
+
+Basically, a tag cloud is a collection of tags sized by their relative popularity.  My favorite function for sizing them is the logarithm, because it doesn't let big tags get ridiculously far ahead of smaller ones.  In particular, I'm using y=(8* ln(x)) + 8 to calculate font size in points (y) from number of articles (x).  The smallest a tag can be (with a single article) is 8pt, and at 100 articles it only gets up to 44pt, which is perfectly reasonable for my number of articles.  Fortunately, the multiplier is tweakable.
+
+# Usage
+Here's my tag.liquid:
+<pre class="textmate-source sunburst"><span class="text text_html text_html_liquid"><span class="source source_liquid source_liquid_tags source_liquid_tags_embedded source_liquid_tags_embedded_html">{% <span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">include</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>shared<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span> %}</span>
+
+      <span class="meta meta_tag meta_tag_block meta_tag_block_any meta_tag_block_any_html"><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&lt;</span><span class="entity entity_name entity_name_tag entity_name_tag_block entity_name_tag_block_any entity_name_tag_block_any_html">h2</span><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&gt;</span></span>All Tags<span class="meta meta_tag meta_tag_block meta_tag_block_any meta_tag_block_any_html"><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&lt;/</span><span class="entity entity_name entity_name_tag entity_name_tag_block entity_name_tag_block_any entity_name_tag_block_any_html">h2</span><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&gt;</span></span>
+      <span class="meta meta_tag meta_tag_block meta_tag_block_any meta_tag_block_any_html"><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&lt;</span><span class="entity entity_name entity_name_tag entity_name_tag_block entity_name_tag_block_any entity_name_tag_block_any_html">ul</span> <span class="entity entity_other entity_other_attribute-name entity_other_attribute-name_html">class</span>=<span class="string string_quoted string_quoted_double string_quoted_double_html"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_html">"</span>monthblock<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_html">"</span></span><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&gt;</span></span>
+        <span class="source source_liquid source_liquid_tags source_liquid_tags_embedded source_liquid_tags_embedded_html">{% <span class="keyword keyword_control keyword_control_ruby">for</span> tag <span class="keyword keyword_control keyword_control_ruby">in</span> site.tags %}</span><span class="meta meta_tag meta_tag_inline meta_tag_inline_any meta_tag_inline_any_html"><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&lt;</span><span class="entity entity_name entity_name_tag entity_name_tag_inline entity_name_tag_inline_any entity_name_tag_inline_any_html">li</span> <span class="entity entity_other entity_other_attribute-name entity_other_attribute-name_html">style</span>=<span class="string string_quoted string_quoted_double string_quoted_double_html"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_html">"</span>font-size: {{tag | tagged_articles | calc_tag_weight}}pt<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_html">"</span></span><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&gt;</span></span><span class="source source_liquid source_liquid_output source_liquid_output_embedded source_liquid_output_embedded_html">{{<span class="meta meta_syntax meta_syntax_ruby meta_syntax_ruby_start-block"> </span>tag | link_to_tag  }}</span><span class="meta meta_tag meta_tag_inline meta_tag_inline_any meta_tag_inline_any_html"><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&lt;/</span><span class="entity entity_name entity_name_tag entity_name_tag_inline entity_name_tag_inline_any entity_name_tag_inline_any_html">li</span><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&gt;</span></span>
+<span class="source source_liquid source_liquid_tags source_liquid_tags_embedded source_liquid_tags_embedded_html">{% endfor %}</span>
+      <span class="meta meta_tag meta_tag_block meta_tag_block_any meta_tag_block_any_html"><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&lt;/</span><span class="entity entity_name entity_name_tag entity_name_tag_block entity_name_tag_block_any entity_name_tag_block_any_html">ul</span><span class="punctuation punctuation_definition punctuation_definition_tag punctuation_definition_tag_html">&gt;</span></span></span></pre>
+(the weirdly long line is so that my HTML comes out looking nice)
+
+# Getting the plugin
+
+Mephisto supports installing (and keeping updated) plugins right from svn, which is pretty sweet.
+
+I highly recommend the trunk release - there's not much there to break. (famous last words)
+
+    #in your mephisto root
+    script/plugin install -x http://brycekerley.net/svn/mephisto_tag_cloud/trunk/
+
+# <s>Whining about</s> Reporting bugs
+
+Send bug reports to [bkerley@brycekerley.net](mailto:bkerley@brycekerley.net) after checking [Trac](http://brycekerley.net/trac/trac.fcgi/report/1) to see if they're fixed.  Ticket submission's not on Trac because it's a spam magnet and I don't feel like putting up with it.

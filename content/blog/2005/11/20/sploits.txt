@@ -1,0 +1,14 @@
+--- 
+slug: sploits
+updated_at: 2008-03-02 17:44:24 -05:00
+title: SPLOITS
+tags: hacking programming school
+id: 41
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-11-20 23:43:00 -05:00
+--- 
+Yesterday I finished my metasploit project for Computer Security.  It's basically a Perl implementation of <a href="http://milw0rm.org/id.php?id=1270">http://milw0rm.org/id.php?id=1270</a> that uses the msf payload instead of simply prompting for a command (in case you want to send a remote shell back to yourself or something).  It was pretty easy, so I might try it with a similar PHP-Nuke exploit.

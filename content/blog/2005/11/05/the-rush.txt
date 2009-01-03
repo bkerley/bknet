@@ -1,0 +1,18 @@
+--- 
+slug: the-rush
+updated_at: 2008-03-02 17:43:51 -05:00
+title: The Rush
+tags: laffo school
+id: 38
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-11-05 18:13:00 -05:00
+--- 
+I'm kind of laughing to myself about all the poor kids in Data Structures this semester, working hard on their project due next week.
+
+Then I realize I need to work on two projects of my own.
+
+<a href="http://www.weaponofmassdisruption.com/?p=18">Watch them suffer, wahaha!</a>

@@ -1,0 +1,30 @@
+--- 
+slug: new-jersey
+updated_at: 2008-03-02 18:06:41 -05:00
+title: New Jersey
+tags: picture travel work
+id: 136
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-01-20 15:38:07 -05:00
+--- 
+Last week I went on my first business trip ever (not bad for the second week at work), and my first trip anywhere on the Eastern Seaboard north of DC.
+
+We left on Tuesday morning, when temperatures in Tampa had begun to climb towards the daily high of 80&deg;F.  (Tampa weather data from [USF Meteorology](http://www.weathercenter.usf.edu/weatherbrowse/))  Getting out of the Newark airport, it was much cooler, with the temperature at 39&deg;F and dropping for the rest of the day.  It wasn't snowy or rainy out, so the scenery was pretty visible for the drive to our destination, including a few brief glimpses of Manhattan while still in the airport area.
+
+The next morning (Wednesday) it was 17&deg;F with a nice breeze when we left the hotel for more work.  Leaving the building at the beginning of the day was like "walking into a freezer," (not my quote), which felt even more cold and bitter at the end of the day, again after dark.
+
+We left the grind of work on Thursday after having seen occasional snow through windows to a freezing rainy mess, and after hanging out at the hotel for an online course, we hit the road for Atlantic City.  Unfortunately, the weather in AC was still crummy, so we pretty much stayed in Harrah's for the whole time we were there.  There was good food, nice rooms (way better than the Riv's), and as I understand the Blackjack tables were pretty happening (still haven't gone through my first pay cycle, so no money to gamble away here).
+
+The next morning, on the Turnpike heading back north, we finally saw a decent amount of snow:
+
+<a href="http://www.flickr.com/photos/bonzoesc/363431793/" title="Photo Sharing"><img src="http://farm1.static.flickr.com/145/363431793_d26f8dff28.jpg" width="375" height="500" alt="New Jersey Sunrise" /></a>
+
+After some time at work (and lunch), we headed for the airport, and the last few distinct things I saw of New Jersey were chemical plants and a container terminal.
+
+After landing in Tampa, the first thing I noticed in the distance from the airport window was palm trees and Raymond James Stadium.  Also, it was warm enough to run the air conditioner.
+
+Next week: Massachusetts!

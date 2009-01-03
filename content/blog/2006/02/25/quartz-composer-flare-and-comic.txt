@@ -1,0 +1,24 @@
+--- 
+slug: quartz-composer-flare-and-comic
+updated_at: 2008-03-02 17:52:01 -05:00
+title: Quartz Composer - Flare and Comic
+tags: mac programming quartz shader
+id: 65
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-02-25 22:20:00 -05:00
+--- 
+I started messing around with Quartz Composer after last night's *awesome* BSG.  For those not familiar with the tool (included with the Xcode Tools distribution for Mac OS X 10.4), it's a visual tool for writing shaders:
+
+[![440kb PNG](/typo/files/quartzcomposer-thumb.png)](/typo/files/quartzcomposer.png)
+
+From what I can tell, it traverses through all the different patches to produce a small and optimized shader, so you can be reasonably free with many of the patches that'll end up flattened and optimized out.  The compositions can then be used as screen savers, transitions or effects in iMovie, and other things I haven't bothered researching.
+
+So, just messing around, I came up with a couple photo screen savers.  Since they're only really appreciable in motion (unlike my [HLSL shaders](/typo/articles/tag/hlsl)), I won't post some ambiguous screenshots.
+
+The first one, Flare, transitions between pictures by briefly overexposing the incoming one, just like a camera flash, while fading its alpha to fully opaque.  The second one, Comic (a single frame of which is hidden in the screenshot above), looks like you're zooming in to a black and white comic book while the picture fades in, at first behind the comic, and then finally overcoming it and coming through in pretty color.
+
+Enjoy and mess with them: [20kb ZIP](/typo/files/Flare_and_Comic.zip).  I'm putting them under the GPL so you can mess around with them.

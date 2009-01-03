@@ -1,0 +1,16 @@
+--- 
+slug: note-to-self
+updated_at: 2008-03-02 17:39:28 -05:00
+title: Note to Self
+tags: games
+id: 19
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-08-26 00:21:00 -04:00
+--- 
+When trying to fill out spraypaints or the like in a game against an online map ( "in this case, Los Santos spraypaint tags in GTA: San Andreas":http://hem.bredband.net/708145/tags.html ), it's helpful to make a list of the ones you do before getting down to the last three and realizing you can't remember which ones you haven't done.
+
+"Excel was made for this, yes?":http://brycekerley.net/textpattern/images/34.png

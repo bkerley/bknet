@@ -1,0 +1,20 @@
+--- 
+slug: mongrel-fastcgi
+updated_at: 2008-03-02 17:58:25 -05:00
+title: Mongrel > FastCGI
+tags: programming rails ruby software
+id: 93
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-08-21 17:45:17 -04:00
+--- 
+At work last week I was getting the big weatherbrowse rails app ready for production, since the mess of PHP and flat files was unworkable.  As it is right now, there's about 75,000 of these one- or two-line files sitting in three folders, containing about 100,000 records.  It's a pain to sift through them, to wrangle them, to make them useful, even if you're scripting it.
+
+So, in <500 lines of code, all that functionality's been moved to SQL and Rails, and I can actually write reports that produce useful data and can export to CSV for excel.
+
+When it came time to switch to production and import that stuff, I found a few outstanding bugs.  Since it was a pain to bounce all the fcgi slaves (it doesn't even get that much traffic), so I just went ahead and moved that site to [Mongrel](http://mongrel.rubyforge.org) and Apache's mod_proxy.
+
+It was pretty easy to configure once I got the /weatherbrowse/ prefix working, and got mongrel_cluster plugged into init.d, and I'm probably not going to use fastCGI on anything else I have that much control over.

@@ -1,0 +1,18 @@
+--- 
+slug: pooped
+updated_at: 2008-03-02 17:56:28 -05:00
+title: pooped
+tags: hacking programming
+id: 83
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-06-14 16:12:50 -04:00
+--- 
+Still haven't completely recovered from CTF this weekend, although I am starting to feel better about the whole deal.  Although we might not get into Defcon CTF (depending on if one more team above us drops), I'm figuring that since we didn't land any of the exploits against binaries during the competition, it's probably deserved.
+
+During the competition, I realized how much more I like Ruby than other languages I know (and some I don't, like Python).  Had to write a program to bust up an OGG file into different segments when nothing else could, and it wasn't too bad.  The HTTP tampering program I wrote was pretty useful too.
+
+Look forward to a miniature project site for this stuff this weekend maybe.

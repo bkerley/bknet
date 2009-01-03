@@ -1,0 +1,16 @@
+--- 
+slug: monolingual
+updated_at: 2008-03-02 18:09:54 -05:00
+title: Monolingual
+tags: programming
+id: 153
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-05-31 00:33:07 -04:00
+--- 
+Lately I've been feeling kind of monolingual, having pretty much abandoned other languages in favor of Ruby in the past few months.  Part of it's that I haven't had anything really to work on in other languages, and I've also just been spinning my wheels trying to choose what to work on.
+
+One thing that I've been working on every now and then has been a module player in Objective C and with the Cocoa GUI.  I haven't got much progress on it beyond playing files, but it's something I can work on when not preparing for a competition in short order.

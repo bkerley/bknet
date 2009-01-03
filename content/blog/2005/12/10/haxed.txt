@@ -1,0 +1,27 @@
+--- 
+slug: haxed
+updated_at: 2008-03-02 17:45:03 -05:00
+title: Haxed
+tags: ctf hacking school
+id: 45
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-12-10 22:39:00 -05:00
+--- 
+Yesterday was the iCTF game.  Needless to say, it was crazy, intense, and lots of things went wrong.  However, much to our suprise, we did pretty well for a bunch of rookies: (<a href="http://www.cs.ucsb.edu/~vigna/CTF/final_score.html">We're WCSC</a>).
+
+It was quite different than what I expected.  I thought that teams would have about three flags on their machine at a time, and get new ones every half hour.  However, it was more like ten at a time, with new ones every minute or so.  In order to actually perform like that, we needed scripts to do the work.
+
+I made lots of tiny perl scripts, and chained them together.  At one point my command line was:
+<blockquote>perl cprog_can_suck_a_dick.pl | perl flagchew.pl | grep MTN | php urlencode.php| perl flagsub.pl</blockquote>
+Breaking that down, the first perl script (named because it was exploiting a C program called cprog that included inline ASM and called a perl script to do some dirty work) fed an enemy httpd an URL causing cprog to spit out the most recent flag stored in a particular place on their machine.  flagchew.pl put each flag on a different line, the grep separated out the flags from the chaff, urlencode.php worked as advertised, and flagsub.pl actually did the submission.
+
+<a href="http://www.net.usf.edu/gallery/Hacky05/show.php?name=2005-12-09-0134-web.jpg">Can this work?</a>
+
+<a href="http://www.net.usf.edu/gallery/Hacky05/show.php?name=2005-12-09-0136-web.jpg">It works!</a>
+
+We did get best logo:
+<img src="/textpattern/images/40.png" alt="WCSC logo" style="height:50px;width:50px" />

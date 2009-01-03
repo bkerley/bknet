@@ -1,0 +1,20 @@
+--- 
+slug: interesting
+updated_at: 2008-03-02 17:52:59 -05:00
+title: Interesting
+tags: school city
+id: 70
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-03-23 23:59:00 -05:00
+--- 
+Finally feels like I'm over the hump for the semester.  Midterms for most of my classes are over (the term paper in Ethics isn't due for another two weeks).  My big database project is coming along well (using Rails because it's less work than JSP), just got the third OS project (teaming up with Amin this time), and so on.
+
+Read a neat article today about modern suburbs.  Talks about some of the things I've been worried about since I've been in my urban planning class:
+
+>It's a desert and it gets very hot out there. Daytime temperatures are well over 100° for several months of the year. Our audio from NPR (cited above) notes that it is a heat island and in last few decades night time temperatures have risen 11° fahrenheit. In addition, it is expected that soon night time temperatures will fail to get below 100° during the warmest months.
+
+[Article on problems with suburban development](http://www.theoildrum.com/story/2006/3/18/174032/731)

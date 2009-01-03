@@ -1,0 +1,42 @@
+--- 
+slug: ctf-quals
+updated_at: 2008-03-02 18:10:07 -05:00
+title: CTF Quals
+tags: ctf hacking
+id: 154
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-06-05 02:22:00 -04:00
+--- 
+Finished quals (as [[0x28] Thieves](http://0x28.net)) not much more than 24 hours ago (Sunday night), and I've had some time to think about what happened, what we ruled at, and what kind of sucked for us.
+
+First off [final scores](http://kenshoto.com/ctf07/quals_final.html) and [raw data](http://kenshoto.com/ctf07/quals_raw.txt).
+
+## I am proud of:
+
+	Trivia 100 2007-06-02 03:22:39
+	Trivia 200 2007-06-02 03:22:47
+	Trivia 400 2007-06-02 03:23:50
+	Trivia 300 2007-06-02 03:28:10
+
+We rule at google.  The fifth trivia (single x86 instruction binary logarithm) was harder (bsrl).
+
+	Web Hacking 500 2007-06-02 23:13:31
+
+This one was a brick wall until I noticed that the cookie dbh => 2130706433 had a couple interesting representations:
+
+	0 :> c = 2130706433
+	     # => 2130706433
+	0 :> c.to_s(8)
+	     # => "17700000001"
+	0 :> c.to_s(16)
+	     # => "7f000001"
+
+Setting the cookie to the binary-encoded representation of one of our IP addresses showed an incoming connection on 3306, home to MySQL.  Configuring our box to respond to their SQL requests verifying our admin status got us an admin session on the site.  Switching the dbh cookie back while keeping the session id allowed us to see the privileged information and answer this one before anybody else did, controlling the board.
+
+## Not so proud of:
+
+Yeah I don't know anything about doing a buffer overflow on Mac and jumping into libc to do stuff.  That's something I'm definitely practicing on before Cipher 3 next month and Defcon CTF in August.

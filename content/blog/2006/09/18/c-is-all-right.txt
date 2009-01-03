@@ -1,0 +1,16 @@
+--- 
+slug: c-is-all-right
+updated_at: 2008-03-02 17:59:43 -05:00
+title: C is all right
+tags: c programming
+id: 98
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-09-18 21:27:21 -04:00
+--- 
+Up until this weekend, it had been a while since I'd written any straight-up C, pretty much because I'm done with C-only classes, and it's not terribly useful for the web stuff I do at work.  However, for this slicin'-up-JPEG stuff for my senior project, it's pretty nice, since the fread/fseek stuff is flat out *righteous* for rooting around in a binary for metadata.
+
+I suppose I *could* do it in Ruby, but I'd end up reading a bunch of bytes I wouldn't need, slowin' it down (the slow interpreter wouldn't really be an issue, since it's all IO code anyways).  Since the application can't have a bunch of installation overhead, compiled code is probably better for the situation anyways.

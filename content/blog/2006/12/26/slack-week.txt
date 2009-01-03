@@ -1,0 +1,14 @@
+--- 
+slug: slack-week
+updated_at: 2008-03-02 18:05:03 -05:00
+title: Slack Week
+tags: e/n
+id: 127
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-12-26 19:30:22 -05:00
+--- 
+The week between Christmas and New Year's is always pretty slack.  I'll probably drive across the state for a couple days in Tampa before the graduation party over in Satellite Beach, but until then I'll probably read some book, help a friend of mine move across town (out of his parents' house, and maybe work a bit on a Ruby HTTP library that lets me write less code than Net::HTTP makes me, but we'll see how that comes around soon enough.

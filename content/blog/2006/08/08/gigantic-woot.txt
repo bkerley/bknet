@@ -1,0 +1,33 @@
+--- 
+slug: gigantic-woot
+updated_at: 2008-03-02 18:11:07 -05:00
+title: Gigantic Woot
+tags: hacking laffo music picture defcon
+id: 92
+excerpt: Defcon was everything that it was played up to be and more.  There were a lot of thatguys, and I felt that I stood out by not wearing a black t-shirt with a slogan and jeans in the Vegas heat, but over all I met a lot of cool people and did some fun stuff.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-08-08 16:49:00 -04:00
+--- 
+aCTF was great, we got the first score and stayed on top for most of the game (although at one point we weren't sure, as the team 'sudoers' had a higher delta than us and we were just spinning our wheels), and when the game ended on Saturday we were still in first.
+
+During odd breaks to relieve boredom (pwning is boring?), we met some of the people in real CTF, including Dustin's favorite hacker ever (on the right):
+
+<a href="http://www.flickr.com/photos/bonzoesc/210356611/" title="Photo Sharing"><img src="http://static.flickr.com/79/210356611_1e0f0e3100.jpg" width="500" height="375" alt="Creepy Stalker Dustin" /></a>
+
+(side note - my what a great shirt Dustin has)
+
+When the convention wasn't up, we pretty much went sightseeing farther south on the strip (north of the Riv is basically wasteland), including some really over-the-top casinos like the Bellagio and Caesars Palace.
+
+<a href="http://www.flickr.com/photos/bonzoesc/209475740/" title="Photo Sharing"><img src="http://static.flickr.com/76/209475740_667e3c59a1.jpg" width="500" height="375" alt="Wow Model" /></a>
+
+Fun hacks from Defcon that I wish I was responsible for:
+* Taking over Kenshoto's Asterisk server (being used for submitting flags in real CTF) with DTMF.
+* Stealing an admin account for a university from the most hostile network in the world.
+* Other things I'm forgetting right now.
+
+So the verdict is that Defcon is awesome and I'm going again next year.
+
+The other verdict is that listening to Philip Glass on the redeye back to Tampa makes you sleep.

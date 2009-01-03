@@ -1,0 +1,26 @@
+--- 
+slug: magnets-are-fun
+updated_at: 2008-03-02 17:54:12 -05:00
+title: Magnets are Fun
+tags: hacking nerf picture
+id: 73
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-04-15 13:30:00 -04:00
+--- 
+Today, while working on the final project for my database class, I realized that I could use the hard drive magnets stuck to my fridge for more productive purposes than having a 6"x3"x2" cardboard-box magnet.
+
+First, I taped a magnet to my Nerf Maverick:
+
+![Magnet on Nerf Maverick](http://brycekerley.net/typo/files/1-maverickmagnet.jpg)
+
+After that, I taped a second magnet to my chair, originally experimenting with different separators between magnet and tape to reduce attraction.  This wasn't really necessary as it turns out - the unseparated magnet is just barely attractive enough.
+
+Finally:
+
+![Maverick on Chair](http://brycekerley.net/typo/files/3-maverickchair.jpg)
+
+Instead of rooting down on my desk shelf grasping for the handle, I can just yank it right off and aim out my door in the blink of an eye.

@@ -1,0 +1,16 @@
+--- 
+slug: i-wrote-a-module-player-for-my-mac
+updated_at: 2008-03-02 17:41:40 -05:00
+title: I wrote a module player for my Mac
+tags: programming music mac software
+id: 8
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-03-22 22:02:00 -05:00
+--- 
+I was chilling around last week, and I wanted to listen to some module music (2nd Reality by Future Crew and some songs from Unreal by Epic Games).  Since there wasn't any module player on Mac that could play .umx files, I had to write a little player using libmikmod with the smarts to detect and unpack module music from Unreal packages.
+
+It was a fun learning experience.  I'll probably release it in a week or so.  It's console based, but it also doesn't suck the whole CPU of my 300mhz G3 Powerbook.

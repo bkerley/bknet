@@ -1,0 +1,18 @@
+--- 
+slug: foodbloggin-featured-in-some-newspaper
+updated_at: 2008-03-02 17:55:06 -05:00
+title: Foodbloggin' featured in some newspaper
+tags: blog food
+id: 78
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-05-03 21:14:00 -04:00
+--- 
+It's apparently in some Chicago newspaper's side project: [see it here](http://www.beepcentral.com/story.aspx?story=2764).
+
+I totally have forgotten to do it recently, something I blame totally on exams.  Either way spaghetti with corned beef sounds quite... odd.
+
+[Digg link](http://digg.com/links/Open_wide_Local_site_shows_what_people_eat_every_day)

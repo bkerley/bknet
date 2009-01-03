@@ -1,0 +1,63 @@
+--- 
+slug: DEFCON_16
+updated_at: 2008-08-26 23:35:41 -04:00
+title: DEFCON 16
+tags: defcon hacking programming badge
+id: 176
+excerpt: |-
+  **DEFCON, THE FINAL FRONTIER**
+  
+  <a href="http://www.flickr.com/photos/60492034@N00/2771768363" title="View 'Quality films at Fry's' on Flickr.com"><img src="http://farm4.static.flickr.com/3029/2771768363_163a3046d1_m.jpg" alt="Quality films at Fry's" border="0" width="180" height="240" /></a>
+  
+  Yeah, it was almost three weeks ago, but this year's DEFCON still rings strongly in my memory.
+  
+  I didn't really go to Vegas with any plans, except for hanging out with Tampa & Melbourne friends, and maybe rambling about some Prolog stuff I had been playing with at work the days prior.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-08-26 23:35:41 -04:00
+--- 
+# Thursday
+
+Of course, these things never go without a hitch.  JetBoy apparently crippled himself while getting off a bus at TPA, and badge supplies were limited by customs delays.  Somehow, we all ended up at the Riviera Thursday afternoon, with real badges and comically tall margaritas.  With badges in hand, and the crazy idea to trigger bathroom faucets and toilets with them, we planned a trip to that Western Mecca of electronic crap, Fry's.
+
+<a href="http://www.flickr.com/photos/60492034@N00/2772615820" title="View 'Sterling at Fry's' on Flickr.com"><img src="http://farm3.static.flickr.com/2024/2772615820_54fdeed829_m.jpg" alt="Sterling at Fry's" border="0" width="240" height="180" /></a>
+
+We still enjoyed some setbacks; Fry's didn't sell the infrared LEDs we wanted to make our badges of bathroom balderdash, so we just bought general breakin' stuff tools: butane soldering iron, cables, and I was thinking about getting a notebook hard drive (but didn't).  Getting back to the strip, Jymbolya and other dudes on the late flight from Orlando were getting in, so we hit the food court after about half an hour of indecision.
+
+# Friday
+
+Most of the Tampa/Ex-Tampa gang waited for Grandma Riv to hurry up and let us into the buffet, followed with a discussion about how the Riviera could probably double their margins on the buffet if they had a cashier that could perform more than one transaction every five minutes.
+
+We wandered around the floor for a while, meeting up with friends stuck in the contest areas (RacerX, Psifertex, Vyrus), and listened to a couple talks.  After a few hours of that, we stalked out into the sun for a walk to the TI buffet (a proud tradition!)
+
+<a href="http://www.flickr.com/photos/60492034@N00/2772616488" title="View 'Vegas Cards' on Flickr.com"><img src="http://farm4.static.flickr.com/3157/2772616488_68104e3f28_m.jpg" alt="Vegas Cards" border="0" width="240" height="180" /></a>
+
+Here's where things get interesting.  Over sushi, prime rib, and incredibly slow drink service (WTF Treasure Island??!!), we started trying to figure out how to figure out how to trigger faucets.
+
+After hitting the hotel, we started setting up a toolchain to flash badges, although it was a pain in the ass since nobody had the .NET framework installed in their Windows VMs (also: nobody had Windows native).  Jymbolya and Critta were able to solder ports on to badges, though.
+
+The rest of the night is pretty straightforward: we hacked together an oscilloscope, read an Apple remote's codes on a whim, and flashed our badges.
+
+# Saturday
+
+After breakfast at Circus Circus (as seen in GTA San Andreas as "The Clown's Pocket"), we hit the floor with amped-up super-badges and phones set to record.
+
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/gPQHFCoAvgE&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/gPQHFCoAvgE&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+
+After we filmed and edited that, we soldered more badges in exchange for beer (as seen in the video), went down to the Hardware Hacking Village for more soldering (and beer), rocked some conference food (always sucky), and did a couple of the parties (Mitch Mitchem in the chill out room, and some free beer party I don't remember in one of the penthouses).
+
+# Sunday
+
+Got up pretty late (don't remember going to bed).  Jymbolya, Sterling, and I wandered around the strip since we didn't want to eat anywhere close, found ourselves at the Wynn sunday brunch buffet, and upon leaving, found out that Critta got the boot from the Riviera after the party.  Hitched a ride back to the Riv (with Critta playing it low-key) with an ex-coworker, and showed off our badges to Kingpin in the HHV.  After that, I caught Brenno De Winter's subway card speech ([humorless dicks](http://www.mbta.com/) cancelled the MIT one), and the last-minute BGP talk right before closing ceremonies.
+
+The Front Row Badge got us second in badge hacking, which is good enough, so we celebrated by trying to get Korean BBQ (40 minute waiting list), then Wynn buffet (2 hour line), and finally Stripburger (not what you think it is), which had good burgers, reasonably comfortable outdoor seating, and cheap PBR on tap.
+
+<a href="http://www.flickr.com/photos/60492034@N00/2771770089" title="View 'Critta at 7-Eleven' on Flickr.com"><img src="http://farm4.static.flickr.com/3179/2771770089_42633691f4_m.jpg" alt="Critta at 7-Eleven" border="0" width="180" height="240" /></a>
+
+Stumbling back to the Riviera, we bought 40s and an incognito hat for Critta at 7-Eleven, and ended up in my room talking about hacking and listening to [module music](https://github.com/bkerley/onebuttonmod/tree).
+
+# Monday
+
+Flew home.

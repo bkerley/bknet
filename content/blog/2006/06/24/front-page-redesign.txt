@@ -1,0 +1,18 @@
+--- 
+slug: front-page-redesign
+updated_at: 2008-03-02 17:57:15 -05:00
+title: Front Page Redesign
+tags: hacking nodebox school
+id: 86
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-06-24 14:15:04 -04:00
+--- 
+I just changed the front page of this site with a picture I whipped up with [NodeBox](http://nodebox.net/).  Fun program, although it hasn't changed my opinion on Python vs. Ruby.
+
+My Communication for Engineers class finished up this week.  Not a bad class, although I already am starting to dread PowerPoint stuff with ugly templates and little content.  It's a good thing I picked an interesting topic (got a pretty swank grade for that tone).
+
+On the security front, looks like MS still prefers obscurity, and would probably prefer if the security industry was run by businesses and not independent researchers; [they are disappointed with the Metasploit team](http://metasploit.blogspot.com/2006/06/microsoft-is-disappointed.html).

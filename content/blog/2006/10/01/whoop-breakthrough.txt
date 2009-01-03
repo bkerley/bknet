@@ -1,0 +1,30 @@
+--- 
+slug: whoop-breakthrough
+updated_at: 2008-03-02 18:01:06 -05:00
+title: Whoop Breakthrough
+tags: c programming
+id: 103
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-10-01 23:16:26 -04:00
+--- 
+Made a big milestone today on the ol' senior project.  A week ago, I was [bellyachin'](/typo/articles/2006/09/24/rdf-is-a-pain) about reading XMP into key-value pairs.  Pretty much just today, I got enough code in to not just get the key-value pairs, but store them in a normalized sqlite database:
+
+    bkerley@thedude ~/[...]/ape> ./ape tests/bigxmp.jpg
+    Debug: XMP found at 0x000062d4
+    Debug: loaded 27 key-value pairs
+    bkerley@thedude ~/[...]/ape> sqlite3 ape.db "
+    select properties.id, proptypes.propname, properties.content 
+    from properties join proptypes on properties.proptype_id=proptypes.id"
+    (boring parts eliminated)
+    24|http://ns.adobe.com/photoshop/1.0/DateCreated|2006-09-19
+    25|http://ns.adobe.com/photoshop/1.0/City|who cares
+    26|http://ns.adobe.com/photoshop/1.0/Doctor|Doc Cottle
+    27|http://ns.adobe.com/photoshop/1.0/History|
+
+What's next is porting the XMP reading part to C# for a visual XMP editor, which should be easy since I won't need so much custom code.
+
+All this and I also got my postscript project for another class done on Thursday afternoon (said class was cancelled).

@@ -1,0 +1,31 @@
+--- 
+slug: Twitter_since_2008-09-12
+updated_at: 2008-09-13 00:01:04 -04:00
+title: Twitter since 2008-09-12
+tags: no tags yet
+id: 180
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-09-13 00:01:04 -04:00
+--- 
+<div class="twitter">
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 13:07:43: </span>
+    <span>Coworker is loud-bloggin' an ruining lunch.</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 20:18:58: </span>
+    <span>My TV has some fast-loading feature-incomplete firmware that loads before the slow-loading feature-complete firmware finishes booting.</span>
+  </p>
+</div>

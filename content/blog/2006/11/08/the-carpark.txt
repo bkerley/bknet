@@ -1,0 +1,71 @@
+--- 
+slug: the-carpark
+updated_at: 2008-03-02 18:03:02 -05:00
+title: The Carpark
+tags: carpark ruby programming
+id: 115
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-11-08 23:15:31 -05:00
+--- 
+In LISP, there's a collection of functions used to slice up lists - car and cdr are the basic ones, but you can stack them up like this:
+
+    (car '(1 2 3)) => 1
+    (cdr '(1 2 3)) => (2 3)
+    (cdar '(1 2 3)) => (car '(2 3)) => 2
+
+These are kind of useful, but according to [Wikipedia](http://en.wikipedia.org/wiki/CAR_and_CDR):
+
+> Most Lisps set a limit on the number of composed forms they support; Common Lisp and Scheme both provide forms with up to four repetitions of the a and d.
+
+So, since I work in Ruby more often than LISP, these functions have two weaknesses for me:
+
+1. They're in the wrong language
+2. There's an artificial and arbitrary limit to how many I can stack up
+
+So I thought to myself � I can hook method_missing on an Array in Ruby...
+
+<typo:code lang="ruby">
+#
+#  carpark.rb
+#  RubyTut
+#
+#  Created by Bryce Kerley on 2006-11-08.
+#  This code is public domain.
+#
+#  Subversion info:
+#  $Id: carpark.rb 176 2006-11-09 04:12:04Z bkerley $
+
+class Array
+  def method_missing(m, *a)
+    s = m.to_s
+    return super.method_missing(m, a) unless s =~ /c[ad]+r/
+    o = s[1..-2]
+    if o.length == 1
+      return self[0] if o[0..0] == "a"
+      return self[1..-1] if o[0..0] == "d"
+    end
+    return self[0].send("c#{o[1..-1]}r".to_sym) if o[0..0]=="a"
+    return self[1..-1].send("c#{o[1..-1]}r".to_sym) if o[0..0]=="d"
+    
+    return "failed #{o}"
+  end
+end
+</typo:code>
+
+Sample run:
+
+    irb(main):001:0> require 'carpark'
+    => true
+    irb(main):002:0> x = [[[[1, 2, 3], 4, 5], 5, 6, [420], 11], 3]
+    => [[[[1, 2, 3], 4, 5], 5, 6, [420], 11], 3]
+    irb(main):003:0> x.cdr
+    => [3]
+    irb(main):004:0> x.cdar
+    => 3
+    irb(main):005:0> x.caaadr
+    => [2, 3]
+Use wisely�

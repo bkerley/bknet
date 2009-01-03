@@ -1,0 +1,17 @@
+--- 
+slug: a-poem
+updated_at: 2008-03-02 18:04:17 -05:00
+title: A Poem
+tags: school poem
+id: 122
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-12-05 01:04:21 -05:00
+--- 
+If my plaintext has a remainder then I don't need that stumper,
+The concept of BCH codes can take it in the dumper.
+
+(apologies to [Achewood](http://achewood.com/index.php?date=05022003) (warning, swears))

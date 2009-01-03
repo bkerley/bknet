@@ -1,0 +1,29 @@
+--- 
+slug: the-genres-of-facebook-applications
+updated_at: 2008-03-02 18:12:22 -05:00
+title: The Genres of Facebook Applications
+tags: facebook software
+id: 164
+excerpt: Ever since Facebook added the ability for anybody with a web server and some time to write an application that runs inside Facebook and has access to some user data, people have started writing these things left and right.  According to Facebook's big list o'applications, there's over 8000 of them.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-11-03 17:14:08 -04:00
+--- 
+So, what do these apps do?  Most seem to fall into four categories:
+
+* Interoperability with some other service
+* Add new profile fields
+* Make an obnoxious new way to browse existing or new profile information, probably using Flash
+* Game requiring approximately four seconds of attention, ever.
+
+The first category basically only exists to allow different services to hook in to Facebook's "closed garden".  "Why should we interoperate with your service when we can provide an APPLICATION PLATFORM for you to interoperate with us!"  I can understand why these are popular - updating Twitter is easier than updating Facebook status, uploading to Flickr allows people to view your photos without logging in to anything, and last.fm has been around longer than Facebook.  Basically, effort has been required from these sites (or donated by users of these sites) to interoperate with Facebook in particular, and that effort can't be recycled to any similar site.
+
+The second category is just because Facebook doesn't want users to have 10,000 fields on their profile page for every possible thing people might want to broadcast, like their Xbox Live name, a bumper sticker slogan they thought was funny, or perhaps the name of the city where they currently are.  The idea of these is good, but most of them are pretty banal (disclaimer: I think the Xbox Live name one is pretty good because my friends list is nowhere near full, so add Dishonest Man to your list today!).
+
+The third category I never really got into.  I kind of understand why you'd want your app to be more than just a profile field, but it seems kind of pointless to have to basically get wrapped up in a different, second, smaller site inside the big site to rate movies and see if I match up with anybody else's likings.  The worst part of this genre is that it's always got at least one really deceptive screen that will spam invites to all your friends if you don't spend five minutes sorting out the right button to click.
+
+The fourth category is basically the same deal as the third.  Spam your friends with invites and reap the nonexistent reward of some text changing on your profile, and maybe a little picture.
+
+Think about this before starting a new application on Facebook, who will be using it, and what it'll look like jammed in between "BEERS THAT I HAVE DRANK AND WHY I DRANK THEM" and "SUPER POKE 4000".

@@ -1,0 +1,16 @@
+--- 
+slug: calendar-update
+updated_at: 2008-03-02 17:44:49 -05:00
+title: Calendar Update
+tags: school software
+id: 43
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-12-04 23:27:00 -05:00
+--- 
+I've got my spring stuff up on my hideous crime against style <a href="http://brycekerley.net/calendar/week.php?cal=all_calendars_combined971&getdate=20060109">calendar</a>.
+
+The red stuff is tentative, gotta run it by the boss first :)

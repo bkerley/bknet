@@ -1,0 +1,14 @@
+--- 
+slug: "r\xC3\xA9sum\xC3\xA9"
+updated_at: 2008-03-17 22:48:32 -04:00
+title: "R\xC3\xA9sum\xC3\xA9"
+tags: resume about
+id: 120
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-12-02 06:36:59 -05:00
+--- 
+My resumé is available in PDF format at [http://brycekerley.net/bkerley-resume.pdf](http://brycekerley.net/bkerley-resume.pdf)

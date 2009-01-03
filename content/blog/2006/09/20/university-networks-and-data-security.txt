@@ -1,0 +1,18 @@
+--- 
+slug: university-networks-and-data-security
+updated_at: 2008-03-02 17:59:53 -05:00
+title: University Networks and Data Security
+tags: hacking work
+id: 99
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-09-20 13:01:52 -04:00
+--- 
+[Security at University](http://www.schneier.com/blog/archives/2006/09/university_netw.html)
+
+Thought this article was pretty good.  USF is kind of set up like this from what I've seen, with a big mostly unregulated periphery and then all the exciting stuff firewalled off in different datacenters.  Individual departments aren't so hot on security, but that's how it goes I guess.
+
+I'm feeling it too - just set up and locked down a new webcam at work, not sure when it'll be up.

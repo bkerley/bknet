@@ -1,0 +1,18 @@
+--- 
+slug: project
+updated_at: 2008-03-02 17:38:22 -05:00
+title: Project
+tags: programming school
+id: 12
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-05-27 13:44:00 -04:00
+--- 
+We got our project assignments in Software Engineering yesterday.  Looks like the whole class is doing the same thing in groups of two, and overhearing conversation on the way out, everybody's doing it the same way.
+
+The project is to build a POS-style interface for a video rental store that can hold details about particular movies (cast, crew, synopsis), customers, and instances of movies (who checked out, how long, when returned).  Since there's no real point in trying something new or exciting, it seems like everybody in the class is going to do it in PHP/MySQL.  Which is my plan.
+
+Funny how that works, isn't it?

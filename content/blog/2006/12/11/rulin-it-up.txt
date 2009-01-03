@@ -1,0 +1,24 @@
+--- 
+slug: rulin-it-up
+updated_at: 2008-03-02 18:04:31 -05:00
+title: Rulin' It Up
+tags: hacking
+id: 124
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-12-11 19:58:59 -05:00
+--- 
+Friday was awesome - we ruled it up at UCSB iCTF 2006, taking 3rd place (best American team), with $10 million in pillaged bank money.
+
+[Final Results](http://www.cs.ucsb.edu/~vigna/CTF/final_results.html)
+
+It was a pretty interesting competition - unlike the more traditional game we saw last year and last summer in Cipher2, it was based around running online banking services while making sure the software architecture kept is secure.  My biggest issue (and that may be because it's what we focused on) is that the three services we did eventually exploit were vulnerable to basically the same thing.
+
+For the sake of discussion, a "check" is a 172-character string consisting of alphanumerics (it's probably a base-64 encoded string).  An "IBAN" is also a big string.
+
+When a webapp would be presented with a check, it would pass it as a command line argument to a ccheck executable, which either returned the check's value, or a negative number indicating error to stdout.  The one problem was that no validation was done on checks, so the invalid check "xxx(bunch of x's) | echo 9953" would show as a value of 9953, instead of failing (since the invalid check number, sent to stdout from ccheck, would just go to echo which would happily throw it away).
+
+We poked around with another service or two, but really they weren't as giving as the three we hit (in order): ipal (hillbilly paypal), stock (stock trading), and bank.  The biggest problem we had with those was automating the account creation, login, deposit, and withdrawals, as they were all separate HTTP requests.  Eventually we had get() and post() methods implemented in Ruby to automate these, but coming up with them the right way was the most difficult part of the day.

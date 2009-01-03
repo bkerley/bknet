@@ -1,0 +1,45 @@
+--- 
+slug: hlsl-redvision
+updated_at: 2008-03-02 17:49:13 -05:00
+title: "HLSL: Redvision"
+tags: hlsl programming shader picture
+id: 47
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-12-21 11:55:00 -05:00
+--- 
+<a href="/textpattern/images/41t.jpg"><img src="/textpattern/images/41t.jpg" alt="Frame from The Daily Show" /></a>
+
+<pre>/*
+redvision by Bryce Kerley
+makes it black and white except for areas with twice as much red
+as both other channels combined
+*/
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define threshold (0.0)
+
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float4 c0;
+	//the thresholds are in the float4() function
+	if(dot(tex2D(s0,tex),float4(.5,-1,-1,0)) >threshold) {
+		 c0 = tex2D(s0,tex);
+	}
+	else {
+	//black and white code yanked from the MPC grayscale filter
+		c0 = dot(tex2D(s0, tex), float4(0.299, 0.587, 0.114, 0));
+	}
+	return c0;
+}</pre>
+<p>This shader was made to use with <a href="http://sourceforge.net/projects/guliverkli/">Media Player Classic</a>.</p>

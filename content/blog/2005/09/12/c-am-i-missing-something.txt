@@ -1,0 +1,20 @@
+--- 
+slug: c-am-i-missing-something
+updated_at: 2008-03-02 17:40:00 -05:00
+title: C# - am I missing something?
+tags: programming school
+id: 22
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-09-12 22:27:00 -04:00
+--- 
+One of my classes this semester, Software System Development, so far seems like the C# equivalent of Beginning Java at the ol' community college, dressed up with a fancy name.  So far we've written Hello World and a program to figure out if one box can fit within another (with fairly simple constraints).
+
+The Box problem, in the guidelines, dictated that the Boxes have to read their dimensions from the console in the constructor, as opposed to separating model from view/controller by reading in numbers in the main() and passing them in.  So I wanted to at least pretend to isolate the console-using code from the rest of the Box by placing it in a special constructor, and then passing the console values to the real constructor.
+
+But you can't!  Instead of letting me do something even PHP lets me do, if I want a common-constructor type deal I'll probably have to make a private init() method.
+
+So I don't get it - this Java rip is the new language for new hotness Windows programming?  It doesn't even seem as interesting as ObjC.

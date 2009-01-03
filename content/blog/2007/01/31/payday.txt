@@ -1,0 +1,22 @@
+--- 
+slug: payday
+updated_at: 2008-03-02 18:06:48 -05:00
+title: Payday
+tags: e/n games work
+id: 137
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-01-31 02:09:53 -05:00
+--- 
+Last week I went to Massachusetts for work, spending the majority of the week in Taunton (closer to Providence than Boston).  I kind of got used to the work laptop I'm using for now (Dell Latitude 820, quite fast but the trackpad is too small).  After returning to the normal office on Friday, I realized that my first week or two of pay would have gone through.
+
+So the first thing I did after work, hacking, and dinner was buy a 360 and Gears of War (and Geometry Wars), and after Psych Dustin and I played that for a few hours.
+
+Saturday the hackin' gang got together to get some work pushed through on the secret project.  And also play a bit of Gears.
+
+Sunday I beat Gears, moved some leaves around in the back yard, and messed around with Gentoo on the work laptop (as of today it's running [wmii](http://wmii.suckless.org/) with [wmii-ruby](http://eigenclass.org/hiki.rb?wmii+ruby) firefox, vmware for that other OS).
+
+Life's good :)

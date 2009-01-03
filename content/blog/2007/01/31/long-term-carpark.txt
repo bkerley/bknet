@@ -1,0 +1,43 @@
+--- 
+slug: long-term-carpark
+updated_at: 2008-03-02 18:06:56 -05:00
+title: Long-Term Carpark
+tags: carpark ruby programming
+id: 138
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-01-31 02:45:43 -05:00
+--- 
+In GCL:
+
+    >>(cadr '(1 2 3))
+
+    2
+
+Old and Busted:
+
+    irb(main):001:0> require 'carpark.rb'
+    => true
+    irb(main):002:0> [1,2,3].cadr
+    NoMethodError: undefined method `cdr' for 1:Fixnum
+    	from ./carpark.rb:17:in `send'
+    	from ./carpark.rb:17:in `method_missing'
+    	from (irb):2
+    irb(main):003:0> [1,2,3].cdar
+    => 2
+
+New and Working:
+
+    irb(main):001:0> require 'carpark.rb'
+    => true
+    irb(main):002:0> [1,2,3].cadr
+    => 2
+
+Delivered straight to your door!
+
+    svn co http://brycekerley.net/svn/carpark/ carpark
+
+Gems forthcoming (maybe this weekend).

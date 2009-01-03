@@ -1,0 +1,16 @@
+--- 
+slug: asm
+updated_at: 2008-03-02 17:39:06 -05:00
+title: ASM
+tags: programming
+id: 17
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-08-09 10:35:00 -04:00
+--- 
+I was bored yesterday, so I tried to crash-course myself in x86 asm, with the eventual intent of writing something neat with it.
+
+I kind of want to get a book about it, but I know that I'll only have a few weeks to use it before school starts up again.

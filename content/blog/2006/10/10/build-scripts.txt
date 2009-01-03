@@ -1,0 +1,21 @@
+--- 
+slug: build-scripts
+updated_at: 2008-03-02 18:01:36 -05:00
+title: Build Scripts
+tags: csharp programming school
+id: 106
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-10-10 19:54:53 -04:00
+--- 
+Visual Studio 2003's build scripts are kind of weird.  The generator doesn't default to escaping directory names correctly, so you have to remember to put quotes around things.  It also just runs it as a batch file, which means that it has to inline a bunch of debug code to catch errors.
+
+Build script for the c# xmp reader that's going to become the tagger for the plasticimages project:
+
+    xcopy "$(SolutionDir)Redland\bin\Debug\\*.dll" . /d /y
+    xcopy "$(ProjectDir)win32dep\\*.*" . /d /y
+
+Useful post I ripped the xcopy from: [http://geekswithblogs.net/dchestnutt/archive/2006/05/30/80113.aspx](http://geekswithblogs.net/dchestnutt/archive/2006/05/30/80113.aspx)

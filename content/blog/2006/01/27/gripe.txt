@@ -1,0 +1,22 @@
+--- 
+slug: gripe
+updated_at: 2008-03-02 17:50:33 -05:00
+title: Gripe
+tags: programming school
+id: 60
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-01-27 19:33:00 -05:00
+--- 
+As it turns out, making my OS assignment highly organized by splitting it into 12 files (6 .c, 6 .h) wasn't such a great idea, since the submit script only takes a single file.
+
+Fixing this was a simple process:
+
+    cat *.h *.c > bigfile.c
+
+I then had to rearrange the order of the headers (command.h needed to come before child.h because a useful data structure is there) and a bunch of the #includes were redundant.
+
+I'm giving a presentation to the ACM on Monday about subversion.  I figure that it's saved me a few times, might as well pass it on..

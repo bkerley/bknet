@@ -1,0 +1,16 @@
+--- 
+slug: finished
+updated_at: 2008-03-02 18:04:43 -05:00
+title: Finished
+tags: school e/n
+id: 125
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-12-20 16:57:40 -05:00
+--- 
+It's over – I've finally graduated from college with my BS in CS, and I've got basically no obligations for the three weeks before I start working.
+
+It's going to be nice relaxing for the Christmas break.  I plan on reading books, hanging out with friends (I've been notified that there might be a D&D game at some point) for the break, and generally having a typical Christmas season with family and friends in town.

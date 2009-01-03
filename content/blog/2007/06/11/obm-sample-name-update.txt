@@ -1,0 +1,20 @@
+--- 
+slug: obm-sample-name-update
+updated_at: 2008-03-02 18:10:21 -05:00
+title: OBM Sample Name Update
+tags: mac programming cocoa onebuttonmod
+id: 156
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-06-11 23:38:01 -04:00
+--- 
+So One Button Mod shows a real list of samples, exactly the way all the older players do.  It's nice to be able to read greetz :)
+
+I'm still dissatisfied with the way the GUI looks.  I dragged some stuff around and changed it in Interface Builder, but I'm not satisfied with it.  I might go for some of the [grey hotness](http://www.apple.com/macosx/leopard/features/finder.html) that we're going to be seeing even more of in the next few months, but subclassing NSWindow's a long-term project.
+
+And if I'm really lucky, Leopard will push the grey down to everything so it'll all be moot.
+
+![Cleaner One Button Mod UI](http://brycekerley.net/assets/2007/6/11/onebuttonmod-cleanui.png)

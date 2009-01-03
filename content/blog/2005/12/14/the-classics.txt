@@ -1,0 +1,20 @@
+--- 
+slug: the-classics
+updated_at: 2008-03-02 17:46:36 -05:00
+title: The Classics
+tags: laffo music school
+id: 46
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-12-14 21:41:00 -05:00
+--- 
+I got tired of the Mercenaries soundtrack, so I fired up Odelay by Beck.  It's a true classic, diverse yet cohesive.
+
+Slammed through my Geography final today, checked through my Automata take-home and I'm pretty pleased.  Software System Development (C# class) won't pose a problem, so the hard part of my semester's over.
+
+Saw somebody on campus today I haven't seen since high school.  Amazingly coincidental, she was getting off the shuttle on the way to a job interview, while I was moseying to the exam.
+
+DESSERT UPDATE: I just bit too far into my apple, and I still think it's the height of humor to declare the resulting situation a "core breach."

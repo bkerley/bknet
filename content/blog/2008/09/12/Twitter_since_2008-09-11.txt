@@ -1,0 +1,94 @@
+--- 
+slug: Twitter_since_2008-09-11
+updated_at: 2008-09-12 11:19:55 -04:00
+title: Twitter since 2008-09-11
+tags: no tags yet
+id: 179
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-09-12 11:19:54 -04:00
+--- 
+<div class="twitter">
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 19:55:09: </span>
+    <span>@chockenberry CHOCK
+LOCK
+W
+A
+S
+T
+E
+S
+_
+S
+O
+_
+M
+A
+N
+Y</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 19:55:16: </span>
+    <span>FUCK IT</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 19:55:44: </span>
+    <span>About to twitter the crap out of my blog.</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 20:45:32: </span>
+    <span>@chockenberry millions of them?  for free?</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 22:45:45: </span>
+    <span>Watching airplane crash videos on youtube while I wait for laundry.</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 23:21:11: </span>
+    <span>@danielpunkass they're only the biggest threat because nobody else makes ads that want to waste that much of my time.</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 23:27:21: </span>
+    <span>@danielpunkass this and your reaction to Palin's speech: trolling?</span>
+  </p>
+  <p>
+    <span class="user">
+      <img src="http://s3.amazonaws.com/twitter_production/profile_images/27149052/skwerl027qd_normal.gif"/>
+      <span class="username">BonzoESC</span>
+    </span>
+    <span class="timestamp">at 23:30:03: </span>
+    <span>OK this is surreal enough for now: http://tinyurl.com/4vz2oz</span>
+  </p>
+</div>

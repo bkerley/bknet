@@ -1,0 +1,68 @@
+--- 
+slug: dns-is-udp
+updated_at: 2008-03-02 17:52:38 -05:00
+title: DNS is UDP
+tags: hacking
+id: 69
+excerpt: Wrapped up the KSU competition last night (with presentations and awards today, read on), and we came out of it totally pooped and yet somehow feeling all right.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-03-12 23:59:00 -05:00
+--- 
+When we showed up at the start of the event Friday morning we thought we had a good idea of what was in store for us.
+
+<a href="http://www.flickr.com/photos/bonzoesc/111748665/" title="Friday morning"><img src="http://static.flickr.com/34/111748665_5e77f028fa_m.jpg" width="240" height="180" alt="Friday morning" /></a>
+
+The day started with an hour waiting outside our competition room while our judge went over our logs for Friday's setup period.
+
+<a href="http://www.flickr.com/photos/bonzoesc/111748671/" title="Photo Sharing"><img src="http://static.flickr.com/52/111748671_4c3dfa5381_m.jpg" width="180" height="240" alt="P1080465" /></a>
+
+Within the first hour, we had our first obvious intrusion, somebody had broken in and started hosting their MP3s on our XP machine (which we didn't flatten and reinstall on Friday).
+
+<a href="http://www.flickr.com/photos/bonzoesc/111748673/" title="Photo Sharing"><img src="http://static.flickr.com/53/111748673_b8a503c2de_m.jpg" width="240" height="180" alt="P1080471" /></a>
+
+A cursory look through some Windows administration screens led to the controls to shut down and disable IIS, although nobody researched the attack route.  There was more work to be done, including setting up the vanilla box as an IDS to prevent this as the day went on.
+
+Within an hour or two, our e-commerce site hosted on Win2k got defaced with the message "pwc owns you".  Fixing it was easy enough (delete default.htm), but it wasn't the last we'd see from the Price Waterhouse Coopers red team.
+
+<a href="http://www.flickr.com/photos/bonzoesc/111751462/" title="Photo Sharing"><img src="http://static.flickr.com/56/111751462_274c5306c4_m.jpg" width="240" height="180" alt="P1080484" /></a>
+
+Side note: the way in which half of our services were hosted was as images running inside the big blade server to my left in the above photo.  It's convenient because it's one machine, but that server was pretty slow.  It crashed when we tried to back up the images to a USB hard drive.
+
+The PWC red team's lead "Mr. Carmichael" probed our physical security later in the day in a particularly hilarious episode.  He entered the room with his computer in hand, and asked where he could plug in.  Immediately, two team members accosted him and told him that he'd have to let them audit his computer before he could plug in.  They checked and verified his virus and spyware scanners, forced him to uninstall the (useful and fun) metasploit framework.  Then, after telling him that he wouldn't be allowed to plug in without confirmation from the CIO, he left the room.
+
+As it turns out, when he did this to other teams he was able to print out and email a fake letter from their CIO telling them to let him use their network.  Since we formatted our win2k machine connected to the printer the previous day, and hadn't made our mail work yet, this failed.
+
+Coming back in seconds later, the physical security team took another five-minutes re-auditing his machine.  After this occurred, he was plugged into the (non-functioning but seemingly working PIX), and tried to get to work.  He pulled out a security filter for his screen (narrowing the display angle), and in response, several of us crowded in behind him.
+
+<a href="http://www.flickr.com/photos/bonzoesc/111751455/" title="Photo Sharing"><img src="http://static.flickr.com/40/111751455_956a21bed4_m.jpg" width="240" height="180" alt="P1080477" /></a>
+
+Since he didn't want any shoulder surfers (and the PIX wasn't letting him out **THANKS SUBNET MISTAKE**), he unplugged, went up to the Debian static web server, and plugged into a different switch.  Within seconds our network guru had that port on the switch disabled, so "Mr. Carmichael" couldn't do anything.  After being jerked around for 30 minutes, he left in frustration.
+
+Throughout the rest of the day, things progressed less interestingly.  The e-commerce site's SQL Server install kept getting busted, occasionally patched, and bounced regularly.  We never got the vanilla box up completely as an IDS, but we did run ethereal for a while.
+
+Two big problems we had for the whole day was lack of mail and lack of a firewall between our network and the competition network.  Afterwards (while working on a [big can](http://flickr.com/photos/bonzoesc/111689035/) in the hotel) we figured out that you can't route from a 10.10.x.x/255.255.0.0 network to a 10.10.x.x/255.255.0.0 network, solving that problem several hours too late.
+
+The problem with the mail, however, was finally solved.  The competition mail server was set to push mail to our SMTP server, using DNS on the win2k3 server to find the Debian mail server.   Since we had no PIX, each machine was running a host-based firewall.  iptables on Linux, ZoneAlarm on the win2k desktop, and Windows Firewall on the XP desktop and 2k3 server.  Because being hacked was bad, we were quite aggressive with our firewall rules.
+
+As it turns out, DNS is not TCP, but UDP.  When we figured this out, we were somewhat overjoyed as the dozen competition messages flooded into our network.
+
+<a href="http://www.flickr.com/photos/bonzoesc/111751460/" title="Photo Sharing"><img src="http://static.flickr.com/49/111751460_d3bdb50894_m.jpg" width="180" height="240" alt="P1080482" /></a>
+
+We were pretty tired at the end of the 12-hour day of hacking:
+
+<a href="http://www.flickr.com/photos/bonzoesc/111748667/" title="Photo Sharing"><img src="http://static.flickr.com/54/111748667_dd5f41033e_m.jpg" width="180" height="240" alt="IMGP0142" /></a>
+
+Coming back this morning, we presented our report on how well we did before all the teams.  It looked pretty grim, because we had the most security holes at any one sample.  However, the team with the second-fewest stated that their lack of holes was because they didn't actually have a working network for the majority of the competition.  We also learned from "Mr. Carmichael" the extent to which other teams were compromised.
+
+Finally it was time for awards.
+
+<a href="http://www.flickr.com/photos/bonzoesc/111748669/" title="Photo Sharing"><img src="http://static.flickr.com/47/111748669_0b922e23b5_m.jpg" width="240" height="180" alt="IMGP0149" /></a>
+
+Much to our surprise after competing against teams made up of students in information security programs, we took **second place** behind UNC-Charlotte (who also did really well in CTF last December).
+
+<a href="http://www.flickr.com/photos/bonzoesc/111748670/" title="Photo Sharing"><img src="http://static.flickr.com/19/111748670_db4e25b388_m.jpg" width="240" height="180" alt="IMGP0153" /></a>
+
+[More Photos](http://flickr.com/photos/bonzoesc/tags/kennesaw/)

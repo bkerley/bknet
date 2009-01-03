@@ -1,0 +1,22 @@
+--- 
+slug: adium-s-chat-transcript-indexing-is-awful
+updated_at: 2008-03-02 18:12:11 -05:00
+title: Adium's Chat Transcript Indexing is Awful
+tags: adium mac software
+id: 165
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-11-14 02:41:39 -05:00
+--- 
+<img src="http://brycekerley.net/assets/2007/11/14/chat_transcripts.png" alt="Indexing 2836 of 5420 transcripts&#8230;">
+
+Why does [Adium](http://adiumx.com/) index its own chats?  1.1.4 requires Tiger or Leopard, both of which have Spotlight searching that indexes literally *every time you write to an indexable file*.  I know new Macs are pretty fast (my new Macbook simply screams), but why do any work at all when the OS provides it, and gives at least filename results just as fast as the duck does, without any indexing code.
+
+*ATTENTION ADIUM DEVELOPERS:*  Fix this or I might be [doing some cooking](http://www.cookadvice.com/recipes/duck_curry_kaen_of_duck-16628-recipe.htm) in the next little while.
+
+**Upgrayedd:** [http://trac.adiumx.com/ticket/8320](http://trac.adiumx.com/ticket/8320) is an Adium bug that seems to cover this.  You're off the hook, duck.
+
+Calling you out, Apple.

@@ -1,0 +1,40 @@
+--- 
+slug: attention-former-programming-languages-students
+updated_at: 2008-03-02 18:11:41 -05:00
+title: Attention Former Programming Languages Students
+tags: programming school
+id: 161
+excerpt: Last fall I took Dr. Albrecht's awesome "Programming Languages" class at USF.  On a whim today, I took a look at one of the postscript programs I had written.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-10-02 02:13:34 -04:00
+--- 
+Some parts I can understand readily:
+
+    (Grade Calculator by Bryce Kerley U-number) dup dup
+    .85 .90 1 setrgbcolor %spiffy watermark
+    -20 9.5 144 pt textdraw
+    
+    
+    0 0 0 setrgbcolor
+    2 10 12 pt textdraw %front and center
+
+Some parts I remember fondly due to sheer smarmy cleverness (i.e. using the rgbcolor register as a loop index):
+
+    currentrgbcolor %load current color
+    dup 1 eq %if our blue was last filled up
+    {pop pop pop 0.4 0 0.4} if %darken it down to purple
+    
+    3 1 roll %rotate it to the next primary or to brown/navy from purple
+    setrgbcolor
+
+And some parts that I forgot to comment I don't understand:
+
+    pop dup grades exch get
+    1 add exch
+    grades 3 1 roll exch put
+    true
+
+So, if you're working in a "puzzle language" like Postscript you might want to include more useful comments than you normally do.

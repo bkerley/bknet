@@ -1,0 +1,40 @@
+--- 
+slug: hlsl-wavebottom
+updated_at: 2008-03-02 17:49:11 -05:00
+title: "HLSL: Wavebottom"
+tags: hlsl programming shader picture
+id: 49
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-12-21 13:21:00 -05:00
+--- 
+<a href="/textpattern/images/43.jpg"><img src="/textpattern/images/43t.jpg" alt="Wavebottom frame from Corner Gas" /></a>
+<p>This shader makes the bottom portion of the frame (defined by the split variable, gently waving up and down by default) a wavy reflection of the top part composited with the unfiltered bottom part, with both frequency and opacity of the wavy reflection becoming less pronounced towards the bottom of the frame.</p>
+<pre>sampler s0 : register(s0);
+float4 p0 : register(c0);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float split = 0.7+0.05*sin(clock/0.8); //border between real and reflection
+	float diff = tex.y - split; //distance from split
+	float shift = .005*sin(50*diff/tex.y)+.1*diff*sin(clock/0.8); //horizontal
+	if (diff < 0) {
+		return tex2D(s0, tex);
+	}
+	else {
+		return 
+		(1-3*sqrt(diff/8))*tex2D(s0, tex - 2*float2(shift, diff)) //shift
+		 + 3*sqrt(diff/8)*tex2D(s0, tex) //see through
+		;
+	}
+}
+</pre>
+<p>This shader was made to use with <a href="http://sourceforge.net/projects/guliverkli/">Media Player Classic</a>.</p>

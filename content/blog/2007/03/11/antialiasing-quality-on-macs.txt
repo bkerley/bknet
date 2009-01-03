@@ -1,0 +1,50 @@
+--- 
+slug: antialiasing-quality-on-macs
+updated_at: 2008-03-02 18:08:30 -05:00
+title: Antialiasing Quality on Macs
+tags: graphics mac picture
+id: 145
+excerpt: |-
+  I've noticed that some antialiasing on macs is video-card dependent -- in particular, the scroll bar and volume slider in iTunes Coverflow full screen get drawn by some anti-aliased method while the buttons are probably bitmaps (I took a spin around iTunes.app but couldn't quickly find them).  It's in this situation where we can see the difference between graphics rendering.  In particular, look at the waves coming out of the speaker to the right of the volume slider.
+  
+  iMac with Intel GMA 950 graphics:
+  
+  ![Coverflow on iMac](http://brycekerley.net/assets/2007/3/11/coverflow-imac.png)
+  
+  More screenshots follow.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-03-11 21:24:44 -04:00
+--- 
+MacBook with Intel GMA 950 graphics:
+
+![Coverflow on MacBook](http://brycekerley.net/assets/2007/3/11/coverflow-mb.png)
+
+iBook with ATI Radeon 9550 graphics:
+
+![Coverflow on iBook](http://brycekerley.net/assets/2007/3/11/coverflow-ibook.png)
+
+MacBook Pro with ATI Radeon X1600 graphics:
+
+![Coverflow on MacBook Pro](http://brycekerley.net/assets/2007/3/11/coverflow-mbp.png)
+
+For grins, Dell Latitude, Windows XP Pro, Quadro NVS 120M graphics:
+
+![Coverflow on Windows](http://brycekerley.net/assets/2007/3/11/coverflow-win32.png)
+
+Note that in Windows they don't even bother to antialias the text, which is in the "wrong" font compared to Mac (here's the iMac shot again:)
+
+![Coverflow on iMac](http://brycekerley.net/assets/2007/3/11/coverflow-imac-big.png)
+
+I've also seen this problem in OmniWeb's Downloads window when using Exposé, but I resized the window and it went away (how's that for an edge case), and I can't find the precise window sizing that makes Exposé scale it just right (or wrong, depending on your point of view).
+
+![OmniWeb Antialiasing Bug](http://brycekerley.net/assets/2007/3/11/omniweb-dl-imac.png)
+
+Thanks & greets to Andrew and Engimo for their screenshots.
+
+<script>reddit_url='http://brycekerley.net/mp/2007/3/11/antialiasing-quality-on-macs';
+digg_url = reddit_url;</script>
+<script language="javascript" src="http://reddit.com/button.js?t=2"></script> 
+<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>

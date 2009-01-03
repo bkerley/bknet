@@ -1,0 +1,18 @@
+--- 
+slug: forks
+updated_at: 2008-03-02 17:38:15 -05:00
+title: Forks
+tags: picture weather
+id: 11
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-05-23 15:46:00 -04:00
+--- 
+<img src="http://brycekerley.net/textpattern/images/24.jpg" alt="forks" />
+
+I found this pile of forks on some dirty pavement while walking to 7-eleven for a coke yesterday.
+
+I'm enjoying this summer so far - the weather hasn't been miserably hot when walking to class, and I've been somewhat good at getting a shady parking spot (even though there's construction around all the really good spots).

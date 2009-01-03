@@ -1,0 +1,18 @@
+--- 
+slug: distcc
+updated_at: 2008-03-02 18:01:27 -05:00
+title: distcc
+tags: linux software
+id: 105
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-10-09 12:08:33 -04:00
+--- 
+Got distcc running this weekend, between my gentoo native desktop and my roommate's gentoo vm set up for the purpose (still "needs" windows, but doesn't use that machine often so the vm doesn't really slow him down).  Splitting stuff between my 1800+ and his vm 2800+ seems to speed up emerge a bit, which really shows when compiling kdelibs or something.
+
+It's probably not fast enough that I'd emerge while suffering with XP in a vm on my desktop (thanks microsoft for making all the parts of c# people want to use closed-source), but I don't feel like going away for a few minutes while installing stuff now.
+
+It's just as well, too, since my iBook's in the shop for having its airport card blow up or something.  Turns out that it breaking as soon as I installed 10.4.8 was a coincidence.

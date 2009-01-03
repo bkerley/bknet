@@ -1,0 +1,21 @@
+--- 
+slug: un-hanging-omniweb
+updated_at: 2008-04-12 07:20:45 -04:00
+title: Un-hanging OmniWeb
+tags: omniweb mac fix
+id: 172
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-04-12 07:20:45 -04:00
+--- 
+When using the [OmniWeb](http://www.omnigroup.com/omniweb/) browser, sometimes it'll get really unresonsive and crummy to use.  Here's one way to fix it:
+
+1. Quit OmniWeb.
+1. Go to ~/Library/Application Support/OmniWeb 5 in Finder.  In my case, this is /Users/bkerley/Library/Application Support/OmniWeb 5
+2. Drag HistoryIndex.ox and the .log and .lock file (if they exist) into the trash.
+3. Re-start OmniWeb.
+
+My guess (an educated guess, thanks to Activity Monitor's Sample feature) is that this index of history items gets corrupted, and OmniWeb gets stuck in a tight loop trying to read or make sense of it.  The index re-generates from History.plist pretty quickly on modern systems, so deleting it is no real loss.

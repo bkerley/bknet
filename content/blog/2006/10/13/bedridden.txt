@@ -1,0 +1,22 @@
+--- 
+slug: bedridden
+updated_at: 2008-03-02 18:01:48 -05:00
+title: Bedridden
+tags: knee
+id: 108
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-10-13 23:55:04 -04:00
+--- 
+I've been out and about for most of the day - [ain't nothing gonna](http://mystride.ytmnd.com/) [break my stride](http://darthstride.ytmnd.com).
+
+After approximating a shower and navigating the stairs this morning, I was off to Benjarong Thai with Dustin, who had been fiending for it all week since his birthday.  He had the usual (the waitress knew it), and I tried the Duck Panang, which was awesome.  We talked about a hackin' project we're going to be working on soon, and also about Dustin's anti-duck-eating policy.
+
+Following that, we went to the hackin' meeting, where Amin presented on Linux securty.  It was a good presentation, and led to some good discussion.  We also registered for a CTF coming up in December, and considered redrawing our logo for it.
+
+After the meeting ended, Andrew, Zap, April, RC, and I went to the Tampa Ale House for dinner becuase nobody made chili for Battlestar tonight.  Dinner was great, BSG was great, and all in all I can say I've had worse days recently.
+
+From my moving around today, I think my knee's getting a bit better.  I can put a bit of weight on it comfortably to help me move around, something useful because I did a lot of crutchin' today.

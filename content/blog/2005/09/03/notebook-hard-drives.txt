@@ -1,0 +1,16 @@
+--- 
+slug: notebook-hard-drives
+updated_at: 2008-03-02 17:39:50 -05:00
+title: Notebook Hard Drives
+tags: hacking hardware mac
+id: 21
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-09-03 16:06:00 -04:00
+--- 
+So I figured out today that some notebook hard drives are thinner than others.  Unfortunately, it was after disassembling my powerbook and neuros mp3 player, and finding out that the fat pb hard drive won't replace the thin neuros one.
+
+And therefore I'm stuck with 8gb in my powerbook for a while since I still want my neuros to be intact.

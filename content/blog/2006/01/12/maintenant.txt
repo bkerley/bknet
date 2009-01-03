@@ -1,0 +1,20 @@
+--- 
+slug: maintenant
+updated_at: 2008-03-02 17:49:37 -05:00
+title: Maintenant!
+tags: mac programming school
+id: 56
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-01-12 20:45:00 -05:00
+--- 
+My friend [Amin](http://www.weaponofmassdisruption.com/?p=32) is in several of my classes this semester, which is pretty rad because this gives me the opportunity to **THROW DOWN THE GLOVE** and say that when I write my command shell in C it'll be way cooler.
+
+That's right, Amin:
+
+[It's on!](http://brycekerley.net/typo/files/southpark-itson.jpg)
+
+Also I ordered my iBook today.  It'll be my first Mac made this century!

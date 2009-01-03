@@ -1,0 +1,18 @@
+--- 
+slug: slack
+updated_at: 2008-03-02 17:44:14 -05:00
+title: Slack
+tags: food hacking school
+id: 40
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-11-15 09:31:00 -05:00
+--- 
+Today, I'll take the third Automata Theory test of the semester.  After that, I'm free to slack for a few days before jumping back in to another project (metasploit project for security, weather station project at work, printing project for my awful awful c# class).  I'll probably end up playing Civ 2 after class this evening, because it'll be late and I'll be tired and hungry.
+
+The CTF competition got pushed back two days, to a Friday instead of a Wednesday, which, quite frankly, is a good idea since I'm busy on Wednesdays.  Hopefully I can have some tools done by then (I'm working on a PHP analyzer called SHART.  It's a backronym!), but mostly I'm looking forward to seeing if we can capture at least one flag.
+
+The BBQ on Saturday ruled - steaks, salsa, salad, and after it got dark we channel-surfed between Modern Marvels: Engineering Disasters 17 and Die Hard with a Vengeance, which I strongly believe to be the best in the series.

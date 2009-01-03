@@ -1,0 +1,70 @@
+--- 
+slug: crushinator
+updated_at: 2008-03-02 17:50:25 -05:00
+title: Crushinator
+tags: programming school
+id: 59
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-01-22 00:48:00 -05:00
+--- 
+[What's this?](http://www.weaponofmassdisruption.com/?p=35)
+
+    gosh! by Bryce Kerley
+    Version information:
+    $Id: versioninfo.h 19 2006-01-22 04:16:00Z bkerley $
+    
+    gosh!> ls -al
+    type: SIMPLE
+    c1:
+            argc: 2
+            argv:
+                    ls
+                    -al
+    total 232
+    drwxr-xr-x   26 bkerley  bkerley    884 Jan 22 00:12 .
+    drwx------   13 bkerley  bkerley    442 Jan 19 17:07 ..
+    -rw-r--r--    1 bkerley  bkerley   6148 Jan 21 18:45 .DS_Store
+    drwxr-xr-x   11 bkerley  bkerley    374 Jan 22 00:09 .svn
+    -rw-r--r--    1 bkerley  bkerley      2 Jan 19 17:43 .svnignore
+    -rw-r--r--    1 bkerley  bkerley    265 Jan 21 23:29 Makefile
+    drwxr-xr-x    5 bkerley  bkerley    170 Jan 20 04:19 build
+    -rw-r--r--    1 bkerley  bkerley    971 Jan 21 23:30 child.c
+    -rw-r--r--    1 bkerley  bkerley    358 Jan 21 18:24 child.h
+    -rw-r--r--    1 bkerley  bkerley   2248 Jan 22 00:12 child.o
+    -rw-r--r--    1 bkerley  bkerley    527 Jan 21 16:37 command.h
+    -rw-r--r--    1 bkerley  bkerley   1620 Jan 21 23:29 eventloop.c
+    -rw-r--r--    1 bkerley  bkerley    410 Jan 21 18:26 eventloop.h
+    -rw-r--r--    1 bkerley  bkerley   2820 Jan 22 00:12 eventloop.o
+    -rwxr-xr-x    1 bkerley  bkerley  22736 Jan 22 00:12 gosh-bkerley
+    -rw-r--r--    1 bkerley  bkerley   3130 Jan 19 17:08 gosh-bkerley.1
+    drwxr-xr-x    6 bkerley  bkerley    204 Jan 22 00:12 gosh-bkerley.xcodeproj
+    -rw-r--r--    1 bkerley  bkerley    899 Jan 21 22:57 main.c
+    -rw-r--r--    1 bkerley  bkerley   1780 Jan 22 00:12 main.o
+    -rw-r--r--    1 bkerley  bkerley   4860 Jan 21 23:32 parse.c
+    -rw-r--r--    1 bkerley  bkerley    426 Jan 21 14:30 parse.h
+    -rw-r--r--    1 bkerley  bkerley   4656 Jan 22 00:12 parse.o
+    -rw-r--r--    1 bkerley  bkerley    820 Jan 22 00:10 signals.c
+    -rw-r--r--    1 bkerley  bkerley    350 Jan 21 23:02 signals.h
+    -rw-r--r--    1 bkerley  bkerley   2284 Jan 22 00:12 signals.o
+    -rw-r--r--    1 bkerley  bkerley    312 Jan 21 23:13 versioninfo.h
+    RCMD: Child pid:5422 complete
+    gosh!> sleep 10
+    type: SIMPLE
+    c1:
+            argc: 2
+         argv:
+                       sleep
+                    10
+    ^CSINT: Handled signal 2
+    CHIF: Trying to kill pid:5426
+    RCMD: Child pid:5426 complete
+    gosh!> exit
+    bkerley@JackieTreehorn ~/Projects/gosh-bkerley> 
+
+All that's left is wrangling the output into the right format, but I'll save that for later.
+
+Different homework tomorrow :/

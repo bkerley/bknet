@@ -1,0 +1,20 @@
+--- 
+slug: sup-st-pete-times
+updated_at: 2008-03-02 17:54:49 -05:00
+title: Sup St. Pete Times
+tags: hacking
+id: 76
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-04-24 23:13:00 -04:00
+--- 
+The WCSC got in a newspaper article today, about the [SECCDC](http://www.brycekerley.net/typo/articles/2006/03/12/dns-is-udp) competition last month, with a picture from [December's iCTF](http://www.brycekerley.net/typo/articles/2005/12/10/haxed).
+
+[Article in today's St. Petersburg Times](http://www.sptimes.com/2006/04/24/Business/USF_team_wards_off_cy.shtml)
+
+I'm not pictured or quoted ![:v](http://www.brycekerley.net/typo/files/emot-v.gif) so eh.
+
+Back to the OS project.

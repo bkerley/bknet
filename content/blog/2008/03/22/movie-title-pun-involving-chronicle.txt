@@ -1,0 +1,19 @@
+--- 
+slug: movie-title-pun-involving-chronicle
+updated_at: 2008-03-22 17:03:18 -04:00
+title: Movie Title Pun involving "Chronicle"
+tags: weblog chronicle programming rails
+id: 171
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-03-22 17:03:18 -04:00
+--- 
+Added a couple features to Chronicle for your reading pleasure.
+
+* An Atom feed is in place.  Use the link above, or hit [http://brycekerley.net/rss](http://brycekerley.net/rss) to see it.  It's going through feedburner for stats, so don't be surprised at the redirect.
+* Page caching, thanks to the [Rails Caching Tutorial by Rails Envy](http://www.railsenvy.com/2007/2/28/rails-caching-tutorial).  Includes sweepers!
+
+More features forthcoming, been busy with the new Smash Brothers.  (Verdict: controls weird, graphic design awful (the stage select screen has six words in four different fonts), still fun).

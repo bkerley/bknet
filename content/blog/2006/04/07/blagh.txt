@@ -1,0 +1,18 @@
+--- 
+slug: blagh
+updated_at: 2008-03-02 17:54:00 -05:00
+title: blagh
+tags: programming school
+id: 72
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-04-07 18:43:00 -04:00
+--- 
+Got the common cold this week, so I've started thinning out a role of "budget kleenex" with fun nasal emissions.  In addition, this debilitating disease made me miss a field trip to Celebration (town south of Orlando as an attempt at New Urbanism sponsored/run/owned by Disney).
+
+Finishing up the memory simulator project for OS this weekend.  Got it running the optimal algorithm on a 10mb dataset in 10 seconds now.  As it turns out, reading the whole file into an array isn't *that* much more work than scrubbing back and forth in the file.
+
+Once that's wrapped up, I'll hit the final stretch of the (now group) database project.  The admin side is done, all that's needed is locking the public out of it, and writing an interface for general users.

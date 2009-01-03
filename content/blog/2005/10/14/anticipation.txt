@@ -1,0 +1,23 @@
+--- 
+slug: anticipation
+updated_at: 2008-03-02 17:42:07 -05:00
+title: Anticipation
+tags: acm programming picture
+id: 28
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-10-14 00:13:00 -04:00
+--- 
+Competition on saturday - I'm so excited.
+
+I printed out 40 pages of notes (still lighter than a book, and I know this stuff better now too) for the four teams from USF going, and spent an hour testing the machines.
+
+Computer porn:
+!/textpattern/images/37.jpg (Competition computers getting wired)!
+
+!/textpattern/images/35.jpg (Competition computers booting)!
+
+!/textpattern/images/36.jpg (Competition computers booting)!

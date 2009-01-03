@@ -1,0 +1,42 @@
+--- 
+slug: forged-in-ruby
+updated_at: 2008-03-02 18:08:54 -05:00
+title: Forged in Ruby
+tags: carpark httpal programming rubygems ruby
+id: 141
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-02-06 02:24:13 -05:00
+--- 
+HTTPal and Carpark are now on Rubyforge.  What does this mean for you?
+<pre>bkerley@sandwich ~> sudo gem install Carpark
+Attempting local installation of 'Carpark'
+Local gem file not found: Carpark*.gem
+Attempting remote installation of 'Carpark'
+Updating Gem source index for: http://gems.rubyforge.org
+Successfully installed Carpark-18
+bkerley@sandwich ~> sudo gem install HTTPal 
+Attempting local installation of 'HTTPal'
+Local gem file not found: HTTPal*.gem
+Attempting remote installation of 'HTTPal'
+Successfully installed HTTPal-19
+bkerley@sandwich ~> sudo gem list
+
+*** LOCAL GEMS ***
+
+Carpark (18)
+    car and cdr array functions
+
+HTTPal (19)
+    HTTP browser library
+</pre>
+You can still grab the source from my svn (the repos are at http://brycekerley.net/svn/carpark/ and http://brycekerley.net/svn/httpal/ ), and they now include Rakefiles to test and gem-ify them.  However, you'll need to make a [gem-signing key](http://docs.rubygems.org/read/chapter/21) to do so without hacking the Rakefile.
+
+Pretty much I'm just using Rubyforge for hosting the gems, at least until there's substantial documentation available for either package.
+
+# Licensing
+
+Carpark is public domain, and HTTPal is LGPL.  I reserve the right to change these in the future, and I still have to mark up the source.

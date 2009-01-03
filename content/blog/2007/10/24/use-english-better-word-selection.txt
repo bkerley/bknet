@@ -1,0 +1,26 @@
+--- 
+slug: use-english-better-word-selection
+updated_at: 2008-03-02 18:11:53 -05:00
+title: Use English Better - Word Selection
+tags: english
+id: 163
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-10-24 01:37:02 -04:00
+--- 
+*This is part of a possibly long-running series of posts about English mannerisms I see online that are overused or make me think less of the writer.*
+
+"Flash forward to today, when I tried to run my windshield washers but horse blood came out!"
+
+"Fast forward to last week when I accidentally dropped my cell phone in a meat grinder&#8230;"
+
+There's better ways to say that, that don't invoke thoughts of streaky VCR tracking or gimmicks in short-running TV shows.  For indicating the passage of time, instead of using some phrase you thought was cool in grade school ("It has **FLASH** in it!"), try one of these alternate ways of saying the same thing:
+
+"I ran my windshield wipers today and horse blood came out!"
+
+"Last week, I dropped my cell phone into a running meat grinder."
+
+Shorter sentences (usually better) that mean the same thing and won't feel outdated in five years or make you look like a semi-literate office drone.

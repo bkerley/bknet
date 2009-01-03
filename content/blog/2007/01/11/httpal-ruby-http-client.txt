@@ -1,0 +1,50 @@
+--- 
+slug: httpal-ruby-http-client
+updated_at: 2008-03-02 18:06:16 -05:00
+title: HTTPal - Ruby HTTP Client
+tags: httpal ruby programming
+id: 134
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-01-11 02:05:07 -05:00
+--- 
+HTTPal is a Ruby library that behaves more like a regular web browser than Net::HTTP does - it keeps state around between requests.  This is incredibly useful for automating scripts that log in and perform actions on sites using cookied sessions, referer tracking, etc.
+
+# Usage
+http://bonzoesc.net/provingground/cookie.php is a page that in the absence of a cookie, sets one and prints 'hope you lok'.  In the presence of a cookie, it prints 'you do'.
+
+    irb(main):001:0> require 'lib/httpal'
+    => true
+    irb(main):002:0> b = HTTPal::Browser.new
+    => #<HTTPal::Browser:0xb7ad8498 @referer=nil, @cookies=[]>
+    irb(main):003:0> b.get('http://bonzoesc.net/provingground/cookie.php').body
+    => "hope you lok"
+    irb(main):004:0> b.get('http://bonzoesc.net/provingground/cookie.php').body
+    => "you do"
+    irb(main):005:0> HTTPal::Browser.new.use {
+    irb(main):006:1* puts get('http://bonzoesc.net/provingground/cookie.php').body
+    irb(main):007:1> puts get('http://bonzoesc.net/provingground/cookie.php').body
+    irb(main):008:1> }
+    hope you lok
+    you do
+    => nil
+    irb(main):009:0> 
+
+You can call the `get` and `post` methods either directly on the object, or from within a block sent to the `use` method (because I thought that would be awesome).
+
+# Getting It
+
+    # unstable = I love to break this version for fun whenever I want
+    svn co http://brycekerley.net/svn/httpal/trunk httpal
+    
+    # first tested public release
+    svn co http://brycekerley.net/svn/httpal/tags/001_firstpub test  
+
+Don't expect a regular schedule for tagged/tested releases - for now this project is pretty much on an as-I-need-it basis.
+
+# <s>Whining about</s> Reporting bugs
+
+Send bug reports to [bkerley@brycekerley.net](mailto:bkerley@brycekerley.net) after checking [Trac](http://brycekerley.net/trac/trac.fcgi/report/1) to see if they're fixed.  Ticket submission's not on Trac because it's a spam magnet and I don't feel like putting up with it.

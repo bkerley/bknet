@@ -1,0 +1,20 @@
+--- 
+slug: off-crutches
+updated_at: 2008-03-02 18:02:47 -05:00
+title: Off Crutches
+tags: knee
+id: 113
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-11-02 13:38:39 -05:00
+--- 
+Quit using crutches this week.  Last week it was already becoming kind of a nuisance toting them around all the time, and this week I finally decided to go cold turkey on them:
+
+<a href="http://www.flickr.com/photos/bonzoesc/282906446/" title="Photo Sharing"><img src="http://static.flickr.com/97/282906446_122d8a69d8.jpg" width="500" height="375" alt="Me in Statesboro" /></a>
+
+<a href="http://www.flickr.com/photos/bonzoesc/286986588/" title="Photo Sharing"><img src="http://static.flickr.com/111/286986588_d8eec14a42.jpg" width="375" height="500" alt="Off Crutches" /></a>
+
+In other business, made our first demo for Senior Project yesterday &#8211; wasn't as good as it could have been (librdf's xmp serialization hasn't been built in win32 from what I've seen), but short of portability issues, we're down to the UI part.

@@ -1,0 +1,18 @@
+--- 
+slug: the-first-bloom
+updated_at: 2008-03-02 17:38:08 -05:00
+title: The first bloom
+tags: plants picture
+id: 10
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-05-15 20:27:00 -04:00
+--- 
+I was chilling on the hammock this afternoon while lunch was cooking, and I noticed the first bloom on our vines, a pretty blue flower:
+<img src="http://brycekerley.net/textpattern/images/22.jpg" height="352" width="288" alt="Flower on vine"    />
+
+So I grabbed my phone, stuck it out through the railing, and took a picture of it head-on:
+<img src="http://brycekerley.net/textpattern/images/23.jpg" height="288" width="352" alt="The flower from outside"    />

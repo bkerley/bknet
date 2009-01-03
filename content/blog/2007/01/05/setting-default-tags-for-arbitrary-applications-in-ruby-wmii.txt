@@ -1,0 +1,50 @@
+--- 
+slug: setting-default-tags-for-arbitrary-applications-in-ruby-wmii
+updated_at: 2008-03-02 18:06:01 -05:00
+title: Setting default tags for arbitrary applications in ruby-wmii
+tags: ruby-wmii wmii programming
+id: 132
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-01-05 20:00:21 -05:00
+--- 
+I've been running [wmii](http://wmii.suckless.org/) with the [ruby-wmii](http://eigenclass.org/hiki.rb?wmii+ruby) configuration/script/event loop for a few months now, and just today decided to scratch an itch I've been having.
+
+Basically, I keep a '1' tag around with the floating model so I can overlap my web browser and IRC window (my IRC window needs to stay a fixed size because it's shared between multiple machines using screen).  However, when I start rhythmbox, I want it managed (and incidentally, full-screen) on the 'rock' tag.
+
+As it turns out, this is cake:
+<pre class="textmate-source sunburst"><span class="source source_ruby"><span class="variable variable_other variable_other_constant variable_other_constant_ruby">WMII</span>::<span class="support support_class support_class_ruby">Configuration</span>.define <span class="keyword keyword_control keyword_control_ruby keyword_control_ruby_start-block">do
+</span>  border      <span class="constant constant_numeric constant_numeric_ruby">1</span>
+  font        <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>fixed<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+  selcolors   <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>#FFFFFF #224422 #228822<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+  normcolors  <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>#FFFFFF #668866 #228822<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+  colmode     <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>default<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>
+  colwidth    <span class="constant constant_numeric constant_numeric_ruby">0</span>
+  grabmod     <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>Mod1<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>
+  rules &lt;&lt;<span class="variable variable_other variable_other_constant variable_other_constant_ruby">EOF</span>
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>Kdict.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; dict
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>XMMS.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; ~
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>Gimp.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; ~
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>MPlayer.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; ~
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>XForm.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; ~
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>XSane.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; ~
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>fontforge.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; ~
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>KoLmafia.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; ~
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>Rhythmbox.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; rock
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; !
+<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>.*<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span> -&gt; <span class="constant constant_numeric constant_numeric_ruby">1</span>
+<span class="variable variable_other variable_other_constant variable_other_constant_ruby">EOF</span>
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> MORE CONFIG
+</span>
+<span class="keyword keyword_control keyword_control_ruby">end</span></span></pre>
+
+Simply adding the rhythmbox matcher was all it took.
+
+Also, as a bonus tip, if you're a Gentoo user that has problems with ruby-wmii and wmii-3.5, you might want to downgrade to wmii-3.1 .  However, simply emerging wmii-3.1 (probably from your portage overlay) will error out unless you unmerge the libixp ebuild that wmii-3.5 depends on:
+
+    sudo emerge -C libixp
+    sudo emerge -av '=wmii-3.1-r4'

@@ -1,0 +1,14 @@
+--- 
+slug: i-think-i-m-going-to-make-a-portfolio
+updated_at: 2008-03-02 17:38:02 -05:00
+title: I think I'm going to make a portfolio
+tags: work
+id: 9
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-05-08 15:03:00 -04:00
+--- 
+I realized that I've worked on quite a few programs, many to completion.  Sometime this week I'll get some screenshots and descriptions for them together to show off.

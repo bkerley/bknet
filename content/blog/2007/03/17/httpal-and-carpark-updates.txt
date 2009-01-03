@@ -1,0 +1,28 @@
+--- 
+slug: httpal-and-carpark-updates
+updated_at: 2008-03-02 18:08:48 -05:00
+title: HTTPal and Carpark updates
+tags: carpark httpal programming ruby
+id: 147
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-03-17 21:46:16 -04:00
+--- 
+HTTPal and Carpark gems now have their dependency on Rake tagged.  I learned about this from the [firebrigade](http://firebrigade.seattlerb.org/build/show/15764) project from the [Seattle Ruby Brigade](http://seattlerb.org/).  Thanks duders!
+
+How to update:
+<pre>bkerley@larry-sellers ~> sudo gem update HTTPal Carpark
+Password:
+Updating installed gems...
+Need to update 2 gems from http://gems.rubyforge.org
+..
+complete
+Attempting remote update of Carpark
+Successfully installed Carpark-26
+Attempting remote update of HTTPal
+Successfully installed HTTPal-25
+Gems: [Carpark, HTTPal] updated</pre>
+(omit Carpark or HTTPal from the command line if you don't care about them)

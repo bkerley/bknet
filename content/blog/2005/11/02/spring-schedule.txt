@@ -1,0 +1,24 @@
+--- 
+slug: spring-schedule
+updated_at: 2008-03-02 17:43:37 -05:00
+title: Spring Schedule
+tags: school
+id: 36
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-11-02 18:01:00 -05:00
+--- 
+Looks like I'll be signing up for classes next week, when my registration appointment draws near.
+
+For the interested ones (and me so I don't have to drag my excel sheet to school):
+|Ref#|Prefix|Crs#|Title|Prof|When|
+|10663|GEO|3402|Human Geography|Archer|MW 1000|
+|11737|COT|4210|Analysis of Algorithms|Tindell|TR 0930|
+|15416|EEL|4852|Database Design|TBA|MW 1800|
+|11735|COP|4600|Operating Systems|Iamnitchi|T 1800|
+|11716|CIS|4250|Ethical Issues|Jeanty|TR 1400|
+
+16 credits total, leaving 20 to fit in the summer and Fall '06.

@@ -1,0 +1,16 @@
+--- 
+slug: "18"
+updated_at: 2008-03-02 18:09:14 -05:00
+title: "18"
+tags: ctf hacking
+id: 149
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-04-13 02:34:45 -04:00
+--- 
+[Eighteen teams](http://ctf07.usf.edu/register.html) will be competing in USFCTF 2007.  This is certainly more impressive than I was hoping for, and hopefully won't present a challenge for our infrastructure.
+
+Getting the image and scoring system ready to go has been suckin' up an awful lot of free time recently, so hence the dearth of blog posts.  Hopefully things will be back to normal April 21.

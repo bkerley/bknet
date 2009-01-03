@@ -1,0 +1,61 @@
+--- 
+slug: don-t-forget-to-add-your-indices
+updated_at: 2008-03-02 18:09:33 -05:00
+title: Don't Forget to Add Your Indices
+tags: programming rails sql
+id: 151
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-04-24 23:42:43 -04:00
+--- 
+Found the problem making that SQL query from yesterday take so long.  As it turns out, there was a quirk in our ad hoc "configuration management" system.
+
+About a week before competition, we started keeping a database pre-loaded with teams and services updated, so that it didn't strike 9:50 on 4/20 and leave us with a big gob of work to be done in *incredibly* short order.
+
+Compounded with this, we had been working on the scoreboard pretty heavily over the same time span, trying to speed it up.  It was during this period in which the big query (from yesterday) was written, as well as a migration to add indices to a table that needed them:
+
+<pre class="textmate-source sunburst"><span class="source source_ruby"><span class="meta meta_class meta_class_ruby"><span class="keyword keyword_control keyword_control_class keyword_control_class_ruby">class</span> <span class="entity entity_name entity_name_type entity_name_type_class entity_name_type_class_ruby">IndexUp<span class="entity entity_other entity_other_inherited-class entity_other_inherited-class_ruby"> <span class="punctuation punctuation_separator punctuation_separator_inheritance punctuation_separator_inheritance_ruby">&lt;</span> ActiveRecord::Migration</span></span></span>
+  <span class="meta meta_function meta_function_method meta_function_method_without-arguments meta_function_method_without-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">self.up</span></span>
+    add_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, [<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>team_id</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>service_id</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>flag_id</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>value</span>])
+    add_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>service_id</span>)
+    add_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>team_id</span>)
+    add_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>flag_id</span>)
+    add_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>value</span>)
+  <span class="keyword keyword_control keyword_control_ruby">end</span>
+
+  <span class="meta meta_function meta_function_method meta_function_method_without-arguments meta_function_method_without-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">self.down</span></span>
+    remove_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, [<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>team_id</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>service_id</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>flag_id</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>value</span>])
+    remove_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>team_id</span>)
+    remove_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>service_id</span>)
+    remove_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>flag_id</span>)
+    remove_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>value</span>)
+  <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class="keyword keyword_control keyword_control_ruby">end</span>
+</span></pre>
+
+We kept testing the whole week, satisfied with the speed of the scoreboard on the test data that had been accumulating all week just by running the uptime checker/flag placer against a handful of VMs.
+
+Morning of, we've got the whole setup from the previous day in a satisfactory condition, so we copy the directory for the database right on top of the one filled with test data.
+
+    RAILS_ENV=production rake db:migrate
+
+That's what we forgot.  With the indices above, the big query ran in 0.6 seconds instead of the 6 it was taking on the machine we tested with today.
+
+So even if we do nothing else, the scoreboard next game won't be as bad, because instead of a cache miss taking 20 seconds (and queueing up 20 seconds worth of cascading cache misses), it'll now only queue up 1 second of cascading cache misses.
+
+And I think we have a solution for that too.
+
+###Prefetching in Rails
+
+The plan right now is to use caching on both the SQL output and page caching.  Since we can't completely negate the penalty of a page cache miss (or the cascading cache misses), we're planning to also cache SQL output.  Since you can easily populate the SQL cache from outside an HTTP request (using `script/runner` for example), we can set up the two sets of caches to complement each other, operated by a script parallel to the HTTP service:
+
+1. Expire (either by force or a cache that knows expiration) the SQL cache.
+2. Perform SQL requests that will get cached.
+3. Expire the page cache.
+
+The next request *might* still cause a cascading cache miss, but since it'll all be in-process misses (the data will be cooling its heels in the cache), it shouldn't bring anything to its knees.
+
+I'm still hoping that this won't be necessary for our scoreboard, but I'm throwing it out here for criticism and in case somebody else needs it.

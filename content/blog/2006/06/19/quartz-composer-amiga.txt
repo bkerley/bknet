@@ -1,0 +1,16 @@
+--- 
+slug: quartz-composer-amiga
+updated_at: 2008-03-02 17:57:07 -05:00
+title: "Quartz Composer: Amiga"
+tags: programming quartz shader
+id: 85
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-06-19 19:51:09 -04:00
+--- 
+[The Shader](http://www.brycekerley.net/typo/files/amiga.qtz.zip)
+
+Bouncing Amiga-style ball.  If you mess with the multiplexer on the root level you can switch between normal, bloom, and gloom.

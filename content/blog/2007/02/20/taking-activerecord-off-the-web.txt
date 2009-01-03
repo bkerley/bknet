@@ -1,0 +1,81 @@
+--- 
+slug: taking-activerecord-off-the-web
+updated_at: 2008-03-02 18:07:53 -05:00
+title: Taking ActiveRecord off the Web
+tags: programming rails ruby
+id: 142
+excerpt: |-
+  [ActiveRecord](http://wiki.rubyonrails.com/rails/pages/ActiveRecord), known to most as the ORM/database interface in [Ruby on Rails](http://rubyonrails.com/), is actually just fine when pulled away from Rails and used in a different environment - the [Camping](http://code.whytheluckystiff.net/camping/) microframework uses it, and I've found it useful in non-web projects too.
+  
+  Why clutter up a non-Rails project with AR?  AR helps you evade SQL for simple use cases, provides bound-parameter-style escaping to lay the smack-down on SQL injection attacks, and provides ever-more-important RDBMS freedom).
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-02-20 02:15:15 -05:00
+--- 
+# Standalone console app
+
+So, let's get this party started with a simple console app that uses ActiveRecord.  You can grab the following example from [http://brycekerley.net/svn/ar-console/1-simple.rb](http://brycekerley.net/svn/ar-console/1-simple.rb) .
+
+The first things to do are to include rubygems and the activerecord gem (hopefully the machine you're running the app on has these installed).  Once that's done, go ahead and `establish_connection` to the database, sqlite3 in this case.
+
+<pre class="textmate-source sunburst"><span class="source source_ruby source_ruby_rails"><span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>rubygems<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span></span>
+<span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>active_record<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span></span>
+
+<span class="support support_class support_class_ruby">ActiveRecord</span>::<span class="support support_class support_class_ruby">Base</span>.establish_connection(
+  <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>adapter</span> =&gt; <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>sqlite3<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>,
+  <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>dbfile</span> =&gt; <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>ar-console.db<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>)</span></pre>
+
+Now, I'm going to detour to directly interacting with the database in this case -- in Rails, you use migrations to handle working with the data definition SQL (creating, altering, &c. tables).  In the absence of that, you can do it by hand.
+
+<pre>
+~/ar-console> sqlite3 ar-console.db
+SQLite version 3.3.6
+Enter ".help" for instructions
+sqlite> create table names (id integer primary key, firstname varchar(20), lastname varchar(20));
+sqlite> .schema
+CREATE TABLE names (id integer primary key, firstname varchar(20), lastname varchar(20));
+sqlite> ^D
+~/ar-console>
+</pre>
+
+Now that we have a table to interface with, we have to define a class that aligns with the table and inherits from the `ActiveRecord::Base` class.  You can require this inline defintion from an external file, or even `Dir.glob('some_rails_app/app/models/*.rb').each { |m| require m }` to load all the models for `some_rails_app` in one fell swoop.  *Stay away from this way of integrating with a rails app for now -- there's a much better way.*
+
+<pre class="textmate-source sunburst"><span class="source source_ruby source_ruby_rails"><span class="meta meta_rails meta_rails_model"><span class="meta meta_class meta_class_ruby"><span class="keyword keyword_control keyword_control_class keyword_control_class_ruby">class</span> <span class="entity entity_name entity_name_type entity_name_type_class entity_name_type_class_ruby">Name<span class="entity entity_other entity_other_inherited-class entity_other_inherited-class_ruby"> <span class="punctuation punctuation_separator punctuation_separator_inheritance punctuation_separator_inheritance_ruby">&lt;</span> ActiveRecord::Base</span></span></span>
+</span><span class="keyword keyword_control keyword_control_ruby">end</span>
+
+x = <span class="support support_class support_class_ruby">Name</span>.<span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">new</span>(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>firstname</span>=&gt;<span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>Hans<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>lastname</span>=&gt;<span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>Gruber<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>)
+x.save
+
+y = <span class="support support_class support_class_ruby">Name</span>.<span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">new</span>(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>firstname</span>=&gt;<span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>John<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>lastname</span>=&gt;<span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>McClane<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>)
+y.save
+
+<span class="support support_class support_class_ruby">Name</span>.find_all.each {<span class="meta meta_syntax meta_syntax_ruby meta_syntax_ruby_start-block"> </span>|n| puts n.inspect }
+</span></pre>
+
+Finally, just for grins, we add some movie characters to the database, save them, and show who's going to be running around Nakatomi Plaza today.
+
+# Flexible configuration
+
+What if you want to move the configuration out into a .yml file just like rails?  Turns out this isn't terribly hard - Ruby comes with YAML support, so we can trivially use the same yaml file that Rails does.  Adding `database.yml` support is nigh-trivial; our only caveat is that if you're using SQLite you have to remember the path to the database is evaluated from where you execute the Ruby with this setup, seen in [http://brycekerley.net/svn/ar-console/2-yamlized.rb](http://brycekerley.net/svn/ar-console/2-yamlized.rb).
+
+<pre class="textmate-source sunburst"><span class="source source_ruby source_ruby_rails"><span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>yaml<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span></span>
+<span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>rubygems<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span></span>
+<span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>active_record<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span></span>
+
+<span class="support support_class support_class_ruby">ActiveRecord</span>::<span class="support support_class support_class_ruby">Base</span>.establish_connection(<span class="variable variable_other variable_other_constant variable_other_constant_ruby">YAML</span>::load_file(<span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>database.yml<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>)[<span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>development<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>])</span></pre>
+
+# Leeching Off Rails
+
+Sometimes you want a console app to hook right in to Rails, but not serve web pages.  As it turns out, we can do this quite cleverly, by loading the Rails environment the same way `dispatch.cgi` or `script/console` does.  As an added bonus, we get to use Rails migrations, models are loaded for us, and so on.  You do get to break all your business logic that you implemented as controllers, but [you should be using a fat model and a skinny controller](http://weblog.jamisbuck.org/2006/10/18/skinny-controller-fat-model) for this very reason.
+
+The files we actually care about are `boot.rb` and `environment.rb`, in your app's `config` directory.  Assuming you want your app to live in a subdirectory off of your app's `/` (i.e. next to `public`, `app`, and `vendor`), the incantation you need to establish the connection is as in [http://brycekerley.net/svn/ar-console/3-railed.rb](http://brycekerley.net/svn/ar-console/3-railed.rb):
+
+<pre class="textmate-source sunburst"><span class="source source_ruby source_ruby_rails"><span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="support support_class support_class_ruby">File</span>.dirname(<span class="variable variable_language variable_language_ruby">__FILE__</span>) + <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>/../config/boot<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span> </span>
+<span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="support support_class support_class_ruby">File</span>.dirname(<span class="variable variable_language variable_language_ruby">__FILE__</span>) + <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>/../config/environment<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span> </span>
+<span class="support support_class support_class_ruby">ActiveRecord</span>::<span class="support support_class support_class_ruby">Base</span>.establish_connection </span></pre>
+
+#Coda
+
+To snap up all the examples from this in one fell swoop, `svn co http://brycekerley.net/svn/ar-console/ ar-console` .  If you've got any questions, fire away in the comments.

@@ -1,0 +1,21 @@
+--- 
+slug: sunset
+updated_at: 2008-03-02 18:08:22 -05:00
+title: Sunset
+tags: book music travel
+id: 144
+excerpt: "Yesterday my boss and I escaped from the work lab an hour early so he could attend (online) one of the classes he teaches.  Since I'm not in the class, and have kind of a cold, I went back to the hotel for some relaxation.\n\n\
+  I've had and enjoyed \"Virthulegu forsetar'\" by [J\xC3\xB3hann J\xC3\xB3hannsson](http://www.johannjohannsson.com/) for a year or so now, and while I was kicking around on iTunes Saturday afternoon, I found out that he released a new album last year, called \"[IBM 1401, A User's Manual](http://www.ausersmanual.com/)\".  Since I knew I had a long plane flight ahead of me (and a new iPod to use on it), I decided to buy the album on Sunday, along with a book to read."
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-03-08 02:06:44 -05:00
+--- 
+Sunday afternoon I tried the Border's on Dale Mabry, and they were sadly lacking the album, so I went and fulfilled my other errand (cough drops), and returned home to pick up the roommate who needed groceries.  Before groceries, we tried the Barnes & Noble basically a block away from the Border's, and they also didn't stock the album.  However, I did pick up the book "[Dreaming in Code](http://www.dreamingincode.com/)" by Scott Rosenberg.  After dinner, I found the album on a DRM-free online music store linked to from the album's home page.  **Nice.**
+
+So, stuck in a hotel room in suburban New Jersey with the common cold and the sun tracing its final radians through the sky behind me, I picked up where I left off on the book (page 128) listening to the album for the first time (was in a Beastie Boys mood on the airplane).
+
+The book is a fascinating -- it alternates between an exploration of the concepts that make the art of programming difficult to control, and a tale of a [personal information manager](http://chandler.osafoundation.org/) project going through a difficult start due to overplanning and desire to do the most futureproofly perfect thing at the expense of doing anything.
+
+Simultaneously, the album is beautiful and haunting, owing greatly to Jóhannsson's inspiration from tapes of a computer's "wake" long ago.  As it reached its end, I paused reading to look up and adjust my lighting, as the sun had set to the point where the shadow along the wall was perfectly parallel with a misaligned identification sticker on the face of my work laptop alone and untouched on the desk on the far side of the room.

@@ -1,0 +1,27 @@
+--- 
+slug: hackin-on-mephisto
+updated_at: 2008-03-02 18:05:47 -05:00
+title: Hackin' on Mephisto
+tags: blog software mephisto
+id: 131
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2007-01-01 23:52:05 -05:00
+--- 
+If you've been watching this blog disturbingly closely, you may have noticed some improvements on my Mephisto install.
+
+First of all, I fixed the tags from the Typo import by running this snippet in the Rails console:
+<pre class="textmate-source sunburst"><span class="source source_ruby"><span class="support support_class support_class_ruby">Article</span>.find_all.each <span class="keyword keyword_control keyword_control_ruby keyword_control_ruby_start-block">do </span>|a|
+  t = a.tag.gsub(<span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>,<span class="string string_regexp string_regexp_group string_regexp_group_ruby"><span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_ruby">(</span><span class="constant constant_character constant_character_escape constant_character_escape_ruby">\w</span><span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_ruby">)</span></span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span>,<span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>, \1<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span>)
+  a.tag = t
+  a.save
+<span class="keyword keyword_control keyword_control_ruby">end</span>
+</span></pre>
+By doing this, I was able to fix the [tags page](http://www.brycekerley.net/mp/tags/) to actually allow (get this!) tag-based viewing of articles.  As such, tags now appear below each post.
+
+I also added google sitemap support with [Stephen Caudill's plugin](http://exdolo.com/2006/9/2/mephisto-google-sitemap-plugin), although I did hack around a bit to make it also map the one non-mephisto page on here (daily I consider just trashing it).
+
+I'm just generally happy with Mephisto.  Typo was getting kind of bloated and inflexible, and Mephisto just seems a lot easier to hack on.  I'm not **completely** sure that's due to the system and not my growing famillarity with Rails, but it does wear quite well.

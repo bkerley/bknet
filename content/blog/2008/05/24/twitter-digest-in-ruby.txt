@@ -1,0 +1,21 @@
+--- 
+slug: twitter-digest-in-ruby
+updated_at: 2008-05-24 22:15:23 -04:00
+title: Twitter Digest in Ruby
+tags: atom twitter ruby programming
+id: 173
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2008-05-24 22:15:23 -04:00
+--- 
+I wanted a customizable tool to turn my daily [Twitter](http://twitter.com/BonzoESC) stream into a single daily Atom entry for self-explanatory reasons. 
+
+[The result is on github](http://github.com/bkerley/tdigester/tree/master), and isn't terribly difficult to use:
+
+1. Get the one file.
+2. Make sure you have the prereqs (rubygems, twitter4r, activesupport, builder).
+3. Edit the source to point at your twitter account, and the selection of updates that you want to get.
+4. Run it and redirect the output somewhere fun/useful.

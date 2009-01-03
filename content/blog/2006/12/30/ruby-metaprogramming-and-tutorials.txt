@@ -1,0 +1,28 @@
+--- 
+slug: ruby-metaprogramming-and-tutorials
+updated_at: 2008-03-02 18:05:23 -05:00
+title: Ruby - Metaprogramming and Tutorials
+tags: metaprogramming programming ruby
+id: 130
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-12-30 00:54:29 -05:00
+--- 
+I caught/am catching [Josh Staigler's series](http://www.joshstaiger.org/archives/2006/12/metaprogramming.html) (that's the third part, the prior two parts are linked in the first paragraph) on some Ruby hackin' and metaprogrammin', and would just like to recommend it to anybody interested.  Neither of us is a guru like [why](http://redhanded.hobix.com) or [Mauricio](http://eigenclass.org/), but it'll be a neat intro for any curious newbies (the best kind of newbie).
+
+In the same spirit of things (and the belated spirit of Christmas, ho ho ho), I've gone ahead and added the PDFs to the notes from the section of Ruby I taught in Dr. Albrecht's Programming Languages class at USF in the fall of 2006.  [Scope the folder full of all the files](http://brycekerley.net/RubyTut/), or hit [Intro to Ruby](http://brycekerley.net/RubyTut/revised.pdf) (last compiled on my birthday!) and [Ruby: Behind the Eightball](http://brycekerley.net/RubyTut/rubymeta.pdf) separately.
+
+The source code in that folder's kind of disorganized, so here's a quick run down:
+
+*    Most of the standalone .rb files are just that – standalone examples referenced in either revised.pdf (Intro to Ruby) or rubymeta.pdf (Ruby: Behind the Eightball).
+
+*    carpark-nohead.rb is probably out of date against carpark.rb .  The only difference was that carpark-nohead.rb had, get this, no header so it wouldn't take up too much v-space when included in a LaTeX document.
+
+*    The .rb files in the filetypes directory are automatically loaded by commentscan.rb (which will fail due to the way tex.rb works) and commentscan-ext.rb (which is a true superset of commentscan's functionality).  Usage for these is discussed in rubymeta.pdf .
+
+*    The .tex files correspond to the .pdf files, save for intro.tex , which was basically an aborted early attempt that got its content mixed back into revised.pdf .
+
+Also, one final oddity from that class, is the award-winning [Law & Order site](http://brycekerley.net/lao/).

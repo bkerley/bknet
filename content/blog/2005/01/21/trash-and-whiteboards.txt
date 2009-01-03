@@ -1,0 +1,20 @@
+--- 
+slug: trash-and-whiteboards
+updated_at: 2008-03-02 17:37:06 -05:00
+title: Trash and Whiteboards
+tags: hardware picture
+id: 5
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-01-21 12:15:00 -05:00
+--- 
+Whiteboards are awesome.  You can leave notes or strange pictures for other people that are looking if they're in your house.
+
+<img src="/textpattern/images/16.jpg" alt="" />
+
+I drew this on mine because I thought of how grouchy my roommate got when he had to take out the trash but didn't want to, and because Oscar was my dad's favorite Sesame Street character.
+
+I think I'm going to change routers today - from a 133MHz IBM I got for $10 from a junk shop to a 333MHz Gateway said roommate brought up to the apartment because he didn't have anything to use it for.

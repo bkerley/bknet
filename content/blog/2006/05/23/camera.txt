@@ -1,0 +1,27 @@
+--- 
+slug: camera
+updated_at: 2008-03-02 17:55:51 -05:00
+title: Camera
+tags: picture phone quartz school
+id: 80
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-05-23 22:01:49 -04:00
+--- 
+Got my k750i today - takes better pictures than my t616, also plays MP3s and videos.  Took it to school to take some photos of the business building for a presentation:
+
+[Full Set](http://www.flickr.com/photos/bonzoesc/sets/72157594143518064/)
+
+[![Big Atrium](http://static.flickr.com/47/152280855_556723e1e5_t.jpg)](http://www.flickr.com/photos/bonzoesc/152280855/in/set-72157594143518064)
+
+This atrium (which is about three times the size of the "fishbowl" in ENB (Engineering 2)) is totally wasted because there's no good tables for eating on, and food and drinks aren't allowed anyways.
+
+[![Taseful Wall](http://static.flickr.com/54/152277877_9bf122e0a1_t.jpg)](http://www.flickr.com/photos/bonzoesc/152277877/in/set-72157594143518064)
+
+The external wall up to the outside on the bottom floor of bunker is really pretty.  There's frequently a cool breeze down here, usually from an open classroom.
+
+Also of interest:
+[Best abuse of Quartz Composer ever](http://zacwhite.com/blog/2006/05/23/circuit-design-with-quartz-composer/)

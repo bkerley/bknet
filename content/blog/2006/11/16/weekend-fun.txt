@@ -1,0 +1,16 @@
+--- 
+slug: weekend-fun
+updated_at: 2008-03-02 18:03:13 -05:00
+title: Weekend Fun
+tags: school
+id: 116
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-11-16 15:23:19 -05:00
+--- 
+Psyche!  This weekend's going to be busy.  We have a take-home test in Advanced Discrete that's due on Monday, and some senior project deadline's next week too.  Looks like I get to alternate between fun BCH stuff (NOT FUN) and making a recent version of [redland](http://librdf.org/) compile in Windows (NOT A GOOD OS TO USE).
+
+[At least I'm not the only one in this boat](http://www.weaponofmassdisruption.com/?p=65)

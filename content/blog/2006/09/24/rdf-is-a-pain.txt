@@ -1,0 +1,25 @@
+--- 
+slug: rdf-is-a-pain
+updated_at: 2008-03-02 18:00:08 -05:00
+title: RDF is a pain
+tags: programming
+id: 101
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-09-24 23:18:29 -04:00
+--- 
+So while I was able to easily rip out XMP data from a JPEG, actually parsing it looks harder, for several reasons:
+
+1. It's XML, which means that there's either expat which has lots of callbacks you have to do, and C just doesn't feel right with that.</li>
+2. It's RDF, so even if you get the XML turned into a tree, all the libraries that deal with it see it as a digraph.  Sample function from a library that deals with RDF:
+
+        librdf_iterator* librdf_model_get_arcs      (librdf_model *model,
+                                             librdf_node *source,
+                                             librdf_node *target);
+
+3. It's XMP, so you have to worry about padding out the result and sticking it back in a JPEG.
+4. It's image metadata, so all you really care about is that it contains key=>value pairs.
+What fun!

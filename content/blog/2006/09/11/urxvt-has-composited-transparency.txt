@@ -1,0 +1,30 @@
+--- 
+slug: urxvt-has-composited-transparency
+updated_at: 2008-03-02 17:59:21 -05:00
+title: urxvt has composited transparency
+tags: compiz linux software picture
+id: 96
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-09-11 01:00:36 -04:00
+--- 
+My .Xdefaults:
+<pre>
+URxvt*background:       rgba:0000/0000/0000/aaaa
+URxvt*foreground:       grey80
+URxvt*colorBD:          white
+URxvt*font:             xft:Lucida Typewriter:pixelsize=10
+URxvt*depth:            32
+URxvt*scrollBar_right:  true
+URxvt*saveLines:        32768
+URxvt*scrollTtyOutput:  false
+URxvt*scrollWithBuffer: true
+URxvt*geometry:         102x44
+URxvt*termName:         xterm-color
+</pre>
+[Big screenshot](http://www.brycekerley.net/typo/files/blurminal.png)
+
+[Compiz](http://www.compiz.net) is pretty sweet, rough around the edges (I wish there were some nice-looking decorator themes that weren't vista ripoffs) but worth the trouble for some people.  Some time I'm going to get around to messing around with shaders and write a plugin or something.

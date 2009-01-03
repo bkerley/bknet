@@ -1,0 +1,16 @@
+--- 
+slug: he-sure-does
+updated_at: 2008-03-02 17:54:36 -05:00
+title: He Sure Does
+tags: hacking laffo picture
+id: 75
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-04-21 18:57:00 -04:00
+--- 
+Somebody set up a wireless network under us with the SSID "GabeLikesPenis".  Seeing as we had a spare AP around, our hand was forced:
+
+![lol](http://brycekerley.net/typo/files/HeSureDoes.png)

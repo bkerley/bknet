@@ -1,0 +1,41 @@
+--- 
+slug: experiments
+updated_at: 2008-03-02 17:58:35 -05:00
+title: Experiments
+tags: food hardware work
+id: 94
+excerpt: My summer's dwindling to a close, which is funny because it's in this last week that all the fun stuff we thought of doing for the whole summer actually happens.
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-08-23 23:43:27 -04:00
+--- 
+###Monday
+
+On Monday night, Dustin and I hit iplaza to get my iBook back from the fruit shop, with a brand new logic board that actually works with more RAM than what's soldered on.  It was actually like that for about a month, but I couldn't get it fixed right away unless I wanted to go to Def Con with my eight-year-old powerbook with no wireless (and for now, no Tiger).  Following that, we got burrito's from Moe's, and then went back to my place for some hardware hackin'.
+
+At Def Con, Dustin got an Atheros Mini-PCI card and a huge 15" antenna for his Compaq laptop, but upon testing the card in his machine, we found out that HP/Compaq, in a total dick anti-customer move, only whitelisted some Broadcom cards, and throw up an error message on POST for non-approved wireless hardware should a customer actually want to take apart and improve their property.  So, in a brazen move, we learned:
+* that Mini-PCI is hot swappable, and that GRUB won't complain if you do it while sitting at the boot loader menu
+* that the flashing program to change the PCI ID of Atheros cards that Dustin downloaded binaries for works, unlike the one Dustin compiled
+* that it's easy and fun to hack the kernel and tell it to load the Broadcom PCI card with Atheros drivers
+
+Of course, that was the easy part - the hardest and most time-intensive part was dismantling most of the laptop (screen, keyboard, drives, and pretty much everything except the motherboard and the top part of the bottom case) to thread the antenna lead out from the center of the machine where the card lives to the space on the side below the left wristrest.
+
+Finished product:
+
+<a href="http://www.flickr.com/photos/bonzoesc/222044773/" title="Photo Sharing"><img src="http://static.flickr.com/89/222044773_325e30786b.jpg" width="500" height="375" alt="totally innocuous" /></a>
+
+Protip: use WPA
+
+###Tuesday
+
+Mostly just lazed around and cleaned up the house, started a C web server using plain' ol sockets, started writing some slides about Ruby for a class this semester, and recovered from being up until 4am Monday night.
+
+I also got XGL and Compiz runnin' on my desktop again, although Compiz still freezes every now and then, but at least it doesn't take the system or even any X apps down with it.
+
+###Wednesday
+
+Got woken up by Zap, who had the day off work and was hanging out with his girlfriend and wanted to do lunch.  I quickly went downstairs to let them in (he called as he was turning in to my subdivision), and then went up and showered and such.  Went to the Tampa Ale House with Andrew, Zap, and April, got back and cleaned up some more, moved another box of stuff upstairs, and worked more on yesterday's projects.
+
+Let's see what happens in the last four days before school.

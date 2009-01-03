@@ -1,0 +1,18 @@
+--- 
+slug: primer
+updated_at: 2008-03-02 17:53:13 -05:00
+title: Primer
+tags: movies school writing
+id: 71
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-03-31 13:50:00 -05:00
+--- 
+I caught the movie "[Primer](http://primermovie.com/)" last Friday on DVD, and was pretty impressed by the movie.  Watched it again on Saturday with the commentary on in the hope that it would be more illuminating, but it wasn't much more.  Watching it again tomorrow :v
+
+I also have to get some serious writin' done on my ethics term paper.  I shouldn't have trouble writing 3000 words about the ethics of hacking, but I <em>do</em> have to actually sit down and start writing.
+
+I'm still not sure what I'm going to do after I graduate.  I could get a decent job right as soon as I get out, but other professors of mine think I'd do well to get a PhD.

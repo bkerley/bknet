@@ -1,0 +1,18 @@
+--- 
+slug: moving
+updated_at: 2008-03-02 17:57:48 -05:00
+title: Moving
+tags: food picture townhouse
+id: 90
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-07-25 16:51:19 -04:00
+--- 
+I'm moving out of the crappy college ghetto this week, but it's getting harder every day as the new townhouse becomes better and better.  I'm not even bothering going over there today, just making a list of stuff I *need* to get tomorrow.
+
+Probably the best thing is the bigger kitchen, huge living room, and being able to grill burgers for lunch:
+
+<a href="http://www.flickr.com/photos/bonzoesc/198218166/" title="Photo Sharing"><img src="http://static.flickr.com/63/198218166_bdb9a276d7.jpg" width="500" height="375" alt="Grillin' burgers" /></a>

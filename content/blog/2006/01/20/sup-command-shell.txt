@@ -1,0 +1,27 @@
+--- 
+slug: sup-command-shell
+updated_at: 2008-03-02 17:50:07 -05:00
+title: sup command shell
+tags: programming school
+id: 58
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-01-20 10:51:00 -05:00
+--- 
+    gosh! by Bryce Kerley
+    Version information:
+    $Id: versioninfo.h 13 2006-01-20 15:59:37Z bkerley $
+    
+    gosh!> 
+    gosh!> test
+    gosh!> exit
+    MNLP: ended OK
+    
+    gosh! terminating.
+    Version information:
+    $Id: versioninfo.h 13 2006-01-20 15:59:37Z bkerley $
+
+Pretty good for just an hour or so.

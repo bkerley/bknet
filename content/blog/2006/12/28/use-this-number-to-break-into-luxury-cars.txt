@@ -1,0 +1,14 @@
+--- 
+slug: use-this-number-to-break-into-luxury-cars
+updated_at: 2008-03-02 18:05:09 -05:00
+title: Use this number to break into luxury cars
+tags: car hacking
+id: 128
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2006-12-28 16:11:14 -05:00
+--- 
+An [article at everything2](http://everything2.com/index.pl?node_id=1520430) gives away the long code needed to guarantee entry into one of those luxury cars that has the buttons on the door.  Maybe some of these cars time you out after a few failed attempts, but really I've never been a luxury car aficionado so you won't get a definitive answer either way here.

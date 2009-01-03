@@ -1,0 +1,27 @@
+--- 
+slug: a-big-scary-function
+updated_at: 2008-03-02 17:38:48 -05:00
+title: A big scary function!
+tags: games programming
+id: 15
+excerpt: 
+filter: 
+- markdown
+blog_post: true
+layout: post
+created_at: 2005-06-11 23:56:00 -04:00
+--- 
+I wrote a big scary function today.
+
+Visualize an electronic stock exchange where piles of shares exist.  Piles consist of an owner id, corporation id, and a quantity of shares they represent.
+
+For trading to be flexible, piles have to be broken up into smaller piles until they become atomic piles of single shares.  However, a single pile of two or more shares is far more efficient to store than two or more piles of single shares.  Therefore, you have to be able to merge piles of similar owner and corporation.
+
+Here's what I do:
+1) Get a list of piles sorted by owner and corporation.
+2) Pick the first pile and designate it as the big pile.
+3) If the next pile is similar to the big pile, merge them.
+4) If not, next pile is the new big pile.
+5) Repeat until all piles have been checked once.
+
+It looks like my part gets the luxury of running in linear time since I can get a sorted list to start from.
