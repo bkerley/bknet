@@ -1,0 +1,56 @@
+body {
+	margin: 0em;
+	padding: 0em;
+	font-family: Optima, Candara, Tahoma, Helvetica, Arial, sans-serif;
+}
+
+#header {
+	margin: 1em;
+}
+
+#header h1 {
+	margin-bottom: 0em;
+}
+
+#header ul {
+	margin-top: 0em;
+	padding-left: 0em;
+}
+
+#header ul li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 1em;
+}
+
+#content {
+	margin: 1em;
+	max-width: 40em;
+	font-size: normal;
+}
+
+#content .post h1 {
+  font-size: 18pt;
+}
+
+#tagcloud {
+	padding: 0em;
+}
+
+#tagcloud li {
+	display: inline;
+	list-style-type: none;
+	margin: 0.5em;
+	padding: 0em;
+}
+
+#footer {
+	background-color: #aaa;
+	margin: 0em;
+	padding: 0em;
+}
+#footer p {
+	margin: 0em;
+	padding: 1em;
+	font-size: smaller;
+}

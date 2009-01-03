@@ -1,0 +1,23 @@
+.twitter {
+  font-size: smaller;
+}
+.twitter .timestamp {
+	font-size: smaller;
+	color: #336;
+}
+.twitter p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.twitter .content {
+	
+}
+.twitter p:first-child span.user img {
+  display: inline;
+  float: left;
+  margin: 0.2em;
+}
+.twitter p span.user img,
+.twitter p span.user .username {
+  display: none;
+}
