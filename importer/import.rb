@@ -13,6 +13,7 @@ Post.all.each do |p|
 	a['blog_post'] = true
 	a['filter'] = ['markdown']
 	a['tags'] = p.tag_string
+	a['layout'] = 'post'
 	header = a.to_yaml
 	path = File.dirname(__FILE__)+'/../content/blog/'+p.created_at.strftime("%Y/%m/%d")
 	filename = path +"/#{p.slug}.txt"
