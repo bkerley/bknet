@@ -1,0 +1,25 @@
+---
+title:      Bryce Kerley
+created_at: 2009-01-02 21:04:01.462428 -05:00
+filter:     erb
+dirty:      true
+---
+
+<div class="archive">
+<%
+  articles = @pages.find(:all, :in_directory => @page.dir, :recursive => true,
+      :sort_by => "created_at", :reverse => true, :blog_post => true)
+  articles.delete(@page)
+	prev_date = Time.parse("January 1st, 1970").strftime("%B %Y")
+  articles.each do |page|
+-%>
+<%
+	my_date = page.created_at.strftime("%B %Y")
+	if my_date !=  prev_date
+		prev_date = my_date
+		%>
+		<h1><%= my_date %></h1>
+		<% end %>
+  <h2><%= link_to_page(page) %></h2>
+<% end -%>
+</div>
