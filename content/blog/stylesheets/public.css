@@ -1,7 +1,7 @@
 body {
 	margin: 0em;
 	padding: 0em;
-	font-family: Optima, Candara, Tahoma, Helvetica, Arial, sans-serif;
+	font-family: "Hoefler Text", Baskerville, "Book Antiqua", serif;
 }
 
 #header {
@@ -42,6 +42,14 @@ body {
 	list-style-type: none;
 	margin: 0.5em;
 	padding: 0em;
+}
+
+.archive h1 {
+    font-size: 12pt;
+}
+.archive h2 {
+    font-weight: normal;
+    font-size: 10pt;
 }
 
 #footer {
