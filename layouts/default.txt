@@ -5,7 +5,7 @@ filter:    erb
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title><%= @page.title %></title>
    <meta name="author" content="<%= @page.author %>" />
   <link href="/blog/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
@@ -16,9 +16,35 @@ filter:    erb
 <body>
 	<div id="header">
 		<h1>Bryce Kerley</h1>
+		<ul>
+			<li><a href="/blog/">Home</a></li>
+			<li><a href="/blog/archive.html">Archive</a></li>
+			<li><a href="/blog/about.html">About</a></li>
+		</ul>
 	</div>
 	<div id="content">
 		<%= @content %>
 	</div>
+	<div id="footer">
+		<p>
+			All content &copy; 2008 by Bryce Kerley.
+			This work is licensed under a 
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+				Creative Commons Attribution-Share Alike 3.0 Unported License</a>.
+			Any original source code posted without explicit licensing information
+			is licensed under the
+				<a rel="license" href="http://sam.zoy.org/wtfpl/">WTF Public License</a>
+			without warranty or guarantee that it'll work.
+		</p>
+	</div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-605807-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
 </body>
 </html>

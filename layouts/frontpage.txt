@@ -7,6 +7,6 @@ layout:     default
   <h2><%= link_to_page(@page) %></h2>
 
   <div class="body">
-		<%= @page.excerpt %>
+		<%= RDiscount.new(@page.excerpt).to_html %>
   </div>
 </div>
