@@ -1,0 +1,25 @@
+Options +Indexes
+RewriteEngine  on
+
+#mephisto shims
+RewriteRule	^mp/(\d\d\d\d/\d+/\d+/)(.*)$	/chronicle/post/$2	[R=permanent]
+RewriteRule	^mp/(.*)/(\d\d\d\d/\d+/\d+/)(.*)$	/chronicle/post/$3	[R=permanent]
+RewriteRule	^(\d\d\d\d/\d+/\d+/)(.*)$	/chronicle/post/$2	[R=permanent]
+RewriteRule	^tags/(.*)$ /chronicle/cloud/$1	[R]
+RewriteRule	^mp/tags(.*)$ /chronicle/cloud$1 [R=permanent]
+RewriteRule	^mp/archives(.*)$ /chronicle/date [R=permanent]
+
+#old feeds
+RewriteRule	^mp/feed/atom.xml$	/rss	[R=permanent]
+RewriteRule	^textpattern/rss/$	/rss	[R=permanent]
+
+#permanent urls
+RewriteRule	^chronicle/$	/blog/  [R]
+RewriteRule	^chronicle$  /blog/ [R]
+RewriteRule	^$ /blog/ [R]
+RewriteRule	^rss(/?)$  http://feeds.feedburner.com/bkerley [R]
+RewriteRule	^mp(/?)$ /blog/ [R=permanent]
+RewriteRule	^typo$  /blog/ [R=permanent]
+
+#ancient typo files are now in assets
+RewriteRule	^typo/files/(.*)$ /assets/$1 [R=permanent]

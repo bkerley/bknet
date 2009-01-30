@@ -7,6 +7,6 @@ task :deploy => [:build, 'deploy:rsync']
 SITE.create_mode = 'directory'
 SITE.host = 'waitingf.org'
 SITE.user = 'bkerley'
-SITE.remote_dir = '/home/waitingf.org/web/public/bknet-preview'
+SITE.remote_dir = '/home/brycekerley.net/web/public'
 
 # EOF
