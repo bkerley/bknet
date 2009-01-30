@@ -1,6 +1,11 @@
 Options +Indexes
 RewriteEngine  on
 
+#chronicle shims
+RewriteRule	^chronicle/cloud/(.*)$	/blog/	[R=temporary]
+RewriteRule	^chronicle/about(.*)$	/blog/about	[R=permanent]
+RewriteRule	^chronicle/post/(.*)$	/blog/post/$1	[R=permanent]
+
 #mephisto shims
 RewriteRule	^mp/(\d\d\d\d/\d+/\d+/)(.*)$	/chronicle/post/$2	[R=permanent]
 RewriteRule	^mp/(.*)/(\d\d\d\d/\d+/\d+/)(.*)$	/chronicle/post/$3	[R=permanent]
@@ -17,7 +22,7 @@ RewriteRule	^textpattern/rss/$	/rss	[R=permanent]
 RewriteRule	^chronicle/$	/blog/  [R]
 RewriteRule	^chronicle$  /blog/ [R]
 RewriteRule	^$ /blog/ [R]
-RewriteRule	^rss(/?)$  http://feeds.feedburner.com/bkerley [R]
+RewriteRule	^rss(/?)$  http://feeds2.feedburner.com/bkerley [R]
 RewriteRule	^mp(/?)$ /blog/ [R=permanent]
 RewriteRule	^typo$  /blog/ [R=permanent]
 
