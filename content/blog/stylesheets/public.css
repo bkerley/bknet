@@ -23,6 +23,11 @@ body {
 	padding-right: 1em;
 }
 
+#header ul li.rsslink img {
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
 #content {
 	margin: 1em;
 	max-width: 40em;
