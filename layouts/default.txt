@@ -20,7 +20,7 @@ filter:    erb
 			<li><a href="/blog/">Home</a></li>
 			<li><a href="/blog/archive.html">Archive</a></li>
 			<li><a href="/blog/about.html">About</a></li>
-			<li class="rsslink"><a href="/blog/index.xml">
+			<li class="rsslink"><a href="/rss">
 				<img src="/blog/images/feed-icon-10x10.png" alt="RSS" />
 				Feed
 			</a></li>
