@@ -6,13 +6,13 @@ layout:     post
 filter:
   - markdown
 --- 
-<div>
-<p><img src="http://twictur.es/i/1174807735.gif" /></p>
+<div class="twicture">
+<p><img src="http://twictur.es/i/1174807735.gif" alt="twitter user maracuja finds 37signals confusing"/></p>
 <p>image provided by <a href="http://twictur.es">twictur.es</a> | original tweet <a href="http://twitter.com/maracuja/statuses/1174807735">here</a></p>
 </div>
 
-<div>
-<p><img src="http://twictur.es/i/1174499355.gif" /></p>
+<div class="twicture">
+<p><img src="http://twictur.es/i/1174499355.gif" alt="twitter user pauloelias finds 37signals difficult"/></p>
 <p>image provided by <a href="http://twictur.es">twictur.es</a> | original tweet <a href="http://twitter.com/pauloelias/statuses/1174499355">here</a></p>
 </div>
 

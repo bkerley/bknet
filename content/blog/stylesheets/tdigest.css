@@ -1,3 +1,10 @@
+div.twicture {
+  font-size: x-small;
+  margin-bottom: 1em;
+}
+div.twicture p {
+  margin: 0;
+}
 .twitter {
   font-size: smaller;
 }
