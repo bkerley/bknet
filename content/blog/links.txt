@@ -1,0 +1,19 @@
+---
+title:      Links - Bryce Kerley
+created_at: 2009-01-02 21:04:01.462428 -05:00
+filter:     markdown
+dirty:      true
+---
+[Bryce Kerley's GitHub](http://github.com/bkerley/): 90% of what I
+program outside of work ends up on my github.  If it's an important
+(to me) project there should be a blog post about it.
+
+[Waiting For Gist](http://waitingf.org/ist/): Tumbleog of stuff I
+find on [Gist](http://gist.github.com/) that amuses me or seems
+momentarily useful.
+
+[Poopstat.us](http://poopstat.us/): My first Erlang project, with
+iPhone app "coming soon."
+
+[Bryce Kerley's Twitter](http://twitter.com/bonzoesc): Irritating
+jibber-jabber and occasional lucidity.
