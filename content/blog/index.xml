@@ -31,7 +31,16 @@ filter:    erb
     <link href="<%= article.url %>" />
     <id>tag:<%= @page.site %>,<%= article.created_at.strftime('%Y-%m-%d') %>:<%= article.created_at.to_i %></id>
     <updated><%= article.created_at.xmlschema %></updated>
-    <content type="html"><%= h(render(article)) %></content>
+    <content type="html"><% unless article.excerpt.nil? %>
+		  <div class="excerpt">
+		    <%= RDiscount.new(article.excerpt).to_html %>
+		  </div>
+			<p class="more_link"><a href="<%=article.url %>">[more]</a></p>
+		<% else %>
+			<div class="body">
+				<%= render(article) %>
+			</div>
+		<% end %></content>
   </entry>
   <% end %>
 </feed>
