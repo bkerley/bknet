@@ -20,6 +20,6 @@ dirty:      true
 		%>
 		<h1><%= my_date %></h1>
 		<% end %>
-  <h2><%= link_to_page(page) %></h2>
+  <h2 class="archiveentry"><%= link_to_page(page) %></h2>
 <% end -%>
 </div>
