@@ -5,11 +5,14 @@ body {
 }
 
 #header {
-	margin: 1em;
+  background-color: #555;
+  color: white;
+  margin: 0em;
+  padding: 0.5em 1em 0em 1em;
 }
 
 #header h1 {
-	margin-bottom: 0em;
+	margin: 0em 0em 0.5em 0em;
 }
 
 #header ul {
@@ -26,6 +29,21 @@ body {
 #header ul li.rsslink img {
     text-decoration: none;
     vertical-align: baseline;
+}
+
+#header a:link,
+#header a:visited,
+#header a:hover,
+#header a:active {
+  background-color: white;
+  color: #00f;
+  text-decoration: none;
+  margin: 0.25em;
+  padding: 0.25em;
+}
+
+#header a:hover {
+  text-decoration: underline;
 }
 
 #content {
@@ -58,7 +76,8 @@ body {
 }
 
 #footer {
-	background-color: #aaa;
+	background-color: #555;
+	color: white;
 	margin: 0em;
 	padding: 0em;
 }
@@ -66,4 +85,10 @@ body {
 	margin: 0em;
 	padding: 1em;
 	font-size: smaller;
+}
+#footer a:link,
+#footer a:visited,
+#footer a:hover,
+#footer a:active {
+  color: #cce;
 }
