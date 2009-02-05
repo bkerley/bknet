@@ -7,22 +7,46 @@ dirty:      true
 
 <%
   articles = @pages.find(:all, :in_directory => @page.dir, :recursive => true,
-      :sort_by => "created_at", :reverse => true, :blog_post => true, :limit=>5)
-  articles.each do |page|
-		page.layout = 'frontpage'
--%>
-<div class="article">
-  <h2><%= link_to_page(page) %></h2>
+      :sort_by => "created_at", :reverse => true, :blog_post => true, :limit=>8)
+  page = articles[0]
+				page.layout = 'frontpage'
+%>
 
-<% unless page.excerpt.nil? %>
-  <div class="excerpt">
-    <%= RDiscount.new(page.excerpt).to_html %>
-  </div>
-	<p class="more_link"><a href="<%=page.url %>">[more]</a></p>
-<% else %>
-	<div class="body">
-		<%= render(page) %>
-	</div>
+<div class="toparticle">
+	<h2><%= link_to_page(page) %></h2>
+	<% unless page.excerpt.nil? %>
+	  <div class="excerpt">
+	    <%= RDiscount.new(page.excerpt).to_html %>
+	  </div>
+	<% end %>
+	  <div class="body">
+      <%= render(page) %>
+	  </div>
+</div>
+
+<h1 class="recent">Also hot:</h1>
+<% articles[1..2].each do |page|
+	page.layout = 'frontpage'
+	%>
+<div class="recentarticle">
+	<h2><%= link_to_page(page) %></h2>
+	<% unless page.excerpt.nil? %>
+	  <div class="excerpt">
+	    <%= RDiscount.new(page.excerpt).to_html %>
+	  </div>
+	<% else %>
+	  <div class="body">
+      <%= render(page) %>
+	  </div>
+	<% end %>
+</div>
 <% end %>
+<h1 class="old">Getting old:</h1>
+<%
+  articles[3..7].each do |page|
+-%>
+<div class="oldarticle">
+  <h2><%= link_to_page(page) %></h2>
 </div>
 <% end -%>
+<h1 class="waymore"><a href="/blog/archive.html">Everything</a></h1>

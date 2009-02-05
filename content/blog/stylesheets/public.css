@@ -36,7 +36,6 @@ body {
 #header a:hover,
 #header a:active {
   background-color: white;
-  color: #00f;
   text-decoration: none;
   margin: 0.25em;
   padding: 0.25em;
@@ -44,6 +43,58 @@ body {
 
 #header a:hover {
   text-decoration: underline;
+}
+
+.toparticle,
+.recentarticle,
+.oldarticle {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  padding-top: 0em;
+  padding-bottom: 0.5em;
+}
+
+h1.recent {
+  font-size: large;
+  background-color: #eee;
+  margin: 0;
+}
+.recentarticle {
+  font-size: smaller;
+  background-color: #eee;
+  padding-top: 0.5em;
+}
+
+h1.old {
+  font-size: smaller;
+  background-color: #ddd;
+  margin: 0;
+}
+.oldarticle {
+  font-size: smaller;
+  background-color: #ddd;
+  padding-top: 0.2em;
+  padding-bottom: 0em;
+}
+
+.recentarticle h2 {
+  margin: 0;
+}
+
+.oldarticle h2 {
+  margin: 0;
+}
+
+h1.waymore {
+  font-size: smaller;
+  background-color: #ccc;
+  margin: 0;
+}
+
+h2.archiveentry {
+  display: inline-block;
+  width: 13em;
+  vertical-align: middle;
 }
 
 #content {
