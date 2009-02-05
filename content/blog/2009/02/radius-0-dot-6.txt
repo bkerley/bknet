@@ -31,6 +31,7 @@ So
 in Ragel which is just flat out nicer. Instead of dealing with a regex, you're describing
 a state machine; they both get turned into NFAs in the end.
 
-Looks like the gem hasn't built yet on github, so if you want it you'll have to build it
-yourself (it'll be bkerley-radius-0.6.0 when it does go). I'll try to edit this post when
+Looks like the gem hasn't built yet on github, so if you want it you'll have to
+[build it yourself](http://github.com/bkerley/radius/)
+(it'll be bkerley-radius-0.6.0 when it does go). I'll try to edit this post when
 it's available.
