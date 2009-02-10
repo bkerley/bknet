@@ -1,0 +1,32 @@
+---
+title:     Bryce Kerley
+subtitle:  Bryce's blog
+site:      brycekerley.net
+author:    Bryce Kerley
+email:     bkerley@brycekerley.net
+extension: xml
+layout:    nil
+dirty:     true
+filter:    erb
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<% @pages.find(:all, :in_directory => '/blog', :recursive => true).each do |page| %>
+<%
+changefreq = 'daily'
+priority = '0.5'
+if page.blog_post
+  changefreq = 'monthly'
+  priority = '0.8'
+end
+%>
+<url>
+   <loc>http://brycekerley.net<%=page.url%></loc>
+   <lastmod><%= page.mtime.xmlschema %></lastmod>
+   <changefreq><%= changefreq %></changefreq>
+   <priority><%= priority %></priority>
+</url>
+<% end %>
+
+</urlset>

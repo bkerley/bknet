@@ -5,6 +5,7 @@ RewriteEngine  on
 RewriteRule	^chronicle/cloud/(.*)$	/blog/	[R=temporary]
 RewriteRule	^chronicle/about(.*)$	/blog/about	[R=permanent]
 RewriteRule	^chronicle/post/(.*)$	/blog/post/$1	[R=permanent]
+RewriteRule	^chronicle/date/?$	/blog/archive.html	[R=permanent]
 
 #mephisto shims
 RewriteRule	^mp/(\d\d\d\d/\d+/\d+/)(.*)$	/chronicle/post/$2	[R=permanent]
