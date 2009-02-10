@@ -8,6 +8,6 @@ RewriteEngine  on
 <% @pages.find(:all, :in_directory => '/blog', :recursive => true,
       :sort_by => "created_at", :reverse => true, :blog_post => true).each do |article|
 %>
-RewriteRule	^<%=article.filename %>$	/blog/<%=article.created_at.year %>/<%=sprintf '%02d', article.created_at.month %>/<%=article.filename %>	[R=permanent]<% end %>
+RewriteRule	^<%=article.filename %>/?$	/blog/<%=article.created_at.year %>/<%=sprintf '%02d', article.created_at.month %>/<%=article.filename %>	[R=permanent]<% end %>
 
 RewriteRule	^blog/post/(.*)$	/blog/	[R=permanent]
