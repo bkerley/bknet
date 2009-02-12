@@ -1,0 +1,47 @@
+--- 
+title:      "Pattern: Erlang-style pattern matching in Ruby"
+created_at: 2009-02-11 21:13:05.858193 -05:00
+blog_post:  true
+layout:     post
+filter:
+  - markdown
+excerpt:
+  Mostly for grins, I decided to implement Erlang-style pattern matching in Ruby on Sunday afternoon.
+
+  <pre class="textmate-source sunburst"><span class="source source_ruby">p<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>match<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span><span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>lmao<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span> <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">{</span><span class="meta meta_syntax meta_syntax_ruby meta_syntax_ruby_start-block"> </span><span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>butts</span> <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">}</span>
+  
+  p<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>match<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span><span class="string string_regexp string_regexp_classic string_regexp_classic_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span>lol<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_ruby">/</span></span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span> <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">{</span><span class="meta meta_syntax meta_syntax_ruby meta_syntax_ruby_start-block"> </span><span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>buttes</span> <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">}</span>
+  
+  p<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>match<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span>wc<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span> <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">{</span><span class="meta meta_syntax meta_syntax_ruby meta_syntax_ruby_start-block"> </span><span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>atomics<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span> <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">}</span>
+  
+  p<span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span><span class="constant constant_numeric constant_numeric_ruby">888</span><span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span>
+  
+  <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> =&gt; "atomics"
+  
+  </span>p<span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span><span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>a butt lmao<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span><span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span>
+  
+  <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> =&gt; :butts
+  
+  </span>p<span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span><span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>lolqdb<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span><span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span>
+  
+  <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> =&gt; :buttes
+  </span></span></pre>
+---
+Fork/clone [Pattern on Github](http://github.com/bkerley/pattern/), and read on for commentary.
+
+# How it works
+
+In the example above, `p` is a `Pattern::Matcher` object, that wraps arguments and blocks from the `#match`
+method into a `Pattern::Entry` object, and stores those objects in an array in order of definition. When
+called with the `#[]` method, it goes through that array and calls the stored block from the first entry that
+answers positively to `Pattern::Entry#match?`.
+
+A `Pattern::Entry` is basically a tuple of an argument list and a proc to execute on match.  The only real
+cleverness is checking for a `Pattern::Wildcard` object, and checking with `#===`, which picks an appropriate
+comparison for the objects involved (uses `Regexp#=~` if the left value is a `Regexp` and right is a `String`,
+for example.)
+
+# What could be done
+
+Things I've got ideas for but haven't done yet include extending the Wildcard object to allow for `Array#first`
+and `Object#class` (or `Class#ancestors`) checks, since those don't work with `#===`.
