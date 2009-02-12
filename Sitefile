@@ -1,4 +1,4 @@
-
+require 'coderay'
 task :default => :build
 
 desc 'deploy the site to the webserver'

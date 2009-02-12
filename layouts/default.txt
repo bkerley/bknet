@@ -11,6 +11,7 @@ filter:    erb
   <link href="/blog/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="/blog/stylesheets/sunburst.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="/blog/stylesheets/tdigest.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/blog/stylesheets/coderay.css" media="screen" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
