@@ -34,6 +34,9 @@ dirty:      true
 	  <div class="excerpt">
 	    <%= RDiscount.new(page.excerpt).to_html %>
 	  </div>
+	  <div class="morelink">
+	    <%= link_to "[More]", page %>
+	  </div>
 	<% else %>
 	  <div class="body">
       <%= render(page) %>

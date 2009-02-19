@@ -13,11 +13,12 @@ body {
 
 #header h1 {
 	margin: 0em 0em 0.5em 0em;
+	padding-left: 0.5em;
 }
 
 #header ul {
 	margin-top: 0em;
-	padding-left: 0em;
+	padding-left: 1em;
 }
 
 #header ul li {
@@ -52,6 +53,8 @@ body {
   margin-bottom: 0em;
   padding-top: 0em;
   padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 h1.recent {
@@ -80,6 +83,14 @@ h1.old {
 .recentarticle h2 {
   margin: 0;
 }
+
+.recentarticle .morelink a:link,
+.recentarticle .morelink a:visited,
+.recentarticle .morelink a:hover,
+.recentarticle .morelink a:active {
+  color: blue;
+}
+
 
 .oldarticle h2 {
   margin: 0;
