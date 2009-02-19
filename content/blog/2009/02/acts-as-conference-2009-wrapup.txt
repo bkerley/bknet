@@ -1,0 +1,39 @@
+--- 
+title:      acts_as_conference 2009 Wrapup
+created_at: 2009-02-18 21:08:05.417094 -05:00
+blog_post:  true
+layout:     post
+excerpt:
+  I try not to be a conference junkie; the last two years, the two have
+  been DEF CON in Las Vegas, and acts\_as\_conference in Orlando.  The
+  former's got quite the reputation for mildly-educational mayhem, but
+  AAC has been growing pretty respectably.
+filter:
+  - markdown
+--- 
+Spent a lot of time talking with [Corey
+Haines](http://coreyhaines.com/) about testing and the cost of fame
+for Rails people (you'll probably freak out, make a really inciendary
+blog post, and get a bad / horrible /
+people-start-naming-their-projects-fu-yourname reputation), [Zach
+Carter](http://zach.carter.name/) about all sorts of stuff, and others
+that are escaping me right now.
+
+It was pretty productive too: I hacked the twitter gem for Ted's [twitter2rss
+app](http://github.com/trak3r/twitter2rss/tree/master), gave a
+lightning talk about [using ragel to fix
+radius](http://aac2009.confreaks.com/06-feb-2009-19-30-lightning-talk-regexes-vs-ragel-bryce-kerley.html)
+(as seen in [Radius 0.6.0 - My Take](http://localhost:4331/blog/2009/02/radius-0-dot-6.html)),
+and managed to get enough talking about other languages on the mind
+that I ended up with an [Erlang in
+Ruby](/blog/2009/02/pattern-matching-in-ruby.html) hack not
+twenty-four hours later.
+
+The speakers were great too, with [Bryan Liles](http://smartic.us) headlining
+with important tools and techniques in testing all the f'n time and
+b-boying, and [Dan Benjamin](http://hivelogic.com) continuing his
+transformation into the Steve Jobs of Rails conference keynotes.
+
+With this in mind, I think I'm going to have to put together a full-length
+talk for next year's conference (somebody hold me to that), and I'll leave
+it at that for now.
