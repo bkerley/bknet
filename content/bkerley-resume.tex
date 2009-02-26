@@ -1,0 +1,215 @@
+\documentclass[11pt,oneside]{article}
+
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{texnansi}
+
+\usepackage{fontspec} 
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\setmainfont[Mapping=tex-text]{Hoefler Text}
+
+
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{pifont}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Bryce Kerley}
+\newcommand{\addr}{3301 NE 1\textsuperscript{st} Ave., Apt. 2206, Miami FL 33137}
+\newcommand{\phone}{(321) 794-1725}
+\newcommand{\email}{bkerley@brycekerley.net}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\selectfont\Huge#1
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{2pt}
+	{\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textsc{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+
+\begin{document}
+
+% \fontfamily{ppl} \selectfont
+% \font\body="Futura" \body
+
+
+% Name with horizontal rule\
+% \bigname{\name}
+
+% \vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+	\multirow{2}{*}{\bigname{\name}} & \addr \\
+	& \phone ~ \email 
+\end{tabular*}
+
+\vspace{4pt}
+\rule{\textwidth}{1pt}
+
+% \vspace{8 pt}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Experience}
+	\begin{ressubsec}{Worldmedia}{Miami, FL}{Software Engineer: June, 2008--Present}
+		\ressubitem{Maintenance and development of proprietary content management system in Rails.}
+		\ressubitem{Created AJAX-based user interfaces for world-facing marketing and sales websites.}
+		\ressubitem{Performed security reviews and hardening, including new authentication and access control systems.}
+	\end{ressubsec}
+	
+	\begin{ressubsec}{Sypris Electronics}{Tampa, FL}{Information Assurance Engineer: January, 2007--June, 2008}
+		\ressubitem{Analysis, certification, and accreditation of high-availability computer systems.}
+		\ressubitem{Development of internal desktop and web applications for report generation, task coordination, and other activities.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{USF Geography Department}{Tampa, FL}{Computer Programmer: November, 2005--September, 2006}
+		\ressubitem{Maintenance of website displaying data from McIDAS weather system.}
+		\ressubitem{Design and implementation of wall-mounted weather display monitor for public viewing.}
+	\end{ressubsec}
+	% 
+	% \begin{ressubsec}{USF Engineering Recruitment and Retention}{Tampa, FL}{Tutor: September, 2005--May, 2006}
+	% 	\ressubitem{Assisted students with Computer Science and general engineering concepts.}
+	% \end{ressubsec}
+
+%	\begin{ressubsec}{Harris Corporation}{Melbourne, FL}{Geospatial Analyst: December, 2003--August, 2004}
+%		\ressubitem{Analyzed and corrected Census Bureau TIGER map data.}
+%		\ressubitem{Learned and used Perl to automate software testing.}
+%	\end{ressubsec}
+	
+%	\begin{ressubsec}{USF Academic Computing}{Tampa, FL}{Helpdesk Consultant: November, 2002--December, 2002}
+%		\ressubitem{Provide support for UNIX login, web services, and dialup accounts.}
+%	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ressection}{Activities and Projects}
+  \resitem{Presented ``Lightning Talk: Regexes vs. Ragel'' at acts\_as\_conference, February 2009}
+	\resitem{Software developer for ``Front Row Badge'' in the DEF CON 16 badge hacking competition, August 2008, received second place.}
+	% \begin{ressubsec}{0x28 Thieves}{Tampa, FL}{Member since founding in Summer 2006.}
+		\resitem{Team captain for ``0x28 Thieves'' in Kenshoto CTF at DEF CON 15 during August 2007, received seventh place.}
+%		\ressubitem{Competed in Kenshoto CTF qualifiers during June 2007, received sixth place.}
+		\resitem{Designed, developed, promoted, and hosted first annual USF CTF 2007 security exercise.}
+		\resitem{Competed with ``0x28 Thieves'' in DC3 Forensics Challenge September-December 2006, received second place.}
+	% \end{ressubsec}
+
+	% \begin{ressubsec}{USF Whitehatters Computer Security Club}{Tampa, FL}{Member since founding in Fall 2005, President Spring--Winter 2006.}
+		\resitem{Competed in UCSB iCTF competition as ``WCSC'' during December 2006, received third place.}
+%		\ressubitem{Competed in aCTF at Defcon 14 during August 2006, won first place.}
+%		\ressubitem{Competed in Cipher 2 CTF during July 2006, received second place.}
+%		\ressubitem{Competed in Kenshoto CTF qualifiers during June 2006.}
+%		\ressubitem{Competed in Southeast Collegiate Cyber Defense Competition in March 2006, received second place.}
+		% \ressubitem{Competed in UCSB iCTF competition during December 2005.}
+	% \end{ressubsec}
+	
+	% \begin{ressubsec}{ACM at USF}{Tampa, FL}{Member Fall 2004--Fall 2006, Webmaster Summer 2005--Summer 2006.  President Summer--Fall 2006.}
+
+		% \ressubitem{Participated in ACM International Collegiate Programming Competition Southeast US regional in November 2004.}
+		\resitem{Team captain for November 2004, October 2005, and October 2006 ACM ICPC regionals.}
+		
+	% \end{ressubsec}
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+	\begin{ressubsec}{University of South Florida}{Tampa, FL}{Graduated December, 2006}
+		\ressubitem{Bachelor of Science in Computer Science, Minor in Geography}
+	\end{ressubsec}
+%	\begin{ressubsec}{Brevard Community College}{Melbourne, FL}{Filled General Education requirements}
+%		\ressubitem{Transferred to USF: August, 2004}
+%	\end{ressubsec}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+%	\resitem{{\bfseries Operating Systems:} Linux, Mac OS X, Solaris, Windows}
+	
+	\resitem{{\bfseries Programming Languages:} C, CSS, JavaScript, \LaTeX, Ruby, SQL, XHTML}
+	
+	\resitem{{\bfseries Tools, Frameworks, and APIs:} Managed Direct3D, Git, Prototype, Ruby on Rails, Subversion}
+
+\end{ressection}
+
+%%%%%
+%
+%\begin{ressection}{References}
+% \resitem{{\bfseries Jennifer Collins} -- Assistant Professor, Department of Geography, University of South Florida, 4202 E. Fowler Ave NES-210, Tampa, FL, 33620, (813) 974-4242}
+%	\resitem{{\bfseries Eva Fernandez} -- Director, Engineering Recruitment and Retention, University of South Florida, 4202 E. Fowler Ave ENC-1202, Tampa, FL, 33620, (813) 974-5154}
+%	\resitem{{\bfseries Mike Strong} -- Team Leader, Government Communications Systems Division, Harris Corporation, 150 South Wickham Road, Melbourne, FL, 32935, (321) 984-6256}
+%\end{ressection}
+
+\end{document}
