@@ -1,0 +1,205 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\title{Ruby: Behind the Eightball}
+\author{Bryce Kerley}
+\begin{document}
+	\maketitle
+	
+	Source code for this lesson can be found at \url{http://brycekerley.net/RubyTut/}
+	
+	\section{Error from ``Intro to Ruby''}
+	I made a mistake last class regarding creating a \verb|Proc| object and putting it in a variable:
+	\begin{verbatim}
+		irb(main):001:0> x = Proc.new do |n| puts n end
+		=> #<Proc:0x00479b04@(irb):1>
+		irb(main):002:0> 3.times x  
+		ArgumentError: wrong number of arguments (1 for 0)
+		        from (irb):2:in `times'
+		        from (irb):2
+	\end{verbatim}
+	This doesn't work, and here's why: Ruby makes a distinction between a \verb|Proc| and a block.  Basically, a \verb|Proc| is an object, while a block is the syntactic construct by which you create one.  To use a \verb|Proc| in place of a block as above, you use an ampersand (\verb|&|):
+	\begin{verbatim}
+		irb(main):003:0> 3.times &x
+		0
+		1
+		2
+		=> 3
+	\end{verbatim}
+	\url{http://blog.codahale.com/2006/08/01/stupid-ruby-tricks-stringto_proc/} provided the big clue to solving this.
+	
+	\section{Ruby's Special Methods}
+	Ruby provides several special methods on objects that provide access to features that don't appear to fit in at first.  Some of these methods are already used internally in Ruby, but you can fit the language to your needs.  After all, if you weren't supposed to mess with it, it'd be implemented out of reach (in the Ruby implementation you're probably using, `out of reach' means in C).
+	
+	\subsection{Send a message}
+	Methods in Ruby are not set in stone.  You can add methods to a class or object at any time, but calling them seems so \emph{static}, right?
+	
+	Wrong!  Ruby provides \verb|Object#send| for sending arbitrary messages (Smalltalk terminology for calling a method) to the destination it's called for.
+	\begin{verbatim}
+		irb(main):001:0> x = "This string"
+		=> "This string"
+		irb(main):002:0> x.send(:upcase)
+		=> "THIS STRING"
+		irb(main):003:0> x.send('[]',0..3)
+		=> "This"
+	\end{verbatim}
+	
+	The \verb|Object#send| method takes a method name (either a string or symbol) as its first argument, and then whatever arguments you want to pass to the method.  Line 2 shows the string's \verb|upcase| method being called (the symbol \verb|:upcase| is used), and line 3 demonstrates calling the \verb|[]| method (referring to the method's name with a string, and passing the range \verb|0..3|).
+	
+	Another important use of \verb|Object#send| is to get at private methods:
+	\begin{verbatim}
+		irb(main):001:0> class Tomato
+		irb(main):002:1> private
+		irb(main):003:1> def *
+		irb(main):004:2> "splat"
+		irb(main):005:2> end
+		irb(main):006:1> end
+		=> nil
+		irb(main):007:0> x = Tomato.new
+		=> #<Tomato:0x6bbfc>
+		irb(main):008:0> x.*
+		NoMethodError: private method `*' called for #<Tomato:0x6bbfc>
+		        from (irb):9
+		irb(main):009:0> x.send :* # hehe
+		=> "splat"
+	\end{verbatim}
+	This may seem like it lets you violate encapsulation, and that's correct.  However, since you can already violate encapsulation by adding methods as you wish, encapsulation was already of dubious strictness, and as it turns out private methods are only really used to define implementation methods that only make sense within the class or an inherited class.
+	
+	\subsection{Missing Something?}
+	
+	Calling a method that's missing is normally punished with an error message and a crash.  However, you might instead want to provide the impression of having methods being there already.  To pull this off, simply override \verb|Object#method_missing|.
+	
+	Let's look at one use of this I mentioned on Thursday, simulating an infinite number of \verb|car|-style functions.
+	\listinginput{1}{carpark-nohead.rb}
+	I'm adding these methods on to the \verb|Array| class, because that matches the closest to the LISP list.  Also note the simple \verb|car| and \verb|cdr| implementations.  These are the base cases for the recursive \verb|method_missing| method.
+	
+	\verb|method_missing| is called with the name of the method that was missing (the parameter \verb|m| above) and a variable number of arguments (the name of this parameter is \verb|a|, the asterisk means take all the remaining arguments and put them in an array).  In this case, since I don't care about the arguments, I never look at \verb|a| again.
+	
+	Since the method name is passed as a \verb|Symbol|, I convert it to a string.  Next, if the method name doesn't look like a friend of \verb|car| (checked with a regular expression), I just defer to the version of \verb|method_missing| that the ancestor of \verb|Array| uses.  After that, I cut out the central part of the method name (from the second character to the second from the end) and keep that around in the variable \verb|o|.
+	
+	Finally, I start producing results.  If the first character of \verb|o| is `a', I recur on the first element in the current array (using \verb|send| with the rest of \verb|o|).  If the first character is `d', I recur on the rest of the array (also with \verb|send| and a slice of \verb|o|).  If I didn't recur on any of these, there's obviously a problem, so I dump out an unhelpful string.
+	
+	\subsection{Making New Methods}
+	Instance and class variables in Ruby are private by default - there's simply no way to declare one as public.  However, you will see the use of special methods that automatically write new accessor methods to give the impression of public variables.  These three methods are \verb|attr_accessor|, \verb|attr_reader|, and \verb|attr_writer|.
+	
+	The method for using all three of these is the same - call them (outside a method but still in the class) with a symbol for the variable you want method(s) for:
+	\begin{verbatim}
+		irb(main):001:0> class RushHour2
+		irb(main):002:1> attr_accessor :AAAAAA
+		irb(main):003:1> attr_reader :BBBBB 
+		irb(main):004:1> attr_writer :CCCCC
+		irb(main):005:1> end
+		irb(main):006:0> RushHour2.instance_methods.sort
+		=> ["==", "===", "=~", "AAAAAA", "AAAAAA=", "BBBBB", "CCCCC=", ...
+	\end{verbatim}
+	The variables themselves don't have to be defined - calling a reader when there's no backing variable just returns \verb|nil|.
+	\begin{verbatim}
+		irb(main):007:0> x.AAAAAA
+		=> nil
+		irb(main):008:0> x.AAAAAA = "chris tucker"
+		=> "chris tucker"
+		irb(main):009:0> x.AAAAAA
+		=> "chris tucker"
+	\end{verbatim}
+	
+	When you have a method with an awkward name that you'd like to fix without breaking existing code, you can use \verb|alias_method| to assign it a second name.
+	\begin{verbatim}
+		irb(main):001:0> class Candy
+		irb(main):002:1> def eat_all_the_candy
+		irb(main):003:2> "mmmm"
+		irb(main):004:2> end
+		irb(main):005:1> end
+		=> nil
+		irb(main):006:0> x = Candy.new
+		=> #<Candy:0x75904>
+		irb(main):007:0> x.eat_all_the_candy
+		=> "mmmm"
+		irb(main):008:0> class Candy
+		irb(main):009:1> alias_method :eat, :eat_all_the_candy
+		irb(main):010:1> end
+		=> Candy
+		irb(main):011:0> x.eat
+		=> "mmmm"
+	\end{verbatim}
+	
+	Using \verb|alias_method|, you can nondestructively override a method, as seen in this example from \url{http://ola-bini.blogspot.com/2006/09/ruby-metaprogramming-techniques.html}
+	\begin{verbatim}
+		 class Object
+		  def add_tracing(*mths)
+		    mths.each do |m|
+		      singleton_class.send :alias_method, "traced_#{m}", m
+		      singleton_class.send :define_method, m do |*args|
+		        $stderr.puts "before #{m}(#{args.inspect})"
+		        ret = self.send("traced_#{m}", *args)
+		        $stderr.puts "after #{m} - #{ret.inspect}"
+		        ret
+		      end
+		    end
+		  end
+
+		  def remove_tracing(*mths)
+		    mths.each do |m|
+		      singleton_class.send :alias_method, m, "traced_#{m}"
+		    end
+		  end
+		end
+
+		"abc".add_tracing :reverse
+	\end{verbatim}
+	
+	It is possible to implement \verb|alias_method| in pure Ruby (it's compiled in C for the sake of simplicity), and in fact you can implement arbitrary methods based on variables.
+	
+	\section{Plugins and a simple Domain Specific Language}
+	For a project above a certain size, it makes sense to move functionality into modular plugins instead of keeping them monolithically attached to the main source.  For example, if you're writing a system to read comments from programs in different languages, you'd want a separate file for each language.
+	
+	Here's a class that implements this:
+	\listinginput{1}{commentscan.rb}
+	One of the classes from the \verb|filetypes| directory:
+	\listinginput{1}{filetypes/ruby.rb}
+	
+	And using it:
+	\begin{verbatim}
+		irb(main):001:0> require 'commentscan.rb'
+		=> true
+		irb(main):002:0> CommentScanner.get_comments('carpark.rb')
+		=> "!/usr/bin/env ruby\n commentscan.rb\nreturn true if I can pull ...
+	\end{verbatim}
+	
+	One thing that might strike you about this example is that a lot of the code in the individual modules is pretty redundant:
+	\begin{verbatim}
+		> diff filetypes/lisp.rb filetypes/ruby.rb 
+		3c3
+		< class LispScanner < CommentScanner
+		---
+		> class RubyScanner < CommentScanner
+		7c7
+		<     return true if filename =~ /\.lisp$/
+		---
+		>     return true if filename =~ /\.rb$/
+		18c18
+		<       next unless l =~ /;(.*)/
+		---
+		>       next unless l =~ /#(.*)/
+	\end{verbatim}
+	We can start to fix this by automating how we write the \verb|support_file?| method.  Since regular expressions are so powerful, we'll write a method that takes a regular expression as an argument and \emph{writes} the \verb|supports_file?| method.  To do this, we'll make use of the \verb|define_method| private method.
+	
+	And for good measure, we'll automate the writing of \verb|get_comments| too.
+	
+	\listinginput{1}{commentscan-ext.rb}
+	
+	We aren't \emph{forced} to use the new generator methods, but they do make writing plugins much simpler:
+	\listinginput{1}{filetypes/tex.rb}
+	We only have a few things that are identifiably ruby in this file - the class declaration and the (relatively standardized Perl-style) regular expression syntax.  This language falls in to the trendy category (at least for Rubyists) of being a Domain-Specific Language.
+	
+	For more on the power of DSLs in Ruby, here's an example of the Markaby DSL:
+	\listinginput{1}{homepage.rb}
+	For more on Markaby, see \url{http://markaby.rubyforge.org/}
+\end{document}

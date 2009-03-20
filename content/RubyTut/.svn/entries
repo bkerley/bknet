@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="186"
+   name=""
+   committed-date="2006-12-29T23:56:29.929304Z"
+   url="file:///home/bkerley/subversion-2006/ProgLang/RubyTut"
+   last-author="bkerley"
+   kind="dir"
+   uuid="96825b59-5611-9642-bbe1-227633eaa54c"
+   repos="file:///home/bkerley/subversion-2006"
+   revision="186"/>
+<entry
+   committed-rev="177"
+   name="carpark-nohead.rb"
+   text-time="2006-11-13T20:26:05.000000Z"
+   committed-date="2006-11-13T01:56:06.131917Z"
+   checksum="1f9041cf2ce1e02335eee2da439658d7"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-13T20:26:05.000000Z"/>
+<entry
+   committed-rev="177"
+   name="carpark.rb"
+   text-time="2006-11-13T20:26:05.000000Z"
+   committed-date="2006-11-13T01:56:06.131917Z"
+   checksum="5ee7b5583b45c6788cac8b1b70b72fe0"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-13T20:26:05.000000Z"/>
+<entry
+   committed-rev="179"
+   name="homepage.rb"
+   text-time="2006-11-14T03:52:15.000000Z"
+   committed-date="2006-11-14T03:51:44.427292Z"
+   checksum="d4f55be44fcf1966251dcc69f35101db"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-14T03:52:15.000000Z"/>
+<entry
+   committed-rev="179"
+   name="rubymeta.tex"
+   text-time="2006-11-14T03:52:15.000000Z"
+   committed-date="2006-11-14T03:51:44.427292Z"
+   checksum="85bc80d10605f187dea1f4341984e10d"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-14T03:52:15.000000Z"/>
+<entry
+   committed-rev="142"
+   name="intro.tex"
+   text-time="2006-11-13T20:26:05.000000Z"
+   committed-date="2006-08-29T21:40:33.488652Z"
+   checksum="1bc0a65fd73f089791ae95d0236d5cb4"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-13T20:26:05.000000Z"/>
+<entry
+   committed-rev="186"
+   name="rubymeta.pdf"
+   text-time="2006-12-29T23:56:34.000000Z"
+   committed-date="2006-12-29T23:56:29.929304Z"
+   checksum="113ae91f7875a64cf24939017e3affc6"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-12-29T23:56:34.000000Z"/>
+<entry
+   committed-rev="174"
+   name="revised.tex"
+   text-time="2006-11-13T20:26:05.000000Z"
+   committed-date="2006-11-09T03:09:41.334903Z"
+   checksum="4ae5bc354c5d55a850c28b205e67c55f"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-13T20:26:05.000000Z"/>
+<entry
+   committed-rev="173"
+   name="carcdr.rb"
+   text-time="2006-11-13T20:26:05.000000Z"
+   committed-date="2006-11-09T02:30:21.619402Z"
+   checksum="9ffb1896a7ed0aefac6eaab73c73b0d6"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-13T20:26:05.000000Z"/>
+<entry
+   committed-rev="179"
+   name="hi.rb"
+   text-time="2006-11-14T03:52:15.000000Z"
+   committed-date="2006-11-14T03:51:44.427292Z"
+   checksum="9ebbeb65a4a5b2f8a2624ad9378a823e"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-14T03:52:15.000000Z"/>
+<entry
+   committed-rev="173"
+   name="disco.rb"
+   text-time="2006-11-13T20:26:05.000000Z"
+   committed-date="2006-11-09T02:30:21.619402Z"
+   checksum="45a8cc83e52a235dcc7fc29ab4972fda"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-13T20:26:05.000000Z"/>
+<entry
+   name="filetypes"
+   kind="dir"/>
+<entry
+   committed-rev="173"
+   name="proc.rb"
+   text-time="2006-11-13T20:26:05.000000Z"
+   committed-date="2006-11-09T02:30:21.619402Z"
+   checksum="c9a6cf242ab1dffc84e1bd5da438e48d"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-13T20:26:05.000000Z"/>
+<entry
+   committed-rev="173"
+   name="hello.rb"
+   text-time="2006-11-13T20:26:05.000000Z"
+   committed-date="2006-11-09T02:30:21.619402Z"
+   checksum="1a9666cb02a501a3282c9bc6e5c2c1d8"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-13T20:26:05.000000Z"/>
+<entry
+   committed-rev="179"
+   name="commentscan-ext.rb"
+   text-time="2006-11-14T03:52:15.000000Z"
+   committed-date="2006-11-14T03:51:44.427292Z"
+   checksum="c8075a5c67727c67c7617e26528dee0b"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-14T03:52:15.000000Z"/>
+<entry
+   committed-rev="179"
+   name="commentscan.rb"
+   text-time="2006-11-14T03:52:15.000000Z"
+   committed-date="2006-11-14T03:51:44.427292Z"
+   checksum="b6b2139cf32c5eae408a8f419b58b059"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-14T03:52:15.000000Z"/>
+<entry
+   committed-rev="186"
+   name="revised.pdf"
+   text-time="2006-12-29T23:56:34.000000Z"
+   committed-date="2006-12-29T23:56:29.929304Z"
+   checksum="4b347c32c6254a2fbfd687adca58ee18"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-12-29T23:56:34.000000Z"/>
+</wc-entries>

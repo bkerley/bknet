@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="179"
+   name=""
+   committed-date="2006-11-14T03:51:44.427292Z"
+   url="file:///home/bkerley/subversion-2006/ProgLang/RubyTut/filetypes"
+   last-author="bkerley"
+   kind="dir"
+   uuid="96825b59-5611-9642-bbe1-227633eaa54c"
+   repos="file:///home/bkerley/subversion-2006"
+   revision="186"/>
+<entry
+   committed-rev="179"
+   name="tex.rb"
+   text-time="2006-11-14T03:52:15.000000Z"
+   committed-date="2006-11-14T03:51:44.427292Z"
+   checksum="468c78661de3095d979afacfd748888c"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-14T03:52:15.000000Z"/>
+<entry
+   committed-rev="179"
+   name="ruby.rb"
+   text-time="2006-11-14T03:52:15.000000Z"
+   committed-date="2006-11-14T03:51:44.427292Z"
+   checksum="2c7e3d6d0d67407fad5cd804efd24633"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-14T03:52:15.000000Z"/>
+<entry
+   committed-rev="179"
+   name="lisp.rb"
+   text-time="2006-11-14T03:52:15.000000Z"
+   committed-date="2006-11-14T03:51:44.427292Z"
+   checksum="74465686073def5d20f0a5083e5bde9a"
+   last-author="bkerley"
+   kind="file"
+   prop-time="2006-11-14T03:52:15.000000Z"/>
+</wc-entries>

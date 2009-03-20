@@ -1,0 +1,6 @@
+AddHandler default-handler .rb
+AddIcon /icons/pdf.png .pdf
+AddIcon /icons/sphere1.png .rb
+AddAlt "Ruby source" *.rb
+AddAlt "PDF document" *.pdf
+AddAlt "TeX source" *.tex

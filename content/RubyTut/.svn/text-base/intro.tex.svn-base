@@ -1,0 +1,442 @@
+\documentclass{slides}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\newcommand{\sh}[1]{
+	{\Large #1}
+	
+}
+\newcommand{\subh}[1]{
+	{\large #1}
+	
+}
+
+\newcommand{\question}[2]{
+	\section*{#1 \normalsize#2}
+}
+
+\newcommand{\svn}[1]{\svnsub#1}
+\def\svnsub$#1${#1}
+
+\title{Intro to Ruby}
+\author{Bryce Kerley}
+\begin{document}
+\fontfamily{ppl} \selectfont
+%\pagestyle{empty}
+\maketitle
+%\svn{$Id$}
+\begin{slide}
+Ruby is an interpreted object-oriented language that is becoming increasingly popular at tasks of all sizes, from trivial automation scripts to complicated websites.
+
+Some Ruby projects you may have heard of:
+\begin{itemize}
+\item Ruby on Rails - database-driven websites with less programming. \url{http://rubyonrails.org}
+\item Metasploit Framework v3.0 - platform for developing, testing, and launching software exploits.  \url{http://metasploit.com}
+\item Rake - make-like utility for automating tasks such as building and testing software, with Ruby syntax in Rakefiles.  \url{http://rake.rubyforge.org/}
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Why are these projects in Ruby as opposed to another language?
+\begin{itemize}
+\item Everything is an object - literals, instance methods, and even anonymous blocks of code all have their own set of instance methods, and can be assigned to any variable name.
+\begin{verbatim}
+irb(main):001:0> 10.abs
+=> 10
+irb(main):002:0> tenabs = 10.method(:abs)
+=> #<Method: Fixnum#abs>
+irb(main):003:0> tenabs.call
+=> 10
+\end{verbatim}
+\item This allows useful features like iterators to be easy.
+\begin{verbatim}
+irb(main):001:0> 3.times { puts "lol" }
+lol
+lol
+lol
+=> 3
+\end{verbatim}
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+\begin{itemize}
+\item Objects are highly dynamic - you can hang extra methods off them at any time.
+\begin{verbatim}
+irb(main):001:0> 10.log
+NoMethodError: undefined method `log' for
+10:Fixnum
+        from (irb):1
+irb(main):002:0> class Numeric
+irb(main):003:1> def log(n=10)
+irb(main):004:2> Math.log(self)/Math.log(n)
+irb(main):005:2> end
+irb(main):006:1> end
+=> nil
+irb(main):007:0> 10.log
+=> 1.0
+\end{verbatim}
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+\sh{Getting Ruby}
+\begin{itemize}
+\item Microsoft Windows - get the installer from \url{http://rubyinstaller.rubyforge.org/}
+\item Mac OS X 10.2 and newer - it's installed already\footnote{Although some applications such as MSF 3 require a different version - use DarwinPorts or Fink to get a newer version of Ruby.}
+\item Other UNIX-like operating systems - use your distribution's package manager ({\tt sudo emerge ruby}, {\tt sudo apt-get install ruby}, {\tt sudo yum install ruby}, etc.) or download and compile the source from \url{http://ruby-lang.org/en/20020102.html}
+\end{itemize}
+You may also want the Ruby Gems package manager if you continue using Ruby.  The Windows installer comes with it, but you'll probably have to manually install it on other platforms.
+
+(I forgot how on Mac)
+\end{slide}
+
+\begin{slide}
+\sh{Simple Examples}
+
+\subh{Hello World!}
+\begin{verbatim}
+#!/usr/bin/ruby
+puts "Hello world!"
+\end{verbatim}
+The \verb|Object#puts| method  \verb|put|s a string to standard out - it's aliased to \verb!$stdout.puts!.
+
+\subh{Print ten times}
+\begin{verbatim}
+#!/usr/bin/ruby
+10.times do
+  puts "Hello world!"
+end
+\end{verbatim}
+How does this work?
+\end{slide}
+\begin{slide}
+\sh{Procs in Ruby}
+
+Code in a \verb|do|\ldots\verb|end| or \verb|{|\ldots\verb|}| block is put into an object of class \verb|Proc|.
+\begin{verbatim}
+irb(main):001:0> b = Proc.new do
+irb(main):002:1* puts "hi"
+irb(main):003:1> end
+=> #<Proc:0x000850c0@(irb):1>
+irb(main):004:0> b.call
+hi
+=> nil    
+irb(main):005:0> b.class
+=> Proc
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+A \verb|Proc| can both take local variables from the scope it's defined in, and arguments from when it's called:
+\begin{verbatim}
+irb(main):001:0> local = 40
+=> 40
+irb(main):002:0> b = Proc.new do |arg|
+irb(main):003:1* puts "#{local} #{arg}"
+irb(main):004:1> end
+=> #<Proc:0x0007e338@(irb):2>
+irb(main):005:0> b.call(50)
+40 50
+=> nil
+irb(main):006:0> b.arity
+=> 1
+\end{verbatim}
+The number of arguments a \verb|Proc| takes is called its {\em arity}, which can be determined through the \verb|Proc#arity| instance method as demonstrated above.
+\end{slide}
+
+\begin{slide}
+\sh{What can you do with a Proc?}
+As we saw in the "Print ten times" example above, you can pass a \verb|Proc| to iterator methods:
+\begin{verbatim}
+#!/usr/bin/ruby
+10.times do |x|
+  puts x
+end
+\end{verbatim}
+%And for reference, the C guts of \verb|Integer#times| (located in numeric.c):
+%\begin{verbatim}
+%        for (i=0; i<end; i++) {
+%            rb_yield(LONG2FIX(i));
+%        }
+%\end{verbatim}
+And for reference, the guts\footnote{Hypothetically - it's actually implemented in C - take a look at ruby's numeric.c source} of the \verb|Integer#times| method:
+\begin{verbatim}
+class Integer
+  def times
+    cur = 0
+    while (cur < self)
+      yield cur
+      cur += 1
+    end
+  end
+end
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+What's happening here?
+\begin{itemize}
+\item The \verb|do|\ldots\verb|end| is collapsed into a Proc
+\item The Proc is passed to the \verb|Integer#times| method
+\item Inside the \verb|Integer#times| method, the Proc is \verb|yield|ed many times with the current value of the iterator
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+\sh{So what else is neat about Ruby?}
+The ability to pass Procs to functions is kind of like having custom block and loop structures.  Other function-calling syntax is similarly flexible, converting certain kinds of argument lists into collection objects:
+
+\subh{Passing a hash}
+\begin{verbatim}
+irb(main):001:0> def func(x)
+irb(main):002:1> puts x.class
+irb(main):003:1> end
+=> nil
+irb(main):004:0> func :leonard=>"nimoy",
+irb(main):005:1* :patrick=>"stewart"
+Hash
+=> nil
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+In this case, the tuples are collapsed into a single Hash.  This is common in many instances where the set of possible arguments to the function has lots of optional parameters, and not all might be used:
+\begin{verbatim}
+link_to 'Logout',
+  :controller=>'login',
+  :action=>'logout'
+\end{verbatim}
+In this example from a Rails application, the link\_to helper function\footnote{rails jargon} has a large set of possible arguments, some of which are mutually exclusive (for example, specifying a controller and action to generate a URL for when you're also specifying a specific URL doesn't make any sense).
+\end{slide}
+\begin{slide}
+\subh{Passing an array} 
+Suppose you want to reimplement printf in Ruby.  printf takes a variable number of arguments, based on the string in the first argument.  You could just specify an absurdly huge number of arguments with \verb|nil| defaults, but somebody will undoubtedly break this anyways.  What you want is a way to take a big list of arguments, preferably without the ability to start munching past the argument list into the guts of the stack like you could with C-style variable argument lists:
+\begin{verbatim}
+irb(main):001:0> def countargs(*x)
+irb(main):002:1> x.length
+irb(main):003:1> end
+=> nil
+irb(main):004:0> countargs("one")
+=> 1
+irb(main):005:0> countargs("one", "two")
+=> 2
+\end{verbatim}
+By placing an asterisk before the variable name of the last argument, Ruby will wrap up all those arguments into an Array of that name.  In the above example, within the \verb|countargs| function x[0] would be used to refer to the first optional argument. 
+\end{slide}
+
+\begin{slide}
+\sh{What can I do with this?}
+One growing fad among Rubyists is the use of Ruby to create what appears to be Domain Specific Languages (DSLs), either to map one language into Ruby syntax (as in Markaby for HTML or RJS for JavaScript), or reimplement another language's utility into Ruby in a familiar way for users of the old language  (as in Rake).
+
+For example, the Markaby library allows you to write:
+\begin{verbatim}
+h1 "Heading"
+p "This is a paragraph"
+ol do
+  li "item in ordered list"
+  ul do
+    li "item in nested list"
+    li "another item in nested list"
+  end
+  li "last item in ordered list"
+end
+\end{verbatim}
+\end{slide}
+\begin{slide}
+To produce this HTML:
+\begin{verbatim}
+<h1>Heading</h1>
+<p>This is a paragraph</p>
+<ol>
+<li>item in ordered list</li>
+<ul>
+<li>item in nested list</li>
+<li>another item in nested list</li>
+</ul>
+<li>last item in ordered list</li>
+</ol>
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+\sh{Duck Typing}
+{\em"If it walks like a duck, sounds like a duck, it must be a duck."}
+
+Ruby's type system does not require specifying at any point what a particular variable contains:
+\begin{verbatim}
+trunkofcar << "tuba"
+\end{verbatim}
+In this statement, we have no way of knowing what exactly the \verb|trunkofcar| variable is, but as long as the \verb|<<| method does the correct/expected thing, it's not terribly important.  For example, if the variable is an Array or a String, it'll stick the tuba at the end of it.  If the variable is an IO or a child of IO, it'll write the tuba out.  That these three different classes of object do analogous things with the same method contributes much to the "principle of least surprise."
+
+So instead of worrying about exactly what the variable is before calling that method on it, instead we can just worry if it implements that method:
+\begin{verbatim}
+raise ArgumentError unless
+  trunkofcar.respond_to?('<<')
+trunkofcar << "tuba"
+\end{verbatim}
+
+\end{slide}
+
+\begin{slide}
+\sh{Modules as Mixins}
+One thing to note about Ruby is that unlike C++ and some other OO languages, it does not have multiple inheritance, or really know the concept of an interface (like in Java or C\#) beyond if an object implements the necessary methods whenever they're called.
+
+However, sometimes it's useful to apply a set of common methods to a class beyond its class definition.
+
+For example, let's have a class for a car:
+\begin{verbatim}
+class Car
+  @topspeed
+  attr_accessor :topspeed
+
+  def initialize(speed)
+    @topspeed = speed
+  end
+  
+  def <=>(other)
+    self.topspeed <=> other.topspeed
+  end
+end
+\end{verbatim}
+\end{slide}
+\begin{slide}
+We don't quite get the intended output comparing these cars:
+\begin{verbatim}
+irb(main):011:0> mirage = Car.new(85)
+=> #<Car:0xb7ad9e70 @topspeed=85>
+irb(main):012:0> atom = Car.new(200)
+=> #<Car:0xb7ad7864 @topspeed=200>
+irb(main):013:0> mirage > atom
+NoMethodError: undefined method `>' for
+#<Car:0xb7ad9e70 @topspeed=85>
+        from (irb):13
+\end{verbatim}
+
+With the above class, we'd like to be able to compare them with the wide variety of $>$, $<$, $==$, \&c. operators, but there's {\em just so many} to type :( .
+
+Fortunately, we can include the Comparable module, which mixes in the usual gang of comparators based on the $<=>$ method.
+
+\begin{verbatim}
+class Car
+  include Comparable
+end
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+And now, our comparison shows the expected result:
+\begin{verbatim}
+irb(main):021:0> mirage > atom
+=> false
+\end{verbatim}
+
+\subh{More Module Facts}
+\begin{itemize}
+\item Modules are useful independent of mixins - they have their own set of methods (called by using \verb|Module.method(args)|) that are independent of other methods.
+\item If multiple objects have methods mixed in from a Module, changing or adding methods to that module changes or adds methods to every object with that Module mixed in.
+\item Any instance variables used within mixin methods are added to the object they're mixed in to - be wary of naming conflicts.
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+\sh{Strings in Ruby}
+Ruby has been compared to Perl for its ability to do complex operations on Strings of characters, mostly because both Ruby and Perl natively support regular expressions.  Ruby also has several other mostly-intuitive ways of manipulating strings.
+
+\subh{Regular expression matching}
+\begin{verbatim}
+irb(main):001:0> "lemonade" =~ /lemon/
+=> 0
+irb(main):002:0> "lemonade" =~ /lennon/
+=> nil
+\end{verbatim}
+Note that \verb|0| is equivalent to \verb|true| and \verb|nil| is equivalent to \verb|false|.
+\end{slide}
+
+\begin{slide}
+\subh{Regular expression substitution}
+\begin{verbatim}
+irb(main):001:0> "lemonade with lemons".
+irb(main):002:0* sub(/lemon/,"lime")
+=> "limeade with lemons"
+irb(main):003:0> "lemonade with lemons".
+irb(main):004:0* gsub(/lemon/,"lime")
+=> "limeade with limes"
+\end{verbatim}
+\verb|String#sub| makes the first substitution, while \verb|String#gsub| makes every possible substitution.
+
+Using the \verb|sub!| or \verb|gsub!| method will alter the string in-place:
+\begin{verbatim}
+irb(main):001:0> x = "x"
+=> "x"
+irb(main):002:0> x.sub(/x/,'y')
+=> "y"
+irb(main):003:0> x
+=> "x"
+irb(main):004:0> x.sub!(/x/,'z')
+=> "z"
+irb(main):005:0> x
+=> "z"
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+\subh{Substrings}
+Ruby, unlike C, does not consider a String to be an array of characters.  In fact, it doesn't even have a class for a single character.  However, it {\em is} possible to get a single-character's integer value, or a substring of any size from a larger string:
+\begin{verbatim}
+irb(main):001:0> lv = "las venturas"
+=> "las venturas"
+irb(main):002:0> lv[2]
+=> 115
+irb(main):003:0> lv[2].chr
+=> "s"
+irb(main):004:0> lv[2..2]
+=> "s"
+irb(main):005:0> lv[0..2]
+=> "las"
+irb(main):006:0> lv[-8..-1]
+=> "venturas"
+\end{verbatim}
+In the last example, negative numbers are used to count backwards from the end of the string.  You cannot specify a range from a negative number to a positive number.
+\end{slide}
+
+\begin{slide}
+\subh{Iterators on Strings}
+You can also iterate through different units in a string:
+\begin{itemize}
+\item \verb|String#each| and \verb|String#each_line| - iterates through records split by the record separator (stored in \verb| $\| by default)
+\begin{verbatim}
+irb(main):001:0> h = "hey\nguys"
+=> "hey\nguys"
+irb(main):002:0> h.each { |u| puts u }
+hey
+guys
+=> "hey\nguys"
+\end{verbatim}
+\item \verb|String#each_byte| - iterates through individual bytes as integers.
+\begin{verbatim}
+irb(main):003:0> h.each_byte {|u| puts u}
+104
+101
+121
+...
+\end{verbatim}
+\end{itemize}
+\end{slide}
+
+
+\begin{slide}
+\sh{Documentation}
+\begin{itemize}
+\item Why's (Poignant) Guide to Ruby - incredibly self-indulgent and esoteric tutorial, ranging from basics to metaprogramming and other complicated topics: \url{http://poignantguide.net/}
+\item Programming Ruby (pickaxe book) - more straightforward and immediately useful book with API documentation, first edition free online: \url{http://ruby-doc.org/docs/ProgrammingRuby/}
+\item Ruby-Doc.org - up-to-date API documentation, fantastically useful: \url{http://ruby-doc.org}
+\item Eigenclass - blog and reference about Ruby features and idioms ranging from the useful yet unique to the esoteric and powerful: \url{http://eigenclass.org}
+\end{itemize}
+\end{slide}
+\end{document}
