@@ -11,7 +11,7 @@ blog_post: true
 layout: post
 created_at: 2006-12-02 06:40:48 -05:00
 --- 
-<img src="http://presn.s3.amazonaws.com/coffee_with_milk.jpg alt="Actual hair length may vary" title="Actual hair length may vary"/>
+<img src="http://presn.s3.amazonaws.com/coffee_with_milk.jpg" alt="Actual hair length may vary" title="Actual hair length may vary"/>
 
 <div class="vcard">
 
