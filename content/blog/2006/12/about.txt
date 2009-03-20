@@ -15,7 +15,7 @@ created_at: 2006-12-02 06:40:48 -05:00
 
 <div class="vcard">
 
-<p>I'm <span class="fn">Bryce Kerley</span>, and I'm glad you've found my website.  I'm a recent Computer Science graduate from the <a href="http://www.usf.edu/">University of South Florida</a> (graduated December, 2006), and during my time there was active as the President of the <a href="http://www.csee.usf.edu/acm/">ACM chapter</a> and the <a href="http://wcsc.myweb.usf.edu/">Whitehatters Computer Security Club</a>.  I currently work in <a href="http://en.wikipedia.org/wiki/Tampa,_Florida" class="adr"><span class="locality">Tampa</span>, <span class="region">FL</span></a>, and also participate in the <a href="http://0x28.net/">0x28 Thieves</a> computer security team.</p>
+<p>I'm <span class="fn">Bryce Kerley</span>, and I'm glad you've found my website.  I'm a recent Computer Science graduate from the <a href="http://www.usf.edu/">University of South Florida</a> (graduated December, 2006), and during my time there was active as the President of the <a href="http://www.csee.usf.edu/acm/">ACM chapter</a> and the <a href="http://wcsc.myweb.usf.edu/">Whitehatters Computer Security Club</a>.  I currently work in <a href="http://en.wikipedia.org/wiki/Miami,_Florida" class="adr"><span class="locality">Miami</span>, <span class="region">FL</span></a>, and also participate in the <a href="http://0x28.net/">0x28 Thieves</a> computer security team.</p>
 
 <p>You're probably at this page for one of these reasons:</p>
 
