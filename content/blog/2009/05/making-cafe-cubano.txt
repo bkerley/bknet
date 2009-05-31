@@ -1,0 +1,18 @@
+--- 
+title:      Making Café Cubano
+created_at: 2009-05-31 14:14:30.279847 -05:00
+blog_post:  true
+layout:     post
+filter:
+  - markdown
+--- 
+I just got a new video camera, and had to make an appropriate first video.
+Here's something to start your day with:
+
+<object width="853" height="505"><param name="movie" value="http://www.youtube-nocookie.com/v/wV3BaUc1OGc&hl=en&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999&hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/wV3BaUc1OGc&hl=en&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999&hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="853" height="505"></embed></object
+
+A few complaints I have:
+
+* I need a tripod.  Cooking with one hand doesn't work.
+* I need to write what I want to say first to keep vocal tics from leaking in.
+* Editing HD video is really slow even on the current-gen MacBook.
