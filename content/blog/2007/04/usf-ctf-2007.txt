@@ -51,7 +51,8 @@ The scoreboard was ***SLOW***.  By the end of the game, after taking all but a s
     result = <span class="support support_class support_class_ruby">ActiveRecord</span>::<span class="support support_class support_class_ruby">Base</span>.connection.select_all(final_query)
     <span class="keyword keyword_control keyword_control_pseudo-method keyword_control_pseudo-method_ruby">return</span> result <span class="keyword keyword_control keyword_control_ruby">unless</span> result.empty? <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_ruby">or</span> result.nil?
     exit
-  <span class="keyword keyword_control keyword_control_ruby">end</span></span></pre>
+  <span class="keyword keyword_control keyword_control_ruby">end</span></span>
+</pre>
 
 Ten seconds for a page is crap, and we anticipated page loads being a problem, so we configured the scoreboard to use page caching for anything world-facing.  However, a confluence of conditions (+4 alliteration bonus) broke this.
 
