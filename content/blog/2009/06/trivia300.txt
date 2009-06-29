@@ -12,9 +12,12 @@ excerpt: |
   hours to score as many points as fast as possible on a Jeopardy-style board), although
   the team running it was [Diutinus Defense Technologies][1], instead of
   [Kenshoto][2] as in previous years.
+
   [1]: http://ddtek.biz/
   [2]: http://kenshoto.com/
+
   The most fun problem for me was Trivia 300, phrased as such:
+
   > pwn2.ddtek.biz:11511, provide 200 valid solutions in a row
   > and you will get a prize, but you better be quick!
   > Password == MAZE4J002PLAY
@@ -122,10 +125,11 @@ do not use this explanation in any serious context.)
 Source code of my solution:
 <http://github.com/bkerley/quals09/blob/dcdec7c06d705b7d1f8d11b4e115287bfea96760/trivia300/mazer.rb>
 
-Someone else's solution in python:
-<http://privatepaste.com/c70qd9j8B7>
-(if this is yours, please e-mail me so I can give you a link)
+Solution from The Art of Approximation in Science and Engineering:
+<http://pastebin.com/f79ce0843>
 
 # Solutions to other Problems
 
-Binary 300, from KOrUPt of SapHeads: http://korupt.co.uk/?p=132
+Awesome and exhaustive writeups on everything from VedaGodz: <http://shallweplayaga.me/>
+
+Binary 300, from KOrUPt of SapHeads: <http://korupt.co.uk/?p=132>
