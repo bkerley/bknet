@@ -34,7 +34,8 @@ Compounded with this, we had been working on the scoreboard pretty heavily over 
     remove_index(<span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>uptimes</span>, <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>value</span>)
   <span class="keyword keyword_control keyword_control_ruby">end</span>
 <span class="keyword keyword_control keyword_control_ruby">end</span>
-</span></pre>
+</span>
+</pre>
 
 We kept testing the whole week, satisfied with the speed of the scoreboard on the test data that had been accumulating all week just by running the uptime checker/flag placer against a handful of VMs.
 
